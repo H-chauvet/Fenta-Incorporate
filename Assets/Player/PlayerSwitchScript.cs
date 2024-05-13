@@ -6,24 +6,18 @@ using UnityEngine.Rendering;
 public class PlayerSwitchScript : MonoBehaviour
 {
 
-    public Transform character;
-    public List<Transform> possibleCharacters;
+    public List<GameObject> possibleCharacters;
     public int whichCharacter;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (character == null && possibleCharacters.Count >= 1)
-        {
-            character = possibleCharacters[0];
-        }
         Swap();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(possibleCharacters.Count);
         if (Input.GetKeyDown("[-]"))
         {
             if (whichCharacter == 0)
@@ -52,13 +46,15 @@ public class PlayerSwitchScript : MonoBehaviour
     }
     public void Swap()
     {
-        character = possibleCharacters[whichCharacter];
-        character.GetComponent<PlayerMovement>().enabled = true;
         for (int i = 0; i < possibleCharacters.Count; i++)
         {
-            if (possibleCharacters[i] != character)
+            if (i == whichCharacter)
             {
-                possibleCharacters[i].GetComponent<PlayerMovement>().enabled = false;
+                possibleCharacters[i].SetActive(true);
+            }
+            else
+            {
+                possibleCharacters[i].SetActive(false);
             }
         }
     }

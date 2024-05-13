@@ -1090,12 +1090,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67b73b726cae9384d94d61dd0bb7cfb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 0}
   possibleCharacters:
-  - {fileID: 1732559260}
-  - {fileID: 490694717}
-  - {fileID: 2016515183}
-  - {fileID: 658615039}
+  - {fileID: 1732559253}
+  - {fileID: 490694711}
+  - {fileID: 2016515177}
+  - {fileID: 658615033}
   whichCharacter: 0
 --- !u!4 &1728577982
 Transform:
