@@ -1,21 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class PlayerSwitchScript : MonoBehaviour
 {
-
     public List<GameObject> possibleCharacters;
     public int whichCharacter;
+    private Vector3 previousPosition;
 
-    // Start is called before the first frame update
     void Start()
     {
         Swap();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown("[-]"))
@@ -32,7 +29,7 @@ public class PlayerSwitchScript : MonoBehaviour
         }
         if (Input.GetKeyDown("[+]"))
         {
-
+            Debug.Log("Previous position will be : " + previousPosition);
             if (whichCharacter == possibleCharacters.Count - 1)
             {
                 whichCharacter = 0;
@@ -44,17 +41,24 @@ public class PlayerSwitchScript : MonoBehaviour
             Swap();
         }
     }
+
     public void Swap()
     {
         for (int i = 0; i < possibleCharacters.Count; i++)
         {
             if (i == whichCharacter)
             {
+                if (previousPosition != Vector3.zero)
+                {
+                    possibleCharacters[i].transform.position = previousPosition;
+                }
                 possibleCharacters[i].SetActive(true);
             }
             else
             {
+                previousPosition = possibleCharacters[i].transform.position;
                 possibleCharacters[i].SetActive(false);
+                
             }
         }
     }
