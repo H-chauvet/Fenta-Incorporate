@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine;
 public class PlayerSwitchScript : MonoBehaviour
 {
     public List<GameObject> possibleCharacters;
+    public CinemachineVirtualCamera virtualCamera;
     public int whichCharacter;
     private Vector3 previousPosition;
     private bool canSwitch = true; // Flag to ensure single switch per press
@@ -68,6 +70,9 @@ public class PlayerSwitchScript : MonoBehaviour
             {
                 possibleCharacters[i].transform.position = previousPosition;
                 possibleCharacters[i].SetActive(true);
+
+                virtualCamera.Follow = possibleCharacters[i].transform;
+                virtualCamera.LookAt = possibleCharacters[i].transform;
             }
             else
             {
