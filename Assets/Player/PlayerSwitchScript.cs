@@ -7,39 +7,57 @@ public class PlayerSwitchScript : MonoBehaviour
     public List<GameObject> possibleCharacters;
     public int whichCharacter;
     private Vector3 previousPosition;
+    private bool canSwitch = true; // Flag to ensure single switch per press
 
     void Start()
     {
+        previousPosition = possibleCharacters[whichCharacter].transform.position;
         Swap();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown("[-]"))
+        float dPadHorizontal = Input.GetAxis("DPadHorizontal");
+        float dPadVertical = Input.GetAxis("DPadVertical");
+
+        if (canSwitch)
         {
-            if (whichCharacter == 0)
+            if (dPadVertical > 0.5f) // D-Pad Up
             {
-                whichCharacter = possibleCharacters.Count - 1;
+                SwitchCharacter(0);
             }
-            else
+            else if (dPadHorizontal > 0.5f) // D-Pad Right
             {
-                whichCharacter -= 1;
+                SwitchCharacter(1);
             }
-            Swap();
+            else if (dPadVertical < -0.5f) // D-Pad Down
+            {
+                SwitchCharacter(2);
+            }
+            else if (dPadHorizontal < -0.5f) // D-Pad Left
+            {
+                SwitchCharacter(3);
+            }
+
+            if (Mathf.Abs(dPadHorizontal) > 0.5f || Mathf.Abs(dPadVertical) > 0.5f)
+            {
+                canSwitch = false;
+            }
         }
-        if (Input.GetKeyDown("[+]"))
+        else
         {
-            Debug.Log("Previous position will be : " + previousPosition);
-            if (whichCharacter == possibleCharacters.Count - 1)
+            if (Mathf.Abs(dPadHorizontal) < 0.5f && Mathf.Abs(dPadVertical) < 0.5f)
             {
-                whichCharacter = 0;
+                canSwitch = true;
             }
-            else
-            {
-                whichCharacter += 1;
-            }
-            Swap();
         }
+    }
+
+    private void SwitchCharacter(int characterIndex)
+    {
+        previousPosition = possibleCharacters[whichCharacter].transform.position;
+        whichCharacter = characterIndex;
+        Swap();
     }
 
     public void Swap()
@@ -48,17 +66,12 @@ public class PlayerSwitchScript : MonoBehaviour
         {
             if (i == whichCharacter)
             {
-                if (previousPosition != Vector3.zero)
-                {
-                    possibleCharacters[i].transform.position = previousPosition;
-                }
+                possibleCharacters[i].transform.position = previousPosition;
                 possibleCharacters[i].SetActive(true);
             }
             else
             {
-                previousPosition = possibleCharacters[i].transform.position;
                 possibleCharacters[i].SetActive(false);
-                
             }
         }
     }
