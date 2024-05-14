@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private float xMin, xMax, zMin, zMax; // Bounds for x and z positions
 
 
+
     private void Start()
     {
         // Get the bounds from the limitObject
