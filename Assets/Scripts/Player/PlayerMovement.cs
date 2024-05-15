@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     private float jumpVelocity = 0f;
 
     private InputAction move;
+    private InputAction jump;
 
 
 
@@ -32,11 +33,12 @@ public class PlayerMovement : MonoBehaviour
         zMin = renderer.bounds.min.z;
         zMax = renderer.bounds.max.z;
 
-        move = InputSystem.actions.FindAction("move");
+        move = InputSystem.actions.FindAction("Move");
+        jump = InputSystem.actions.FindAction("Jump");
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         var input_vector = move.ReadValue<Vector2>();
 
@@ -45,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
 
         bool isGrounded = IsGrounded();
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (jump.IsPressed() && isGrounded)
         {
             jumpVelocity = jumpForce;
         }
