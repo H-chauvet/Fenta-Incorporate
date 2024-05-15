@@ -2,6 +2,7 @@ using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerSwitchScript : MonoBehaviour
 {
@@ -10,9 +11,17 @@ public class PlayerSwitchScript : MonoBehaviour
     public int whichCharacter;
     private Vector3 previousPosition;
     private bool canSwitch = true; // Flag to ensure single switch per press
+    private InputAction UpMonster;
+    private InputAction DownMonster;
+    private InputAction RightMonster;
+    private InputAction LeftMonster;
 
     void Start()
     {
+        UpMonster = InputSystem.actions.FindAction("UpMonster");
+        DownMonster = InputSystem.actions.FindAction("DownMonster");
+        LeftMonster = InputSystem.actions.FindAction("LeftMonster");
+        RightMonster = InputSystem.actions.FindAction("RightMonster");
         previousPosition = possibleCharacters[whichCharacter].transform.position;
         Swap();
     }
@@ -24,19 +33,19 @@ public class PlayerSwitchScript : MonoBehaviour
 
         if (canSwitch)
         {
-            if (dPadVertical > 0.5f) // D-Pad Up
+            if (UpMonster.IsPressed()) // D-Pad Up
             {
                 SwitchCharacter(0);
             }
-            else if (dPadHorizontal > 0.5f) // D-Pad Right
+            else if (RightMonster.IsPressed()) // D-Pad Right
             {
                 SwitchCharacter(1);
             }
-            else if (dPadVertical < -0.5f) // D-Pad Down
+            else if (DownMonster.IsPressed()) // D-Pad Down
             {
                 SwitchCharacter(2);
             }
-            else if (dPadHorizontal < -0.5f) // D-Pad Left
+            else if (LeftMonster.IsPressed()) // D-Pad Left
             {
                 SwitchCharacter(3);
             }
