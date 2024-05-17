@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class PlayerMovement : MonoBehaviour
     public float gravity = 9.8f;
     private float jumpVelocity = 0f;
 
+    private InputAction move;
+    private InputAction jump;
+
 
 
     private void Start()
@@ -27,17 +31,22 @@ public class PlayerMovement : MonoBehaviour
         xMax = renderer.bounds.max.x;
         zMin = renderer.bounds.min.z;
         zMax = renderer.bounds.max.z;
+
+        move = InputSystem.actions.FindAction("Move");
+        jump = InputSystem.actions.FindAction("Jump");
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        var input_vector = move.ReadValue<Vector2>();
+
+        float horizontalInput = input_vector.x;
+        float verticalInput = input_vector.y;
 
         bool isGrounded = IsGrounded();
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (jump.IsPressed() && isGrounded)
         {
             jumpVelocity = jumpForce;
         }
