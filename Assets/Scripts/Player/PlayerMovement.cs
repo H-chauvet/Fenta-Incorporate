@@ -6,14 +6,15 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public GameObject limitObject; // Object representing the limit
+    public GameObject limitObject;
     public float xMinOffset = 0f;
     public float xMaxOffset = 0f;
     public float zMinOffset = 0f;
     public float zMaxOffset = 0f;
 
-    private float xMin, xMax, zMin, zMax; // Bounds for x and z positions
+    public float rotationSpeed = 1f;
 
+    private float xMin, xMax, zMin, zMax; // Bounds for x and z positions
     public float jumpForce = 10f;
     public float jumpSpeed = 5f;
     public float gravity = 9.8f;
@@ -70,9 +71,17 @@ public class PlayerMovement : MonoBehaviour
         // Limit the movement within the specified bounds
         newPosition.x = Mathf.Clamp(newPosition.x, xMin + xMinOffset, xMax - xMaxOffset);
         newPosition.z = Mathf.Clamp(newPosition.z, zMin + zMinOffset, zMax - zMaxOffset);
+
         transform.position = newPosition;
-        CorrectPosition();
+
+        if (movement != Vector3.zero)
+        {
+            Quaternion toRotate = Quaternion.LookRotation(movement, Vector3.up);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotate, rotationSpeed * Time.deltaTime);
+        }
+        CorrectPosition(isGrounded);
     }
+
 
     bool IsGrounded()
     {
@@ -91,7 +100,7 @@ public class PlayerMovement : MonoBehaviour
         return false;
     }
 
-    void CorrectPosition()
+    void CorrectPosition(bool isGrounded)
     {
         Renderer renderer = GetComponent<Renderer>();
         if (renderer == null)
