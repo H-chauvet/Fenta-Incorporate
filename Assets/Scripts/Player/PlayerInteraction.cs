@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class InteractiveObject : MonoBehaviour
 {
     // Définir le tag du personnage autorisé
-    public string authorizedTag = "Character1";
+    public string authorizedTag;
     private InputAction interact;
 
     private void Start()
