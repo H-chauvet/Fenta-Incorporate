@@ -478,6 +478,7 @@ MonoBehaviour:
   xMaxOffset: 0.5
   zMinOffset: 0.5
   zMaxOffset: 0.5
+  rotationSpeed: 360
   jumpForce: 3
   jumpSpeed: 5
   gravity: 9.8
@@ -1858,6 +1859,7 @@ MonoBehaviour:
   xMaxOffset: 0.5
   zMinOffset: 0.5
   zMaxOffset: 0.5
+  rotationSpeed: 360
   jumpForce: 3
   jumpSpeed: 5
   gravity: 9.8
@@ -2016,6 +2018,7 @@ MonoBehaviour:
   xMaxOffset: 0.5
   zMinOffset: 0.5
   zMaxOffset: 0.5
+  rotationSpeed: 360
   jumpForce: 3
   jumpSpeed: 5
   gravity: 9.8
@@ -2175,6 +2178,7 @@ MonoBehaviour:
   xMaxOffset: 0.5
   zMinOffset: 0.5
   zMaxOffset: 0.5
+  rotationSpeed: 360
   jumpForce: 3
   jumpSpeed: 5
   gravity: 9.8
