@@ -103,6 +103,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "PreviousMonster",
+                    "type": "Button",
+                    "id": "9c610911-ef51-4d18-a13a-e5bff768baf7",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "NextMonster",
+                    "type": "Button",
+                    "id": "de2e0bd0-cd07-4876-beab-44997cb97f79",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -444,6 +462,28 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "LeftMonster",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ddb86d91-1255-4445-b1a6-6a95e63e70d0",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "PreviousMonster",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1da7b5dd-a71f-4712-912b-d49c742f7b13",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "NextMonster",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

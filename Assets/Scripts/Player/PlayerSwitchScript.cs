@@ -1,6 +1,7 @@
 using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,6 +16,12 @@ public class PlayerSwitchScript : MonoBehaviour
     private InputAction DownMonster;
     private InputAction RightMonster;
     private InputAction LeftMonster;
+    private InputAction PreviousMonster;
+    private InputAction NextMonster;
+
+
+    private bool IsSwitchingPressed = false;
+    private bool IsSwitchingPressed2 = false;
 
     void Start()
     {
@@ -22,6 +29,8 @@ public class PlayerSwitchScript : MonoBehaviour
         DownMonster = InputSystem.actions.FindAction("DownMonster");
         LeftMonster = InputSystem.actions.FindAction("LeftMonster");
         RightMonster = InputSystem.actions.FindAction("RightMonster");
+        PreviousMonster = InputSystem.actions.FindAction("PreviousMonster");
+        NextMonster = InputSystem.actions.FindAction("NextMonster");
         previousPosition = possibleCharacters[whichCharacter].transform.position;
         Swap();
     }
@@ -30,6 +39,46 @@ public class PlayerSwitchScript : MonoBehaviour
     {
         float dPadHorizontal = Input.GetAxis("DPadHorizontal");
         float dPadVertical = Input.GetAxis("DPadVertical");
+
+        if (!IsSwitchingPressed)
+        {
+            if (NextMonster.IsPressed())
+            {
+                IsSwitchingPressed = true;
+                if (whichCharacter == 3)
+                {
+                    SwitchCharacter(0);
+                }
+                else
+                {
+                    SwitchCharacter(whichCharacter, 1);
+                }
+            }
+        } else if (!NextMonster.IsPressed())
+        {
+            IsSwitchingPressed = false;
+        }
+
+        if (!IsSwitchingPressed2)
+        {
+            if (PreviousMonster.IsPressed())
+            {
+                IsSwitchingPressed2 = true;
+                if (whichCharacter == 0)
+                {
+                    SwitchCharacter(3);
+                }
+                else
+                {
+                    SwitchCharacter(whichCharacter, -1);
+                }
+            }
+        }
+        else if (!PreviousMonster.IsPressed())
+        {
+            IsSwitchingPressed2 = false;
+        }
+
 
         if (canSwitch)
         {
@@ -49,6 +98,7 @@ public class PlayerSwitchScript : MonoBehaviour
             {
                 SwitchCharacter(3);
             }
+            
 
             if (Mathf.Abs(dPadHorizontal) > 0.5f || Mathf.Abs(dPadVertical) > 0.5f)
             {
@@ -64,10 +114,10 @@ public class PlayerSwitchScript : MonoBehaviour
         }
     }
 
-    private void SwitchCharacter(int characterIndex)
+    private void SwitchCharacter(int characterIndex, int changeIndex = 0)
     {
         previousPosition = possibleCharacters[whichCharacter].transform.position;
-        whichCharacter = characterIndex;
+        whichCharacter = characterIndex + changeIndex;
         Swap();
     }
 
