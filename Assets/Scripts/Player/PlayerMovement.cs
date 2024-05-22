@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     public float zMinOffset = 0f;
     public float zMaxOffset = 0f;
 
+    public float rotationSpeed = 1f;
+
     private float xMin, xMax, zMin, zMax; // Bounds for x and z positions
     public float jumpForce = 10f;
     public float jumpSpeed = 5f;
@@ -58,6 +60,7 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpVelocity = 0;
         }
+
         Vector3 movement = new Vector3(horizontalInput, 0, verticalInput) * moveSpeed * Time.deltaTime;
         movement.y = jumpVelocity * Time.deltaTime * jumpSpeed;
         if (HardCorrectPosition(movement)) {
@@ -70,6 +73,12 @@ public class PlayerMovement : MonoBehaviour
         newPosition.z = Mathf.Clamp(newPosition.z, zMin + zMinOffset, zMax - zMaxOffset);
 
         transform.position = newPosition;
+
+        if (movement != Vector3.zero)
+        {
+            Quaternion toRotate = Quaternion.LookRotation(movement, Vector3.up);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotate, rotationSpeed * Time.deltaTime);
+        }
         CorrectPosition(isGrounded);
     }
 
