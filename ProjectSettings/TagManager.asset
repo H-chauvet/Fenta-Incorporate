@@ -6,6 +6,9 @@ TagManager:
   tags:
   - CinemachineTarget
   - Character1
+  - Character2
+  - Character3
+  - Character4
   layers:
   - Default
   - TransparentFX
