@@ -6,15 +6,9 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public GameObject limitObject;
-    public float xMinOffset = 0f;
-    public float xMaxOffset = 0f;
-    public float zMinOffset = 0f;
-    public float zMaxOffset = 0f;
 
     public float rotationSpeed = 1f;
 
-    private float xMin, xMax, zMin, zMax; // Bounds for x and z positions
     public float jumpForce = 10f;
     public float jumpSpeed = 5f;
     public float gravity = 9.8f;
@@ -27,13 +21,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        // Get the bounds from the limitObject
-        Renderer renderer = limitObject.GetComponent<Renderer>();
-        xMin = renderer.bounds.min.x;
-        xMax = renderer.bounds.max.x;
-        zMin = renderer.bounds.min.z;
-        zMax = renderer.bounds.max.z;
-
         move = InputSystem.actions.FindAction("Move");
         jump = InputSystem.actions.FindAction("Jump");
     }
@@ -58,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (isGrounded && jumpVelocity < 0)
         {
-            jumpVelocity = 0;
+            jumpVelocity = 0f;
         }
 
         Vector3 movement = new Vector3(horizontalInput, 0, verticalInput) * moveSpeed * Time.deltaTime;
@@ -67,79 +54,39 @@ public class PlayerMovement : MonoBehaviour
             movement.y = 0;
         }
         Vector3 newPosition = transform.position + movement;
-
-        // Limit the movement within the specified bounds
-        newPosition.x = Mathf.Clamp(newPosition.x, xMin + xMinOffset, xMax - xMaxOffset);
-        newPosition.z = Mathf.Clamp(newPosition.z, zMin + zMinOffset, zMax - zMaxOffset);
-
         transform.position = newPosition;
 
-        if (movement != Vector3.zero)
+        if (movement.x != 0 || movement.z != 0)
         {
-            Quaternion toRotate = Quaternion.LookRotation(movement, Vector3.up);
+            Quaternion toRotate = Quaternion.LookRotation(new Vector3(movement.x, 0, movement.z));
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotate, rotationSpeed * Time.deltaTime);
         }
-        CorrectPosition(isGrounded);
     }
 
 
     bool IsGrounded()
     {
-        Renderer renderer = GetComponent<Renderer>();
-        if (renderer == null)
-        {
-            return false;
-        }
-        float height = renderer.bounds.extents.y;
-
         RaycastHit hit;
         if (Physics.Raycast(transform.position, Vector3.down, out hit))
         {
-            return hit.distance <= height + 0.1f;
+            return hit.distance <= 0.1f;
         }
-        return false;
-    }
-
-    void CorrectPosition(bool isGrounded)
-    {
-        Renderer renderer = GetComponent<Renderer>();
-        if (renderer == null)
-        {
-            return;
-        }
-        float height = renderer.bounds.extents.y;
         
-        RaycastHit hit;
-        if (!Physics.Raycast(transform.position, Vector3.down, out hit))
-        {
-            return;
-        }
-        if (hit.distance <= height)
-        {
-            transform.position = new Vector3(transform.position.x, hit.point.y + height, transform.position.z);
-            return;
-        }
+        return false;
     }
 
     bool HardCorrectPosition(Vector3 movement)
     {
-        Renderer renderer = GetComponent<Renderer>();
-        if (renderer == null)
-        {
-            return false;
-        }
-        float height = renderer.bounds.extents.y;
-
         RaycastHit hit;
         if (!Physics.Raycast(transform.position, Vector3.down, out hit))
         {
             return false;
         }
 
-        if (hit.distance - height / 2 < -jumpVelocity * Time.deltaTime * 5)
+        if (hit.distance < -jumpVelocity * Time.deltaTime * 5)
         {
             Vector3 newPosition = transform.position + movement;
-            transform.position = new Vector3(newPosition.x, hit.point.y + height, newPosition.z);
+            transform.position = new Vector3(newPosition.x, hit.point.y + 0.01f, newPosition.z);
             return true;
         }
         return false;
