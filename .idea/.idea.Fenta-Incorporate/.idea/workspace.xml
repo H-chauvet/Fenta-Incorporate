@@ -5,21 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a10ef50d-60c1-416c-b6b1-52a0a2f9f553" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/BENOTAFRAID.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Materials/BENOTAFRAID.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerAnimation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerAnimation.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/BENOTAFRAID.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Textures/BENOTAFRAID.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Fenta-Incorporate/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fenta-Incorporate/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Monster.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Monster.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Walking.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Walking.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Bloetje.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Bloetje.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Elisa.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Elisa.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.learn.iet-framework/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.learn.iet-framework/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DEMO SCENE.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DEMO SCENE.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DesignerV1.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DesignerV1.unity.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +97,7 @@
       <updated>1715938927438</updated>
       <workItem from="1715938929805" duration="15000" />
       <workItem from="1715939752695" duration="3954000" />
+      <workItem from="1716456039464" duration="533000" />
     </task>
     <servers />
   </component>
