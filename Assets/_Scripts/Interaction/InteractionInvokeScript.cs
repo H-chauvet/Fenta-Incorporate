@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
-
-// public class enum MonsterType
-// {
-//     All,
-//     Bloetje = "Character1",
-//     Hijsi = "Character2",
-//     Robotmonster = "Character3",
-//     Elisa = "Character4"
-// }
+public enum MonsterType
+{
+    All,
+    Bloetje,
+    Hijsi,
+    Robotmonster,
+    Elisa
+}
 
 public class InteractionInvokeScript : MonoBehaviour, IInteractable
 {
@@ -20,12 +19,21 @@ public class InteractionInvokeScript : MonoBehaviour, IInteractable
     private InputAction mainInteractionButton;
     private InputAction secondaryInteractionButton;
 
-    // public MonsterType interactionMonster = MonsterType.All;
+    public MonsterType interactionMonster = MonsterType.All;
 
 
     [SerializeField] private UnityEvent _basicInteractEvent;
     [SerializeField] private UnityEvent _mainInteractEvent;
     [SerializeField] private UnityEvent _secondaryInteractEvent;
+
+    private Dictionary<MonsterType, string> monsterTags = new Dictionary<MonsterType, string>
+    {
+        {MonsterType.All, "All"},
+        {MonsterType.Bloetje, "Character1"},
+        {MonsterType.Hijsi, "Character2"},
+        {MonsterType.Robotmonster, "Character3"},
+        {MonsterType.Elisa, "Character4"}
+    };
 
 
 
@@ -33,30 +41,44 @@ public class InteractionInvokeScript : MonoBehaviour, IInteractable
     void Start()
     {
         basicInteractionButton = InputSystem.actions.FindAction("Interact");
-        mainInteractionButton = InputSystem.actions.FindAction("MainInteract");
-        secondaryInteractionButton = InputSystem.actions.FindAction("SecondaryInteract");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        mainInteractionButton = InputSystem.actions.FindAction("Interact");
+        secondaryInteractionButton = InputSystem.actions.FindAction("Interact");
     }
 
     public void OnTriggerStay(Collider other)
-    {
-        // if (interactionMonster == MonsterType.All) {
-        Interact(other.gameObject);
-        // } 
-        // else if (other.gameObject.tag == interactionMonster.ToString())
-        // {
-            Interact(other.gameObject);
-        // }
+    {   
+        PlayerSwitchScript playerSwitchScript = other.gameObject.GetComponent<PlayerSwitchScript>();
+        if (playerSwitchScript == null)
+        {
+            return;
+        }
+        GameObject children = other.gameObject.transform.GetChild(playerSwitchScript.whichCharacter).gameObject;
+
+
+
+        if (interactionMonster == MonsterType.All) {
+            Interact();
+        } 
+        else if (children.tag == monsterTags[interactionMonster])
+        {
+            Interact();
+        }
     }
 
-    public void Interact(GameObject obj)
+    public void Interact()
     {
-        
+        if (basicInteractionButton.IsPressed())
+        {
+            onBasicInteractEvent();
+        }
+        if (mainInteractionButton.IsPressed())
+        {
+            onMainInteractEvent();
+        }
+        if (secondaryInteractionButton.IsPressed())
+        {
+            onSecondaryInteractEvent();
+        }
     }
 
     public void onBasicInteractEvent()
