@@ -478,8 +478,30 @@
                 },
                 {
                     "name": "",
+                    "id": "cd5d2b44-d7cf-4702-844f-8c87fb97ee59",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "PreviousMonster",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "1da7b5dd-a71f-4712-912b-d49c742f7b13",
                     "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "NextMonster",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6585d792-c34a-41c1-aae6-3afb510abd8b",
+                    "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
