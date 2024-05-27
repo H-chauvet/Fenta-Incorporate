@@ -11,7 +11,6 @@ public class PlayerSwitchScript : MonoBehaviour
     public CinemachineVirtualCamera virtualCamera;
     public int whichCharacter;
     private Vector3 previousPosition;
-    private bool canSwitch = true; // Flag to ensure single switch per press
     private InputAction UpMonster;
     private InputAction DownMonster;
     private InputAction RightMonster;
