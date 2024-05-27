@@ -22,6 +22,7 @@ public class PlayerSwitchScript : MonoBehaviour
 
     private bool IsSwitchingPressed = false;
     private bool IsSwitchingPressed2 = false;
+    private bool IsSwitchingPressed3 = false;
 
     void Start()
     {
@@ -80,38 +81,37 @@ public class PlayerSwitchScript : MonoBehaviour
         }
 
 
-        if (canSwitch)
+        if (!IsSwitchingPressed3)
         {
             if (UpMonster.IsPressed()) // D-Pad Up
             {
+                IsSwitchingPressed3 = true;
                 SwitchCharacter(0);
             }
             else if (RightMonster.IsPressed()) // D-Pad Right
             {
+                IsSwitchingPressed3 = true;
                 SwitchCharacter(1);
             }
             else if (DownMonster.IsPressed()) // D-Pad Down
             {
+                IsSwitchingPressed3 = true;
                 SwitchCharacter(2);
             }
             else if (LeftMonster.IsPressed()) // D-Pad Left
             {
+                IsSwitchingPressed3 = true;
                 SwitchCharacter(3);
-            }
-            
-
-            if (Mathf.Abs(dPadHorizontal) > 0.5f || Mathf.Abs(dPadVertical) > 0.5f)
-            {
-                canSwitch = false;
             }
         }
         else
         {
-            if (Mathf.Abs(dPadHorizontal) < 0.5f && Mathf.Abs(dPadVertical) < 0.5f)
+            if (!UpMonster.IsPressed() && !RightMonster.IsPressed() && !DownMonster.IsPressed() && !LeftMonster.IsPressed())
             {
-                canSwitch = true;
+                IsSwitchingPressed3 = false;
             }
         }
+
     }
 
     private void SwitchCharacter(int characterIndex, int changeIndex = 0)
