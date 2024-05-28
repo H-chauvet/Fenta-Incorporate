@@ -8,9 +8,9 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float moveSpeed = 1f;
     public float rotationSpeed = 1f;
-    public float jumpForce = 10f;
+    public float jumpForce = 1f;
     public LayerMask groundLayer;
     public float jumpBufferTime = 0.2f;
     public float jumpCoyoteTime = 0.2f;
@@ -41,41 +41,39 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        var input_vector = move.ReadValue<Vector2>();
-        isWalking = input_vector != Vector2.zero;
-        if (isWalking)
-            Move(input_vector);
-        Jump();        
+        Move();
+        Jump();
     }
 
-    void Move(Vector2 input_vector)
+    void Move()
     {
+        Vector2 input_vector = move.ReadValue<Vector2>();
         float horizontalInput = input_vector.x;
         float verticalInput = input_vector.y;
 
         Vector3 movement = new Vector3(horizontalInput, 0, verticalInput);
-        ProjectVectorToCameraCoordinateSpace(ref movement);
+        movement = RotateVector3ToCameraSpace(movement);
         Vector3 velocity = movement * moveSpeed;
 
         Vector3 localVelocity = transform.InverseTransformDirection(velocity);
         localVelocity.y = rb.velocity.y;
-        
+        isWalking = localVelocity != Vector3.zero ? true : false;
         rb.velocity = transform.TransformDirection(localVelocity);
         Rotation(movement);
     }
     
     void Jump()
     {
-        isGrounded = Physics.CheckSphere(transform.position, groundCheckRadius, groundLayer);
+        Vector3 currentScale = transform.localScale;
+        float normalizedGroundCheckRadius = groundCheckRadius * currentScale.y;
+
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, normalizedGroundCheckRadius, groundLayer);
+        isJumping = isGrounded ? false : true;
         if (isGrounded && jump.IsPressed())
         {
-            isJumping = true;
+            float normalizedJumpForce = jumpForce * 20 * currentScale.y;
             rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        }
-        else
-        {
-            isJumping = false;
+            rb.AddForce(Vector3.up * normalizedJumpForce, ForceMode.Impulse);
         }
     }
 
@@ -87,15 +85,16 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotate, rotationSpeed * 360 * Time.fixedDeltaTime);
         }
     }
-    
-    private void ProjectVectorToCameraCoordinateSpace(ref Vector3 vectorToProject)
+
+    private Vector3 RotateVector3ToCameraSpace(Vector3 vector)
     {
         _mainCameraForward = _mainCameraTransform.forward;
-        var right = _mainCameraTransform.right;
+        Vector3 right = _mainCameraTransform.right;
         _mainCameraForward.y = 0.0f;
         right.y = 0.0f;
         _mainCameraForward.Normalize();
         right.Normalize();
-        vectorToProject = vectorToProject.x * right + vectorToProject.z * _mainCameraForward;
+        return vector.x * right + vector.z * _mainCameraForward;
     }
+    
 }
