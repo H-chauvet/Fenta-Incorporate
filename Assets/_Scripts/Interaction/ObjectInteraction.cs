@@ -3,16 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
-public enum MonsterType
-{
-    All,
-    Bloetje,
-    Hijsi,
-    Robotmonster,
-    Elisa
-}
 
-public class InteractionInvokeScript : MonoBehaviour, IInteractable
+public class ObjectInteraction : MonoBehaviour, IInteractable
 {
 
     private InputAction basicInteractionButton;
@@ -53,9 +45,7 @@ public class InteractionInvokeScript : MonoBehaviour, IInteractable
             return;
         }
         GameObject children = other.gameObject.transform.GetChild(playerSwitchScript.whichCharacter).gameObject;
-
-
-
+        
         if (interactionMonster == MonsterType.All) {
             Interact();
         } 

@@ -4,13 +4,13 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody))]
+
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float rotationSpeed = 1f;
     public float jumpForce = 10f;
     public LayerMask groundLayer;
-    // public Transform groundCheck;
     public float jumpBufferTime = 0.2f;
     public float jumpCoyoteTime = 0.2f;
 
@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
         if (Camera.main != null)
             _mainCameraTransform = Camera.main.transform;
         rb = GetComponent<Rigidbody>();
+        rb.freezeRotation = true;
         move = InputSystem.actions.FindAction("Move");
         jump = InputSystem.actions.FindAction("Jump");
     }
@@ -69,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isJumping = true;
             rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-            rb.AddForce(Vector3.up * jumpForce * 50, ForceMode.Impulse);
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
         else
         {
