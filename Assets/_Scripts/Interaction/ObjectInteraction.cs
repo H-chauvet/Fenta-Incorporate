@@ -57,15 +57,15 @@ public class ObjectInteraction : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (basicInteractionButton.IsPressed())
+        if (basicInteractionButton.triggered)
         {
             onBasicInteractEvent();
         }
-        if (mainInteractionButton.IsPressed())
+        if (mainInteractionButton.triggered)
         {
             onMainInteractEvent();
         }
-        if (secondaryInteractionButton.IsPressed())
+        if (secondaryInteractionButton.triggered)
         {
             onSecondaryInteractEvent();
         }
