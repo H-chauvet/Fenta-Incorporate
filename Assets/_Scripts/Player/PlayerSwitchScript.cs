@@ -1,3 +1,4 @@
+using System;
 using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,7 +9,6 @@ using UnityEngine.InputSystem;
 public class PlayerSwitchScript : MonoBehaviour
 {
     public List<GameObject> possibleCharacters;
-    public CinemachineVirtualCamera virtualCamera;
     public int whichCharacter;
     private Vector3 previousPosition;
     private InputAction UpMonster;
@@ -23,6 +23,8 @@ public class PlayerSwitchScript : MonoBehaviour
     private bool IsSwitchingPressed2 = false;
     private bool IsSwitchingPressed3 = false;
 
+    public static Action<int, GameObject> CharacterSwitch;
+    
     void Start()
     {
         UpMonster = InputSystem.actions.FindAction("UpMonster");
@@ -32,7 +34,7 @@ public class PlayerSwitchScript : MonoBehaviour
         PreviousMonster = InputSystem.actions.FindAction("PreviousMonster");
         NextMonster = InputSystem.actions.FindAction("NextMonster");
         previousPosition = possibleCharacters[whichCharacter].transform.position;
-        Swap();
+        SwitchCharacter(0);
     }
 
     void Update()
@@ -117,6 +119,7 @@ public class PlayerSwitchScript : MonoBehaviour
     {
         previousPosition = possibleCharacters[whichCharacter].transform.position;
         whichCharacter = characterIndex + changeIndex;
+        CharacterSwitch.Invoke(whichCharacter, possibleCharacters[whichCharacter]);
         Swap();
     }
 
@@ -128,9 +131,6 @@ public class PlayerSwitchScript : MonoBehaviour
             {
                 possibleCharacters[i].transform.position = previousPosition;
                 possibleCharacters[i].SetActive(true);
-
-                virtualCamera.Follow = possibleCharacters[i].transform;
-                virtualCamera.LookAt = possibleCharacters[i].transform;
             }
             else
             {

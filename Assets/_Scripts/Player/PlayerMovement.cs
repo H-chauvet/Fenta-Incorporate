@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpBufferTime = 0.1f;
     public float jumpCoyoteTime = 0.1f;
 
-
+    [SerializeField] private Transform monstersTransform;
 
     private bool canJump = true;
     // private float currentJumpPressedTime = 0f;
@@ -90,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
         if (movement.x != 0 || movement.z != 0)
         {
             Quaternion toRotate = Quaternion.LookRotation(new Vector3(movement.x, 0, movement.z));
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotate, rotationSpeed * 360 * Time.fixedDeltaTime);
+            monstersTransform.rotation = Quaternion.RotateTowards(monstersTransform.rotation, toRotate, rotationSpeed * 360 * Time.fixedDeltaTime);
         }
     }
     
@@ -129,6 +129,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Fall()
     {
+        isFalling = true;
+        
         Vector3 currentScale = transform.localScale;
 
         // Coyote time
