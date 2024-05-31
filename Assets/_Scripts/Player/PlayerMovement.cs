@@ -15,14 +15,15 @@ public class PlayerMovement : MonoBehaviour
     public float jumpBufferTime = 0.1f;
     public float jumpCoyoteTime = 0.1f;
 
-
-
     private bool canJump = true;
     // private float currentJumpPressedTime = 0f;
     // private float maxJumpPressedTime = 0.2f;
     private float currentFallingTime = 0f;
     private float currentJumpBufferTime = 0f;
     public float gravity = 9.8f;
+
+    public List<GameObject> gameObjectsScaleNormalization = new List<GameObject>();
+    private float normalizedScale = 1f;
 
 
 
@@ -44,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         AttachComponents();
+        NormalizeScale();
     }
     
     void AttachComponents()
@@ -54,6 +56,14 @@ public class PlayerMovement : MonoBehaviour
         rb.freezeRotation = true;
         move = InputSystem.actions.FindAction("Move");
         jump = InputSystem.actions.FindAction("Jump");
+    }
+
+    void NormalizeScale()
+    {
+        foreach (GameObject go in gameObjectsScaleNormalization)
+        {
+            normalizedScale *= go.transform.localScale.y;
+        }
     }
 
     void FixedUpdate()
@@ -72,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
         // Getting movement and calculating velocity from input
         Vector3 movement = new Vector3(horizontalInput, 0, verticalInput);
         movement = RotateVector3ToCameraSpace(movement);
-        Vector3 velocity = movement * moveSpeed * transform.localScale.y * 10;
+        Vector3 velocity = movement * moveSpeed * normalizedScale * 10;
 
         // Apply velocity to the player
         Vector3 localVelocity = transform.InverseTransformDirection(velocity);
@@ -93,34 +103,42 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotate, rotationSpeed * 360 * Time.fixedDeltaTime);
         }
     }
+
+    private void OnDrawGizmos()
+    {
+        float normalizedGroundCheckRadius = groundCheckRadius * normalizedScale; 
+        // Draw the sphere at the transform's position
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, normalizedGroundCheckRadius);
+    }
     
     void Jump()
     {
-        Vector3 currentScale = transform.localScale;
-        float normalizedGroundCheckRadius = groundCheckRadius * currentScale.y;
+        float normalizedGroundCheckRadius = groundCheckRadius * normalizedScale;
             
         // Check if player is on ground
         isGrounded = Physics.SphereCast(transform.position, 0f, Vector3.down, out RaycastHit hit, normalizedGroundCheckRadius, groundLayer);
+        Debug.Log(isGrounded);
         
         // Jump if one condition is met
-        if ((canJump && jump.IsPressed()) || (canJump && currentJumpBufferTime > 0) || (canJump && currentFallingTime < jumpCoyoteTime && jump.IsPressed()))
+        if ((canJump && jump.IsPressed()) || (canJump && currentJumpBufferTime > 0))
         {
             isJumping = true;
             canJump = false;
             currentJumpBufferTime = 0.0f;
-            float normalizedJumpForce = jumpForce * 10 * currentScale.y;
+            float normalizedJumpForce = jumpForce * normalizedScale * 10;
             rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
             rb.AddForce(Vector3.up * normalizedJumpForce, ForceMode.Impulse);
-        } 
+        }
         // Reset jump conditions
-        else if (isGrounded)
+        if (isGrounded)
         {
             isJumping = false;
             canJump = true;
             isFalling = false;
             currentFallingTime = 0;
         }
-        // Falling script if the player is not on the ground
+        // Falling function if the player is not on the ground
         if (!isGrounded) {
             Fall();
         }
@@ -129,13 +147,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Fall()
     {
-        Vector3 currentScale = transform.localScale;
-
+        isFalling = true;
         // Coyote time
         currentFallingTime += Time.fixedDeltaTime;
         if (canJump && currentFallingTime > jumpCoyoteTime)
         {
-            isFalling = true;
             canJump = false;
         }
         
@@ -146,7 +162,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Apply gravity
-        float normalizedGravity = gravity * currentScale.y * 10;
+        float normalizedGravity = gravity * normalizedScale * 10;
         rb.AddForce(Vector3.down * normalizedGravity, ForceMode.Acceleration);
     }
 
