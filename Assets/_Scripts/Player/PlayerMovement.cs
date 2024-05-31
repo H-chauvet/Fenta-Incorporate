@@ -12,10 +12,22 @@ public class PlayerMovement : MonoBehaviour
     public float rotationSpeed = 1f;
     public float jumpForce = 1f;
     public LayerMask groundLayer;
-    public float jumpBufferTime = 0.2f;
-    public float jumpCoyoteTime = 0.2f;
+    public float jumpBufferTime = 0.1f;
+    public float jumpCoyoteTime = 0.1f;
+
+
+
+    private bool canJump = true;
+    // private float currentJumpPressedTime = 0f;
+    // private float maxJumpPressedTime = 0.2f;
+    private float currentFallingTime = 0f;
+    private float currentJumpBufferTime = 0f;
+    public float gravity = 9.8f;
+
+
 
     [HideInInspector] public bool isJumping;
+    [HideInInspector] public bool isFalling;
     [HideInInspector] public bool isWalking;
     
     private float groundCheckRadius = 0.1f;
@@ -30,6 +42,11 @@ public class PlayerMovement : MonoBehaviour
 
 
     private void Start()
+    {
+        AttachComponents();
+    }
+    
+    void AttachComponents()
     {
         if (Camera.main != null)
             _mainCameraTransform = Camera.main.transform;
@@ -47,44 +64,93 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
+        // Get input from player
         Vector2 input_vector = move.ReadValue<Vector2>();
         float horizontalInput = input_vector.x;
         float verticalInput = input_vector.y;
 
+        // Getting movement and calculating velocity from input
         Vector3 movement = new Vector3(horizontalInput, 0, verticalInput);
         movement = RotateVector3ToCameraSpace(movement);
-        Vector3 velocity = movement * moveSpeed;
+        Vector3 velocity = movement * moveSpeed * transform.localScale.y * 10;
 
+        // Apply velocity to the player
         Vector3 localVelocity = transform.InverseTransformDirection(velocity);
         localVelocity.y = rb.velocity.y;
         isWalking = localVelocity != Vector3.zero ? true : false;
         rb.velocity = transform.TransformDirection(localVelocity);
-        Rotation(movement);
-    }
-    
-    void Jump()
-    {
-        Vector3 currentScale = transform.localScale;
-        float normalizedGroundCheckRadius = groundCheckRadius * currentScale.y;
 
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, normalizedGroundCheckRadius, groundLayer);
-        isJumping = isGrounded ? false : true;
-        if (isGrounded && jump.IsPressed())
-        {
-            float normalizedJumpForce = jumpForce * 20 * currentScale.y;
-            rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-            rb.AddForce(Vector3.up * normalizedJumpForce, ForceMode.Impulse);
-        }
+        // Rotate player
+        Rotation(movement);
     }
 
     void Rotation(Vector3 movement)
     {
+        // Rotate player to the direction of movement
         if (movement.x != 0 || movement.z != 0)
         {
             Quaternion toRotate = Quaternion.LookRotation(new Vector3(movement.x, 0, movement.z));
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotate, rotationSpeed * 360 * Time.fixedDeltaTime);
         }
     }
+    
+    void Jump()
+    {
+        Vector3 currentScale = transform.localScale;
+        float normalizedGroundCheckRadius = groundCheckRadius * currentScale.y;
+            
+        // Check if player is on ground
+        isGrounded = Physics.SphereCast(transform.position, 0f, Vector3.down, out RaycastHit hit, normalizedGroundCheckRadius, groundLayer);
+        
+        // Jump if one condition is met
+        if ((canJump && jump.IsPressed()) || (canJump && currentJumpBufferTime > 0) || (canJump && currentFallingTime < jumpCoyoteTime && jump.IsPressed()))
+        {
+            isJumping = true;
+            canJump = false;
+            currentJumpBufferTime = 0.0f;
+            float normalizedJumpForce = jumpForce * 10 * currentScale.y;
+            rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+            rb.AddForce(Vector3.up * normalizedJumpForce, ForceMode.Impulse);
+        } 
+        // Reset jump conditions
+        else if (isGrounded)
+        {
+            isJumping = false;
+            canJump = true;
+            isFalling = false;
+            currentFallingTime = 0;
+        }
+        // Falling script if the player is not on the ground
+        if (!isGrounded) {
+            Fall();
+        }
+        
+    }
+
+    void Fall()
+    {
+        Vector3 currentScale = transform.localScale;
+
+        // Coyote time
+        currentFallingTime += Time.fixedDeltaTime;
+        if (canJump && currentFallingTime > jumpCoyoteTime)
+        {
+            isFalling = true;
+            canJump = false;
+        }
+        
+        // Jump buffer time
+        currentJumpBufferTime -= Time.fixedDeltaTime;
+        if (!canJump && jump.IsPressed()) {
+            currentJumpBufferTime = jumpBufferTime;
+        }
+
+        // Apply gravity
+        float normalizedGravity = gravity * currentScale.y * 10;
+        rb.AddForce(Vector3.down * normalizedGravity, ForceMode.Acceleration);
+    }
+
+    
 
     private Vector3 RotateVector3ToCameraSpace(Vector3 vector)
     {
