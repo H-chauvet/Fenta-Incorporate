@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
-    private Animator _animator;
-    private PlayerMovement _playerMovement;
+    public Animator _animator;
+    private PlayerMovement playerMovement;
     private static readonly int Jumping = Animator.StringToHash("Jumping");
     private static readonly int Walking = Animator.StringToHash("Walking");
     private static readonly int Falling = Animator.StringToHash("Falling");
 
     private void Awake()
     {
-        _playerMovement = GetComponent<PlayerMovement>();
+        playerMovement = GetComponent<PlayerMovement>();
         PlayerSwitchScript.CharacterSwitch += OnCharacterSwitch;
     }
 
@@ -21,9 +21,8 @@ public class PlayerAnimation : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(_animator);
-        _animator.SetBool(Jumping, _playerMovement.isJumping);
-        _animator.SetBool(Walking, _playerMovement.isWalking);
-        _animator.SetBool(Falling, _playerMovement.isFalling);
+        _animator.SetBool(Jumping, playerMovement.isJumping);
+        _animator.SetBool(Walking, playerMovement.isWalking);
+        _animator.SetBool(Falling, playerMovement.isFalling);
     }
 }
