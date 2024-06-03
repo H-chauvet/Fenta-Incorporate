@@ -15,8 +15,6 @@ public class PlayerMovement : MonoBehaviour
     public float jumpBufferTime = 0.1f;
     public float jumpCoyoteTime = 0.1f;
 
-    [SerializeField] private Transform monstersTransform;
-
     private bool canJump = true;
     // private float currentJumpPressedTime = 0f;
     // private float maxJumpPressedTime = 0.2f;
@@ -24,13 +22,16 @@ public class PlayerMovement : MonoBehaviour
     private float currentJumpBufferTime = 0f;
     public float gravity = 9.8f;
 
+    public List<GameObject> gameObjectsScaleNormalization = new List<GameObject>();
+    private float normalizedScale = 1f;
+
 
 
     [HideInInspector] public bool isJumping;
     [HideInInspector] public bool isFalling;
     [HideInInspector] public bool isWalking;
     
-    private float groundCheckRadius = 0.1f;
+    public float groundCheckRadius = 0.1f;
     private InputAction move;
     private InputAction jump;
     private Rigidbody rb;
@@ -39,11 +40,10 @@ public class PlayerMovement : MonoBehaviour
     private Transform _mainCameraTransform;
     private Vector3 _mainCameraForward;
 
-
-
     private void Start()
     {
         AttachComponents();
+        NormalizeScale();
     }
     
     void AttachComponents()
@@ -54,6 +54,18 @@ public class PlayerMovement : MonoBehaviour
         rb.freezeRotation = true;
         move = InputSystem.actions.FindAction("Move");
         jump = InputSystem.actions.FindAction("Jump");
+    }
+
+    void NormalizeScale()
+    {
+        if (!gameObjectsScaleNormalization.Contains(gameObject))
+        {
+            gameObjectsScaleNormalization.Add(gameObject);
+        }
+        foreach (GameObject go in gameObjectsScaleNormalization)
+        {
+            normalizedScale *= go.transform.localScale.y;
+        }
     }
 
     void FixedUpdate()
@@ -72,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
         // Getting movement and calculating velocity from input
         Vector3 movement = new Vector3(horizontalInput, 0, verticalInput);
         movement = RotateVector3ToCameraSpace(movement);
-        Vector3 velocity = movement * moveSpeed * transform.localScale.y * 10;
+        Vector3 velocity = movement * moveSpeed * normalizedScale * 10;
 
         // Apply velocity to the player
         Vector3 localVelocity = transform.InverseTransformDirection(velocity);
@@ -90,37 +102,37 @@ public class PlayerMovement : MonoBehaviour
         if (movement.x != 0 || movement.z != 0)
         {
             Quaternion toRotate = Quaternion.LookRotation(new Vector3(movement.x, 0, movement.z));
-            monstersTransform.rotation = Quaternion.RotateTowards(monstersTransform.rotation, toRotate, rotationSpeed * 360 * Time.fixedDeltaTime);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotate, rotationSpeed * 360 * Time.fixedDeltaTime);
         }
     }
     
     void Jump()
     {
-        Vector3 currentScale = transform.localScale;
-        float normalizedGroundCheckRadius = groundCheckRadius * currentScale.y;
-            
-        // Check if player is on ground
-        isGrounded = Physics.SphereCast(transform.position, 0f, Vector3.down, out RaycastHit hit, normalizedGroundCheckRadius, groundLayer);
+        float normalizedGroundCheckRadius = groundCheckRadius * normalizedScale;
+
+        Collider[] colliders = Physics.OverlapSphere(transform.position, normalizedGroundCheckRadius, groundLayer, QueryTriggerInteraction.Ignore);
+        // Debug.Log(colliders.Length);
+        isGrounded = colliders.Length > 0;
         
         // Jump if one condition is met
-        if ((canJump && jump.IsPressed()) || (canJump && currentJumpBufferTime > 0) || (canJump && currentFallingTime < jumpCoyoteTime && jump.IsPressed()))
+        if ((canJump && jump.IsPressed()) || (canJump && currentJumpBufferTime > 0))
         {
             isJumping = true;
             canJump = false;
             currentJumpBufferTime = 0.0f;
-            float normalizedJumpForce = jumpForce * 10 * currentScale.y;
+            float normalizedJumpForce = jumpForce * normalizedScale * 10;
             rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
             rb.AddForce(Vector3.up * normalizedJumpForce, ForceMode.Impulse);
-        } 
+        }
         // Reset jump conditions
-        else if (isGrounded)
+        if (isGrounded)
         {
             isJumping = false;
             canJump = true;
             isFalling = false;
             currentFallingTime = 0;
         }
-        // Falling script if the player is not on the ground
+        // Falling function if the player is not on the ground
         if (!isGrounded) {
             Fall();
         }
@@ -130,14 +142,10 @@ public class PlayerMovement : MonoBehaviour
     void Fall()
     {
         isFalling = true;
-        
-        Vector3 currentScale = transform.localScale;
-
         // Coyote time
         currentFallingTime += Time.fixedDeltaTime;
         if (canJump && currentFallingTime > jumpCoyoteTime)
         {
-            isFalling = true;
             canJump = false;
         }
         
@@ -148,7 +156,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Apply gravity
-        float normalizedGravity = gravity * currentScale.y * 10;
+        float normalizedGravity = gravity * normalizedScale * 10;
         rb.AddForce(Vector3.down * normalizedGravity, ForceMode.Acceleration);
     }
 
