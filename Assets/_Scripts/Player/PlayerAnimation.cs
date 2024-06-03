@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
-    public Animator _animator;
+    [HideInInspector] public Animator _animator;
     private PlayerMovement playerMovement;
     private static readonly int Jumping = Animator.StringToHash("Jumping");
     private static readonly int Walking = Animator.StringToHash("Walking");

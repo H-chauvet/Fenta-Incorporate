@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1627349616092817400}
   - component: {fileID: 1556103377591038394}
   - component: {fileID: -5870827374822447988}
+  - component: {fileID: 3430054392517380222}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -75,11 +76,12 @@ MonoBehaviour:
     m_Bits: 8
   jumpBufferTime: 0.1
   jumpCoyoteTime: 0.1
-  monstersTransform: {fileID: 2003705116351687552}
   gravity: 1
+  gameObjectsScaleNormalization: []
   isJumping: 0
   isFalling: 1
   isWalking: 0
+  groundCheckRadius: 0.1
 --- !u!136 &1627349616092817400
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -140,6 +142,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5dd5670541067d46aad5c8250909d2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 0}
+--- !u!114 &3430054392517380222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3950802934175938895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f03fcf13684f2384599c6bbc1a1ac4b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &6701912308323794763
