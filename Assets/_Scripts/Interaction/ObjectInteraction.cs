@@ -45,7 +45,7 @@ public class ObjectInteraction : MonoBehaviour, IInteractable
             return;
         }
         GameObject children = other.gameObject.transform.GetChild(playerSwitchScript.whichCharacter).gameObject;
-        
+        Debug.Log(children.tag);
         if (interactionMonster == MonsterType.All) {
             Interact();
         } 
@@ -57,15 +57,15 @@ public class ObjectInteraction : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (basicInteractionButton.triggered)
+        if (basicInteractionButton.IsPressed())
         {
             onBasicInteractEvent();
         }
-        if (mainInteractionButton.triggered)
+        if (mainInteractionButton.IsPressed())
         {
             onMainInteractEvent();
         }
-        if (secondaryInteractionButton.triggered)
+        if (secondaryInteractionButton.IsPressed())
         {
             onSecondaryInteractEvent();
         }
