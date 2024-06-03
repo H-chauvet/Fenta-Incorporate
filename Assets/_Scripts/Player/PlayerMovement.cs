@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public bool isFalling;
     [HideInInspector] public bool isWalking;
     
-    private float groundCheckRadius = 0.1f;
+    public float groundCheckRadius = 0.1f;
     private InputAction move;
     private InputAction jump;
     private Rigidbody rb;
@@ -39,8 +39,6 @@ public class PlayerMovement : MonoBehaviour
 
     private Transform _mainCameraTransform;
     private Vector3 _mainCameraForward;
-
-
 
     private void Start()
     {
@@ -60,6 +58,10 @@ public class PlayerMovement : MonoBehaviour
 
     void NormalizeScale()
     {
+        if (!gameObjectsScaleNormalization.Contains(gameObject))
+        {
+            gameObjectsScaleNormalization.Add(gameObject);
+        }
         foreach (GameObject go in gameObjectsScaleNormalization)
         {
             normalizedScale *= go.transform.localScale.y;
@@ -103,22 +105,14 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotate, rotationSpeed * 360 * Time.fixedDeltaTime);
         }
     }
-
-    private void OnDrawGizmos()
-    {
-        float normalizedGroundCheckRadius = groundCheckRadius * normalizedScale; 
-        // Draw the sphere at the transform's position
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, normalizedGroundCheckRadius);
-    }
     
     void Jump()
     {
         float normalizedGroundCheckRadius = groundCheckRadius * normalizedScale;
-            
-        // Check if player is on ground
-        isGrounded = Physics.SphereCast(transform.position, 0f, Vector3.down, out RaycastHit hit, normalizedGroundCheckRadius, groundLayer);
-        Debug.Log(isGrounded);
+
+        Collider[] colliders = Physics.OverlapSphere(transform.position, normalizedGroundCheckRadius, groundLayer, QueryTriggerInteraction.Ignore);
+        // Debug.Log(colliders.Length);
+        isGrounded = colliders.Length > 0;
         
         // Jump if one condition is met
         if ((canJump && jump.IsPressed()) || (canJump && currentJumpBufferTime > 0))
