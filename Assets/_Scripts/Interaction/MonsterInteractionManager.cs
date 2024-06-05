@@ -13,9 +13,12 @@ public class MonsterInteractionManager : MonoBehaviour
     private InputAction mainInteractionButton;
     private InputAction secondaryInteractionButton;
 
+    private PlayerAnimation _playerAnimation;
+
     // Start is called before the first frame update
     void Start()
     {
+        _playerAnimation = GetComponent<PlayerAnimation>();
         mainInteractionButton = InputSystem.actions.FindAction("Interact");
         secondaryInteractionButton = InputSystem.actions.FindAction("Interact");
     }
@@ -55,11 +58,11 @@ public class MonsterInteractionManager : MonoBehaviour
 
     void MainAbilityInteraction()
     {
-        monsterAbilities.MainAbilityInteraction();
+        monsterAbilities.MainAbilityInteraction(_playerAnimation._animator);
     }
 
     void SecondaryAbilityInteraction()
     {
-        monsterAbilities.SecondaryAbilityInteraction();
+        monsterAbilities.SecondaryAbilityInteraction(_playerAnimation._animator);
     }
 }
