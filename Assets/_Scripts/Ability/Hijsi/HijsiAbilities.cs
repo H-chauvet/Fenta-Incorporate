@@ -4,22 +4,25 @@ using UnityEngine;
 
 public class DashAbility : MonoBehaviour, IMonsterAbilities
 {
-    public float maxDashTime = 1.0f;
+    public float dashTime = 1.0f;
     public float dashSpeed = 10.0f;
-    public float dashStoppingSpeed = 0.1f;
+    public float dashCooldown = 2.0f;
 
     private float currentDashTime;
+    private float currentSpeed = 1.0f;
+
     private bool isDashing = false;
     private Vector3 moveDirection;
 
-    // Vitesse normale du joueur
-    public float normalSpeed = 5.0f;
-    private float currentSpeed;
+    private GameObject parent;
+
+    private float currentCooldownTime;
+    private bool canDash = true;
 
     void Start()
     {
-        currentDashTime = maxDashTime;
-        currentSpeed = normalSpeed;
+        parent = transform.parent.gameObject;
+        currentDashTime = dashTime;
     }
 
     void Update()
@@ -27,27 +30,40 @@ public class DashAbility : MonoBehaviour, IMonsterAbilities
         if (isDashing)
         {
             currentDashTime += Time.deltaTime;
-            if (currentDashTime < maxDashTime)
+            if (currentDashTime < dashTime)
             {
-                transform.Translate(moveDirection * dashSpeed * Time.deltaTime, Space.World);
+                parent.transform.Translate(moveDirection * dashSpeed * Time.deltaTime, Space.World);
             }
             else
             {
                 isDashing = false;
-                currentDashTime = maxDashTime;
+                currentDashTime = dashTime;
                 moveDirection = Vector3.zero;
-                currentSpeed = normalSpeed;
+                canDash = false;
+                currentCooldownTime = 0.0f;
             }
         }
         else
         {
-            transform.Translate(moveDirection * currentSpeed * Time.deltaTime, Space.World);
+            parent.transform.Translate(moveDirection * currentSpeed * Time.deltaTime, Space.World);
+
+            if (!canDash)
+            {
+                currentCooldownTime += Time.deltaTime;
+                if (currentCooldownTime >= dashCooldown)
+                {
+                    canDash = true;
+                }
+            }
         }
     }
 
     public void MainAbilityInteraction()
     {
-        Dash();
+        if (canDash)
+        {
+            Dash();
+        }
     }
 
     private void Dash()
@@ -56,8 +72,8 @@ public class DashAbility : MonoBehaviour, IMonsterAbilities
 
         isDashing = true;
         currentDashTime = 0.0f;
-        moveDirection = transform.forward;
-        currentSpeed = dashSpeed; // Mettre à jour la vitesse du dash
+        moveDirection = parent.transform.forward;
+        currentSpeed = dashSpeed;
     }
 
     public void SecondaryAbilityInteraction()
