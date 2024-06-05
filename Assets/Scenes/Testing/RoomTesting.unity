@@ -417,6 +417,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 344781605313741427, guid: 826d8e5b36656eb4d86db63efe8562b1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3859074865672516277, guid: 826d8e5b36656eb4d86db63efe8562b1, type: 3}
       propertyPath: jumpForce
       value: 2
@@ -1300,9 +1304,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e7f1511c71de4942a08d20be37bb719, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDashTime: 0.2
-  dashSpeed: 2
+  maxDashTime: 0.3
+  dashSpeed: 3
   dashStoppingSpeed: 0.1
+  normalSpeed: 1
 --- !u!4 &1192966412 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2626282512604322370, guid: b7663a31b0fe09246956d1c72f87ba9a, type: 3}
