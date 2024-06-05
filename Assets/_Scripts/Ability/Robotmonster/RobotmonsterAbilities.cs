@@ -65,12 +65,12 @@ public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
         }
     }
 
-    public void MainAbilityInteraction(Animator animator)
+    public void MainAbilityInteraction()
     {
         LightningPower(parent);
     }
 
-    public void SecondaryAbilityInteraction(Animator animator)
+    public void SecondaryAbilityInteraction()
     {
         WaterPower();
     }

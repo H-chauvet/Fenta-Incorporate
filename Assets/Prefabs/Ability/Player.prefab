@@ -4397,6 +4397,7 @@ MonoBehaviour:
   - {fileID: 344781605313741427}
   - {fileID: 4562712922322635990}
   - {fileID: 1814073533140374894}
+  virtualCamera: {fileID: 0}
   whichCharacter: 0
 --- !u!114 &3859074865672516277
 MonoBehaviour:
@@ -4415,7 +4416,7 @@ MonoBehaviour:
   jumpForce: 5
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   jumpBufferTime: 0.1
   jumpCoyoteTime: 0.1
   gravity: 9.8
