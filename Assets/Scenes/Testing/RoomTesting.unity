@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 4773.2173, g: 3104.397, b: 2292.8596, a: 1}
+  m_IndirectSpecularColor: {r: 4776.2427, g: 3106.4517, b: 2293.887, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -158,8 +158,8 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 1192966412}
-  m_Follow: {fileID: 1192966412}
+  m_LookAt: {fileID: 0}
+  m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60.000004
     OrthographicSize: 5
@@ -662,11 +662,6 @@ Transform:
   - {fileID: 708489101}
   m_Father: {fileID: 1754257766}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &666597073 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3918315310510733990, guid: 4d5954527e42ccc41bc72135c16fbc99, type: 3}
-  m_PrefabInstance: {fileID: 2469005339884917016}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &708489100
 GameObject:
   m_ObjectHideFlags: 3
@@ -1202,11 +1197,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1192966412 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2626282512604322370, guid: b7663a31b0fe09246956d1c72f87ba9a, type: 3}
-  m_PrefabInstance: {fileID: 2791114807756925684}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1296830883
 GameObject:
   m_ObjectHideFlags: 3
@@ -1483,8 +1473,8 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 1978109901}
-  m_Follow: {fileID: 1978109901}
+  m_LookAt: {fileID: 0}
+  m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60.000004
     OrthographicSize: 5
@@ -1562,8 +1552,8 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 666597073}
-  m_Follow: {fileID: 666597073}
+  m_LookAt: {fileID: 0}
+  m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60.000004
     OrthographicSize: 5
@@ -2403,11 +2393,6 @@ Transform:
   - {fileID: 1555031321}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1978109901 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 353528079459074608, guid: 7423039cffaaa694d95a9acbf5afcbda, type: 3}
-  m_PrefabInstance: {fileID: 8848612085039245101}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2030772545
 GameObject:
   m_ObjectHideFlags: 3
@@ -2657,7 +2642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7375715842912704316, guid: 680bb357057cf604d811147c456f92f3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.92
+      value: 1.414
       objectReference: {fileID: 0}
     - target: {fileID: 7375715842912704316, guid: 680bb357057cf604d811147c456f92f3, type: 3}
       propertyPath: m_LocalRotation.w
