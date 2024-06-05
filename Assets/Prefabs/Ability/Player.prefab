@@ -4416,7 +4416,7 @@ MonoBehaviour:
   jumpForce: 5
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   jumpBufferTime: 0.1
   jumpCoyoteTime: 0.1
   gravity: 9.8
