@@ -7,6 +7,7 @@ public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
     public float dashTime = 1.0f;
     public float dashSpeed = 10.0f;
     public float dashCooldown = 2.0f;
+    public float angleDirectionOffset = 30f;
 
     private float currentDashTime;
     private bool isDashing = false;
@@ -17,9 +18,21 @@ public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
     private float currentCooldownTime;
     private bool canDash = true;
 
+    private Rigidbody parentRb;
+
+
+
+    [HideInInspector]
+    public bool isDashedControlled;
+    private bool isSpecialDashing = false;
+    private Vector3 initialPlayerPos;
+    private Vector3 targetPlayerPos;
+    private Vector3 targetDirection;
+
     void Start()
     {
         parent = transform.parent.gameObject;
+        parentRb = parent.GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -32,17 +45,69 @@ public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
         {
             HandleCooldown();
         }
+        if (isSpecialDashing)
+        {
+            HandleSpecialDash();
+        }
     }
 
     public void MainAbilityInteraction()
     {
-        Dash();
+        if (!isDashedControlled) 
+        {
+            Dash();
+        }
     }
 
     public void SecondaryAbilityInteraction()
     {
         // Special dash
     }
+
+    private void HandleSpecialDash()
+    {
+        Vector3 currentPlayerPos = parent.transform.position;
+        float dotProduct = Vector3.Dot(targetDirection, targetPlayerPos - currentPlayerPos);
+
+
+        if (dotProduct >= 0)
+        {
+             parent.transform.Translate(targetDirection * dashSpeed * Time.deltaTime, Space.World);
+        }
+        else
+        {
+             isSpecialDashing = false;
+            moveDirection = Vector3.zero;
+            parentRb.constraints &= ~RigidbodyConstraints.FreezePositionY;
+        }
+    }
+
+    public void SpecialDash(GameObject other)
+    {
+
+        if (isSpecialDashing) return;
+
+        initialPlayerPos = parent.transform.position;
+        targetPlayerPos = other.transform.position;
+        Vector3 playerForward = parent.transform.forward;
+        targetDirection = (targetPlayerPos - initialPlayerPos).normalized;
+
+        float dotProduct = Vector3.Dot(playerForward, targetDirection);
+        float angleThresholdRadians = angleDirectionOffset * Mathf.Deg2Rad;
+        float angleBetween = Mathf.Acos(dotProduct);
+
+        if (angleBetween <= angleThresholdRadians)
+        {
+            if (parentRb != null)
+            {
+                parentRb.constraints |= RigidbodyConstraints.FreezePositionY;
+            }
+            isSpecialDashing = true;
+        }
+    }
+
+
+
 
     private void Dash()
     {
@@ -58,6 +123,11 @@ public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
         currentDashTime += Time.deltaTime;
         if (currentDashTime < dashTime)
         {
+    
+            if (parentRb != null)
+            {
+                parentRb.constraints |= RigidbodyConstraints.FreezePositionY;
+            }
             parent.transform.Translate(moveDirection * dashSpeed * Time.deltaTime, Space.World);
         }
         else
@@ -66,6 +136,8 @@ public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
             moveDirection = Vector3.zero;
             canDash = false;
             currentCooldownTime = 0.0f;
+            parentRb.constraints &= ~RigidbodyConstraints.FreezePositionY;
+
         }
     }
 
