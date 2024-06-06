@@ -56,6 +56,10 @@ public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
         if (!isDashedControlled) 
         {
             Dash();
+        } else
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+            parent.transform.rotation = Quaternion.Slerp(parent.transform.rotation, targetRotation, Time.deltaTime * 5);
         }
     }
 
@@ -102,6 +106,7 @@ public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
             {
                 parentRb.constraints |= RigidbodyConstraints.FreezePositionY;
             }
+            
             isSpecialDashing = true;
         }
     }
