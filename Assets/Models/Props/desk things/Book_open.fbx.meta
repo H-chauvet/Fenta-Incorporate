@@ -7,12 +7,22 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: lambert24
+    second: {fileID: 2100000, guid: fe0f04d6f017f3147a728d0f001d2d50, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: lambert4
     second: {fileID: 2100000, guid: fe0f04d6f017f3147a728d0f001d2d50, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: standardSurface1
+    second: {fileID: 2100000, guid: 98b6528787bbab742bd6a89c141e45e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: standardSurface27
     second: {fileID: 2100000, guid: 98b6528787bbab742bd6a89c141e45e8, type: 2}
   materials:
     materialImportMode: 2
