@@ -9,18 +9,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: d23b2d3bce9c92c4e8e10f6dcc390f20, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.9179723
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d23b2d3bce9c92c4e8e10f6dcc390f20, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.017
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d23b2d3bce9c92c4e8e10f6dcc390f20, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.282
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d23b2d3bce9c92c4e8e10f6dcc390f20, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
@@ -54,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0c817d1d2a3cc1249a3daeebb9a3bfa6, type: 2}
     - target: {fileID: 919132149155446097, guid: d23b2d3bce9c92c4e8e10f6dcc390f20, type: 3}
       propertyPath: m_Name
-      value: paper (3)
+      value: Drawing_Robotmonster
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
