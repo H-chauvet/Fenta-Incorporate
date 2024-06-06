@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 4776.8247, g: 3106.69, b: 2294.0237, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -501,6 +501,7 @@ GameObject:
   - component: {fileID: 336993423}
   - component: {fileID: 336993422}
   - component: {fileID: 336993421}
+  - component: {fileID: 336993426}
   - component: {fileID: 336993420}
   - component: {fileID: 336993425}
   m_Layer: 0
@@ -531,7 +532,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1110509722}
         m_TargetAssemblyTypeName: HijsiAbilities, Assembly-CSharp
-        m_MethodName: ControlDash
+        m_MethodName: SpecialDash
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2116532664}
@@ -652,6 +653,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 3, z: 10}
   m_Center: {x: 0, y: 1.5, z: 0}
+--- !u!114 &336993426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336993419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f37157b984d1576438d8b7269130a260, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hijsi: {fileID: 1110509720}
 --- !u!1 &424079174
 GameObject:
   m_ObjectHideFlags: 0
@@ -1470,6 +1484,7 @@ MonoBehaviour:
   dashTime: 1
   dashSpeed: 1
   dashCooldown: 2
+  angleDirectionOffset: 30
   isDashedControlled: 0
 --- !u!4 &1192966412 stripped
 Transform:
@@ -2856,6 +2871,7 @@ GameObject:
   - component: {fileID: 2116532669}
   - component: {fileID: 2116532668}
   - component: {fileID: 2116532667}
+  - component: {fileID: 2116532671}
   - component: {fileID: 2116532666}
   - component: {fileID: 2116532670}
   m_Layer: 0
@@ -2901,7 +2917,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1110509722}
         m_TargetAssemblyTypeName: HijsiAbilities, Assembly-CSharp
-        m_MethodName: ControlDash
+        m_MethodName: SpecialDash
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 336993419}
@@ -3007,6 +3023,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 3, z: 10}
   m_Center: {x: -0.0000009536743, y: 1.5, z: 0}
+--- !u!114 &2116532671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116532664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f37157b984d1576438d8b7269130a260, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hijsi: {fileID: 1110509720}
 --- !u!1001 &2469005339884917016
 PrefabInstance:
   m_ObjectHideFlags: 0
