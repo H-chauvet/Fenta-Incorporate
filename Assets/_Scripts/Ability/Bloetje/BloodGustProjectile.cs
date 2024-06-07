@@ -32,7 +32,7 @@ public class BloodGustProjectile : MonoBehaviour
             {
                 Rigidbody projectileRb = transform.GetComponent<Rigidbody>();
                 Vector3 direction = projectileRb ? projectileRb.velocity.normalized : Vector3.zero;
-                targetRb.AddForce(direction * 2000 * strength, ForceMode.Impulse);
+                targetRb.AddForce(direction * targetRb.mass * 2 * strength, ForceMode.Impulse);
             }
         }
         
