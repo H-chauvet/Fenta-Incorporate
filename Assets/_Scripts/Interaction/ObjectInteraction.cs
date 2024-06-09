@@ -13,6 +13,8 @@ public class ObjectInteraction : MonoBehaviour, IInteractable
 
     public MonsterType interactionMonster = MonsterType.All;
 
+    private PlayerSwitchScript playerSwitchScript;
+
 
     [SerializeField] private UnityEvent _basicInteractEvent;
     [SerializeField] private UnityEvent _mainInteractEvent;
@@ -37,9 +39,13 @@ public class ObjectInteraction : MonoBehaviour, IInteractable
         secondaryInteractionButton = InputSystem.actions.FindAction("Interact");
     }
 
+    public void OnTriggerEnter(Collider other) 
+    {
+        playerSwitchScript = other.gameObject.GetComponent<PlayerSwitchScript>();
+    }
+
     public void OnTriggerStay(Collider other)
-    {   
-        PlayerSwitchScript playerSwitchScript = other.gameObject.GetComponent<PlayerSwitchScript>();
+    {
         if (playerSwitchScript == null)
         {
             return;
@@ -53,6 +59,11 @@ public class ObjectInteraction : MonoBehaviour, IInteractable
         {
             Interact();
         }
+    }
+
+    public void OnTriggerLeave(Collider other)
+    {
+        playerSwitchScript = null;
     }
 
     public void Interact()

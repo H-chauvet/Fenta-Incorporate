@@ -36,11 +36,13 @@ public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
     private bool waterPowerReady = true;
 
     private GameObject parent;
+    private Rigidbody parentRb;
 
     // Start is called before the first frame update
     void Start()
     {
         parent = transform.parent.gameObject;
+        parentRb = parent.GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -67,7 +69,7 @@ public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
 
     public void MainAbilityInteraction()
     {
-        LightningPower(parent);
+        LightningPower(parent.transform);
     }
 
     public void SecondaryAbilityInteraction()
@@ -75,14 +77,14 @@ public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
         WaterPower();
     }
 
-    public void LightningPower(GameObject newLocation)
+    public void LightningPower(Transform newLocation)
     {
         if (lightningPowerReady == false)
         {
             return;
         }
         lightningPowerReady = false;
-        parent.transform.position = newLocation.transform.position;
+        parent.transform.position = newLocation.position;
     }
 
     public void WaterPower()
@@ -95,7 +97,6 @@ public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
         
         Vector3 localOffset = parent.transform.position + parent.transform.TransformDirection(waterProjectilePositionOffset);
 
-        Rigidbody parentRb = parent.GetComponent<Rigidbody>();
         Vector3 parentVelocity = parentRb != null ? parentRb.velocity : Vector3.zero;
 
         int randomAmount = Random.Range(waterProjectileMinAmount, waterProjectileMaxAmount);
