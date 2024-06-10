@@ -8,12 +8,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lambert11
-    second: {fileID: 2100000, guid: c9549589fe1be7345b6769c4eb7518e0, type: 2}
+    second: {fileID: 2100000, guid: 1342d7c0b786d58488674848248fc9f4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: phong1
-    second: {fileID: 2100000, guid: e91ca9506b04da5489be3ff7055ab26c, type: 2}
+    second: {fileID: 2100000, guid: 0f53e56b876aa164ea891a731f9ae551, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -23,7 +23,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: standardSurface9
-    second: {fileID: 2100000, guid: 3eaa7c9790bbaa946ab34d803a6159b2, type: 2}
+    second: {fileID: 2100000, guid: 30e86d42b1866394ba513ed25545bf14, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -87,7 +87,7 @@ ModelImporter:
     secondaryUVMinLightmapResolution: 40
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
     strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60

@@ -67,7 +67,7 @@ public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
 
     public void MainAbilityInteraction(Animator animator)
     {
-        LightningPower(parent);
+        //LightningPower(parent);
     }
 
     public void SecondaryAbilityInteraction(Animator animator)
@@ -81,6 +81,7 @@ public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
         {
             return;
         }
+
         lightningPowerReady = false;
         parent.transform.position = newLocation.transform.position;
     }

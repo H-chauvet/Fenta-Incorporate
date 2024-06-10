@@ -49,7 +49,7 @@ public class ObjectInteraction : MonoBehaviour, IInteractable
         if (interactionMonster == MonsterType.All) {
             Interact();
         } 
-        else if (children.tag == monsterTags[interactionMonster])
+        else if (children.CompareTag(monsterTags[interactionMonster]))
         {
             Interact();
         }
