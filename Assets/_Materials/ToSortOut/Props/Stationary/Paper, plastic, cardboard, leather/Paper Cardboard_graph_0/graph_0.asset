@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AssetPath: Assets/_Materials/ToSortOut/Props/Stationary/Paper, plastic, cardboard,
     leather/Paper Cardboard.sbsar
-  RawData: {fileID: 0}
+  RawData: {fileID: -244192453324840774, guid: 04ad64c86e015eb4cbd2cd65c76971f4, type: 3}
   Name: graph_0
   IsRoot: 1
   FlagedForDelete: 0
@@ -74,7 +74,7 @@ MonoBehaviour:
       Index: 1
       Type: 8
       Channel: baseColor
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: b25bc9ff70c190048a38639674d3a29a, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -90,7 +90,7 @@ MonoBehaviour:
       Index: 2
       Type: 8
       Channel: normal
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: d7798f37be3f6b042ae78a16c6654529, type: 3}
     sRGB: 0
     IsVirtual: 0
     IsAlphaAssignable: 0
@@ -186,7 +186,7 @@ MonoBehaviour:
       Index: 8
       Type: 8
       Channel: height
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 4c0ee03413f4ab043a617881d7fb23a0, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -202,7 +202,7 @@ MonoBehaviour:
       Index: 9
       Type: 8
       Channel: mask
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 04c9eecf9d92cbd4e9f95c26f4d39181, type: 3}
     sRGB: 0
     IsVirtual: 1
     IsAlphaAssignable: 0
@@ -219,11 +219,11 @@ MonoBehaviour:
   IsRuntimeOnly: 0
   GenerateAllOutputs: 0
   GenerateAllMipmaps: 1
-  OutputMaterial: {fileID: 0}
+  OutputMaterial: {fileID: 2100000, guid: c8e7a5f951e1b9647956446c91a65727, type: 2}
   DefaultPreset: " <sbspreset pkgurl=\"pkg://paper_cardboard\" label=\"\" >\n  <presetinput
     identifier=\"$outputsize\" uid=\"2212358298\" type=\"8\" value=\"10,10\" />\n
     </sbspreset>\n"
-  MaterialShader: 
+  MaterialShader: HDRP/Lit
   RenderTextures: 0
   OutputRemaped: 0
   Presets: []

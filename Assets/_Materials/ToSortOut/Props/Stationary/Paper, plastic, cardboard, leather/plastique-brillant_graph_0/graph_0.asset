@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AssetPath: Assets/_Materials/ToSortOut/Props/Stationary/Paper, plastic, cardboard,
     leather/plastique-brillant.sbsar
-  RawData: {fileID: 0}
+  RawData: {fileID: -244192453324840774, guid: 12b8371e95d05834b8ef91564de30b9d, type: 3}
   Name: graph_0
   IsRoot: 1
   FlagedForDelete: 0
@@ -35,7 +35,7 @@ MonoBehaviour:
       Index: 0
       Type: 8
       Channel: baseColor
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: b284572929290a142a5b7d000d1edbbf, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -51,7 +51,7 @@ MonoBehaviour:
       Index: 1
       Type: 8
       Channel: normal
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 83a9f9da8a047364aaa2e52fc2f73612, type: 3}
     sRGB: 0
     IsVirtual: 0
     IsAlphaAssignable: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
       Index: 4
       Type: 8
       Channel: height
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: b407fa3a00f7e0049a368ad531389717, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -131,7 +131,7 @@ MonoBehaviour:
       Index: 6
       Type: 8
       Channel: mask
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 08dc2338fc364024398a7183c20eb913, type: 3}
     sRGB: 0
     IsVirtual: 1
     IsAlphaAssignable: 0
@@ -148,11 +148,11 @@ MonoBehaviour:
   IsRuntimeOnly: 0
   GenerateAllOutputs: 0
   GenerateAllMipmaps: 1
-  OutputMaterial: {fileID: 0}
+  OutputMaterial: {fileID: 2100000, guid: 1eefd67c57e65e941b1a0d22d45e8fac, type: 2}
   DefaultPreset: " <sbspreset pkgurl=\"pkg://Plastique-brillant\" label=\"\" >\n 
     <presetinput identifier=\"$outputsize\" uid=\"2215208311\" type=\"8\" value=\"10,10\"
     />\n </sbspreset>\n"
-  MaterialShader: 
+  MaterialShader: HDRP/Lit
   RenderTextures: 0
   OutputRemaped: 0
   Presets: []

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AssetPath: Assets/_Materials/ToSortOut/Props/Stationary/Paper, plastic, cardboard,
     leather/Paper Grainy.sbsar
-  RawData: {fileID: 0}
+  RawData: {fileID: -244192453324840774, guid: d2a8413f4df5aa34f96f74d3ce7d93fe, type: 3}
   Name: graph_0
   IsRoot: 1
   FlagedForDelete: 0
@@ -81,7 +81,7 @@ MonoBehaviour:
       Index: 1
       Type: 8
       Channel: baseColor
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 5e4bbb0a8a049c54eaf271a5c5f0b71f, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -97,7 +97,7 @@ MonoBehaviour:
       Index: 2
       Type: 8
       Channel: normal
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: 3f28f5684e1d5cc4eb9373b6ce43bd71, type: 3}
     sRGB: 0
     IsVirtual: 0
     IsAlphaAssignable: 0
@@ -193,7 +193,7 @@ MonoBehaviour:
       Index: 8
       Type: 8
       Channel: height
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: b00fd335f4e83ef46bad78e1702e17fb, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -321,7 +321,7 @@ MonoBehaviour:
       Index: 16
       Type: 8
       Channel: mask
-    OutputTexture: {fileID: 0}
+    OutputTexture: {fileID: 2800000, guid: f6d24a45b5055e34e886699e99d9c58f, type: 3}
     sRGB: 0
     IsVirtual: 1
     IsAlphaAssignable: 0
@@ -338,11 +338,11 @@ MonoBehaviour:
   IsRuntimeOnly: 0
   GenerateAllOutputs: 0
   GenerateAllMipmaps: 1
-  OutputMaterial: {fileID: 0}
+  OutputMaterial: {fileID: 2100000, guid: 1342d7c0b786d58488674848248fc9f4, type: 2}
   DefaultPreset: " <sbspreset pkgurl=\"pkg://paper_grainy\" label=\"\" >\n  <presetinput
     identifier=\"$outputsize\" uid=\"3703095282\" type=\"8\" value=\"10,10\" />\n
     </sbspreset>\n"
-  MaterialShader: 
+  MaterialShader: HDRP/Lit
   RenderTextures: 0
   OutputRemaped: 0
   Presets: []
