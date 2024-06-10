@@ -8,5 +8,11 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/SampleSceneAssets/Scenes/SampleScene.unity
     guid: 3db1837cc97a95e4c98610966fac2b0b
+  - enabled: 1
+    path: Assets/Scenes/Testing/Under the bed testing.unity
+    guid: e3c91829a3b2bb048b690e621294fca9
+  - enabled: 1
+    path: Assets/Scenes/Testing/WardrobeBlockout.unity
+    guid: ad2499e8cbe3592489157105664ece28
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: e48cd292afa3b214c8efa85072b0cc63, type: 3}
