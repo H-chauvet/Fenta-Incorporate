@@ -58,14 +58,30 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2a3fec861f17f884f8140ddc102175ac, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -5643711960283403781}
+      addedObject: {fileID: 2184371863292682146}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2a3fec861f17f884f8140ddc102175ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7592279086205515256}
   m_SourcePrefab: {fileID: 100100000, guid: 2a3fec861f17f884f8140ddc102175ac, type: 3}
 --- !u!1 &333103128957046927 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2a3fec861f17f884f8140ddc102175ac, type: 3}
   m_PrefabInstance: {fileID: 602921968756551134}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &-5643711960283403781
+--- !u!114 &2184371863292682146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333103128957046927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be0cb648d0f5d84ca624a5f578d61bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorPaletteSO: {fileID: 11400000, guid: 753b1b636eb1fef45b9fad817a454da4, type: 2}
+--- !u!65 &7592279086205515256
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -1,27 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Playables;
 
 public class CameraTrigger : MonoBehaviour
 {
-    public GameObject cameraGameObject;
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            // Activate the Cinemachine camera GameObject
-            cameraGameObject.SetActive(true);
-        }
-    }
+    [SerializeField] private Animator cameraStateAnimator;
+    private static readonly int NextCamera = Animator.StringToHash("NextCamera");
 
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            // Deactivate the Cinemachine camera GameObject
-            cameraGameObject.SetActive(false);
+            cameraStateAnimator.SetTrigger(NextCamera);
         }
     }
 }
