@@ -327,10 +327,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bloetje
       objectReference: {fileID: 0}
-    - target: {fileID: 8862710047113457324, guid: 66baa8d2f61d98245b6fa5b61295790b, type: 3}
-      propertyPath: m_TagString
-      value: Character1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
