@@ -206,6 +206,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1117800524345825481}
+  - component: {fileID: 6034557412075812331}
   m_Layer: 0
   m_Name: Hijsi
   m_TagString: Character2
@@ -233,6 +234,23 @@ Transform:
   - {fileID: 6538093642997605166}
   m_Father: {fileID: 6374812353899371506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6034557412075812331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344781605313741427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e7f1511c71de4942a08d20be37bb719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashTime: 1
+  dashSpeed: 3
+  dashCooldown: 2
+  angleDirectionOffset: 30
+  isDashedControlled: 0
 --- !u!1 &445201737735496421
 GameObject:
   m_ObjectHideFlags: 0

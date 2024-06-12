@@ -9,6 +9,8 @@ public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
     public float dashCooldown = 2.0f;
     public float angleDirectionOffset = 30f;
 
+    public GameObject tornadoObject;
+
     private float currentDashTime;
     private bool isDashing = false;
     private Vector3 moveDirection;
@@ -28,6 +30,10 @@ public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
     private Vector3 initialPlayerPos;
     private Vector3 targetPlayerPos;
     private Vector3 targetDirection;
+
+    private float TornadoDuration = 1f;
+    private float TornadoCooldown = 3f;
+    private bool TornadoReady = true;
 
     void Start()
     {
@@ -49,6 +55,16 @@ public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
         {
             HandleSpecialDash();
         }
+
+        if (TornadoReady == false)
+        {
+            TornadoDuration -= Time.deltaTime;
+            if (TornadoDuration <= 0)
+            {
+                TornadoReady = true;
+                TornadoDuration = TornadoCooldown;
+            }
+        }
     }
 
     public void MainAbilityInteraction()
@@ -56,16 +72,12 @@ public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
         if (!isDashedControlled) 
         {
             Dash();
-        } else
-        {
-            Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
-            parent.transform.rotation = Quaternion.Slerp(parent.transform.rotation, targetRotation, Time.deltaTime * 5);
         }
     }
 
     public void SecondaryAbilityInteraction()
     {
-        // Special dash
+        Tornado();
     }
 
     private void HandleSpecialDash()
@@ -77,6 +89,9 @@ public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
         if (dotProduct >= 0)
         {
              parent.transform.Translate(targetDirection * dashSpeed * Time.deltaTime, Space.World);
+            Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+            parent.transform.rotation = targetRotation;
+
         }
         else
         {
@@ -108,6 +123,10 @@ public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
             }
             
             isSpecialDashing = true;
+        }
+         else
+        {
+            Dash();
         }
     }
 
@@ -156,5 +175,16 @@ public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
                 canDash = true;
             }
         }
+    }
+
+    private void Tornado()
+    {
+        if (TornadoReady == false)
+        {
+            return;
+        }
+        TornadoReady = false;
+        Vector3 forwardOffset = parent.transform.forward;
+        GameObject tornadoTemp = Instantiate(tornadoObject, parent.transform.position + forwardOffset, Quaternion.identity);
     }
 }
