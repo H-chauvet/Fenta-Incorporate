@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a10ef50d-60c1-416c-b6b1-52a0a2f9f553" name="Changes" comment="" />
+    <list default="true" id="a10ef50d-60c1-416c-b6b1-52a0a2f9f553" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Fenta-Incorporate/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fenta-Incorporate/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CharacterManager.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Ability/Robotmonster/RobotmonsterAbilities.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Ability/Robotmonster/RobotmonsterAbilities.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +39,7 @@
   "keyToString": {
     "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging designer-vitoldas",
+    "git-widget-placeholder": "designer-vitoldas",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
