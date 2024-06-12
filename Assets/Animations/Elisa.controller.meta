@@ -1,8 +1,14 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Animations/Elisa.controller.meta
 guid: acb83dc0917d4044c97747cbd7fcb0fb
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 9100000
+========
+guid: 602ba35a8ab350f4faa8c3c89e8ceb55
+PrefabImporter:
+  externalObjects: {}
+>>>>>>>> c96fb3e3620239413d595522cd44f72a14ec0342:Assets/Prefabs/Monsters/Monsters.prefab.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 

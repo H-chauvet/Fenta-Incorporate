@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Models/Props/blocks.meta
 guid: 08ee6205c39e5214b9e903c1aa6edce0
+========
+guid: 90780bede6ebddc49b2fd06317cfe381
+>>>>>>>> c96fb3e3620239413d595522cd44f72a14ec0342:Assets/Scripts/Player.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

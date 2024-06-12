@@ -1,8 +1,14 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Animations/Bloetje.controller.meta
 guid: 94a1c2599d03eab41aad142dce4ea714
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 9100000
+========
+guid: 7fd607451a472e449bd004344e4709c9
+PrefabImporter:
+  externalObjects: {}
+>>>>>>>> c96fb3e3620239413d595522cd44f72a14ec0342:Assets/Prefabs/Props/blocks/arch.prefab.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 

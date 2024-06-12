@@ -1,8 +1,15 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Animations/Robotmonster.controller.meta
 guid: df401cd92226b9c478cdf631d728fb8b
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 9100000
+========
+guid: c3abf1e469bc048489deb962774968b0
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+>>>>>>>> c96fb3e3620239413d595522cd44f72a14ec0342:Assets/Models/Props/blocks.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 

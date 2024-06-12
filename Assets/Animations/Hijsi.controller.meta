@@ -1,8 +1,15 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Animations/Hijsi.controller.meta
 guid: c99c1a0d2b8e60e48b876e767d5a464d
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 9100000
+========
+guid: bf7b53d2c3e51cd45b5720440aa40b3a
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+>>>>>>>> c96fb3e3620239413d595522cd44f72a14ec0342:Assets/Models/Props.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 
