@@ -11,6 +11,9 @@ public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
     // List of all the water projectiles that can be spawned randomly
     public List<GameObject> waterProjectile;
 
+    // List of all the spawn points for the water projectiles
+    public List<Transform> waterProjectileSpawnPoints;
+
     // Offset of the position of the water projectiles relative to the parent object orientation and position
     public Vector3 waterProjectilePositionOffset = new Vector3(0, 0, 0);
 
@@ -36,11 +39,13 @@ public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
     private bool waterPowerReady = true;
 
     private GameObject parent;
+    private Rigidbody parentRb;
 
     // Start is called before the first frame update
     void Start()
     {
         parent = transform.parent.gameObject;
+        parentRb = parent.GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -67,7 +72,7 @@ public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
 
     public void MainAbilityInteraction()
     {
-        LightningPower(parent);
+        LightningPower(parent.transform);
     }
 
     public void SecondaryAbilityInteraction()
@@ -75,14 +80,14 @@ public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
         WaterPower();
     }
 
-    public void LightningPower(GameObject newLocation)
+    public void LightningPower(Transform newLocation)
     {
         if (lightningPowerReady == false)
         {
             return;
         }
         lightningPowerReady = false;
-        parent.transform.position = newLocation.transform.position;
+        parent.transform.position = newLocation.position;
     }
 
     public void WaterPower()
@@ -92,27 +97,26 @@ public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
             return;
         }
         waterPowerReady = false;
-        
-        Vector3 localOffset = parent.transform.position + parent.transform.TransformDirection(waterProjectilePositionOffset);
 
-        Rigidbody parentRb = parent.GetComponent<Rigidbody>();
         Vector3 parentVelocity = parentRb != null ? parentRb.velocity : Vector3.zero;
 
-        int randomAmount = Random.Range(waterProjectileMinAmount, waterProjectileMaxAmount);
-
-        for (int i = 0; i < randomAmount; i++)
+        for (int i = 0; i < waterProjectileSpawnPoints.Count; i++)
         {
-            CreateWaterProjectile(localOffset, parentVelocity);
+            int randomAmount = Random.Range(waterProjectileMinAmount, waterProjectileMaxAmount);
+            for (int j = 0; j < randomAmount; j++)
+            {
+                CreateWaterProjectile(waterProjectileSpawnPoints[i], parentVelocity);
+            }
         }
     }
 
     // Create a water projectile with a random rotation and direction relative to the parent object orientation position and velocity
-    private void CreateWaterProjectile(Vector3 localOffset, Vector3 parentVelocity)
+    private void CreateWaterProjectile(Transform spawnPosition, Vector3 parentVelocity)
     {
         int randomProjectile = Random.Range(0, waterProjectile.Count);
         Vector3 randomRotation = new Vector3(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360));
 
-        GameObject newProjectile = Instantiate(waterProjectile[randomProjectile], localOffset, Quaternion.Euler(randomRotation));
+        GameObject newProjectile = Instantiate(waterProjectile[randomProjectile], spawnPosition.position, Quaternion.Euler(randomRotation));
         Rigidbody rb = newProjectile.GetComponent<Rigidbody>();
 
         float randomLeftRight = Random.Range(-waterProjectileRandomDirectionOffset, waterProjectileRandomDirectionOffset);

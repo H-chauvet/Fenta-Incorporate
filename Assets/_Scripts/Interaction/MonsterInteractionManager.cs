@@ -13,28 +13,35 @@ public class MonsterInteractionManager : MonoBehaviour
     private InputAction mainInteractionButton;
     private InputAction secondaryInteractionButton;
 
+    private PlayerSwitchScript playerSwitchScript;
+    private int currentCharacter = -1;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        mainInteractionButton = InputSystem.actions.FindAction("Interact");
-        secondaryInteractionButton = InputSystem.actions.FindAction("Interact");
+        playerSwitchScript = GetComponent<PlayerSwitchScript>();
+        mainInteractionButton = InputSystem.actions.FindAction("InteractMain");
+        secondaryInteractionButton = InputSystem.actions.FindAction("InteractSecond");
     }
 
     // Update is called once per frame
     void Update()
     {
-        PlayerSwitchScript playerSwitchScript = GetComponent<PlayerSwitchScript>();
         if (playerSwitchScript == null)
         {
             return;
         }
-        GameObject children = gameObject.transform.GetChild(playerSwitchScript.whichCharacter).gameObject;
-        monsterAbilities = children.GetComponent<IMonsterAbilities>();
+        if (playerSwitchScript.whichCharacter != currentCharacter)
+        {
+            currentCharacter = playerSwitchScript.whichCharacter;
+            monsterAbilities = gameObject.transform.GetChild(playerSwitchScript.whichCharacter).GetComponent<IMonsterAbilities>();
+            monsterInteraction = gameObject.transform.GetChild(playerSwitchScript.whichCharacter).GetComponent<IInteractable>();
+        }
         if (monsterAbilities != null)
         {
             UseAbility();
         }
-        monsterInteraction = children.GetComponent<IInteractable>();
         if (monsterInteraction != null)
         {
             monsterInteraction.Interact();

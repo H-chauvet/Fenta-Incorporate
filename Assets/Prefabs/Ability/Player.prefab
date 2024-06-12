@@ -1534,6 +1534,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1326084590551781332}
+  - component: {fileID: 7279484469694628911}
   m_Layer: 0
   m_Name: Elisa
   m_TagString: Character4
@@ -1576,6 +1577,24 @@ Transform:
   - {fileID: 6579099773498704498}
   m_Father: {fileID: 6374812353899371506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7279484469694628911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814073533140374894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15ae3ccfcf78e9bfea2f0c57727946c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  growPlantsCooldown: 5
+  icePowerCooldown: 5
+  plantPrefabs: []
+  plantGrowDuration: 1
+  plantGrowDelay: 0.5
+  plantGrowDistance: 1
 --- !u!1 &1861964479724693241
 GameObject:
   m_ObjectHideFlags: 0
@@ -3856,6 +3875,11 @@ MonoBehaviour:
   waterProjectile:
   - {fileID: 5675944273688935339, guid: efd4026841171ef4483fabe739356493, type: 3}
   - {fileID: 3876843331629676570, guid: 1535f573824fdf645809246f47fc485f, type: 3}
+  waterProjectileSpawnPoints:
+  - {fileID: 8268557705072100053}
+  - {fileID: 4683322984783929044}
+  - {fileID: 7326089425904936058}
+  - {fileID: 5190381794039654707}
   waterProjectilePositionOffset: {x: 0.12, y: 0.12, z: 0}
   waterProjectileSpeed: 1
   waterProjectileUpwardPercentage: 0.2
