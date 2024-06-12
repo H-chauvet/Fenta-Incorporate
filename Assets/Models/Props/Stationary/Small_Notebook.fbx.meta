@@ -8,12 +8,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lambert13
-    second: {fileID: 2100000, guid: d9afb64606feafc4dba27661294d56f4, type: 2}
+    second: {fileID: 2100000, guid: 1342d7c0b786d58488674848248fc9f4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: phong3
-    second: {fileID: 2100000, guid: 99522db9c46c0fa43b47308c83df4d83, type: 2}
+    second: {fileID: 2100000, guid: 0f53e56b876aa164ea891a731f9ae551, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -23,7 +23,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: standardSurface2
-    second: {fileID: 2100000, guid: 2abd31c2b6e2c134aa7d4a050794f8fe, type: 2}
+    second: {fileID: 2100000, guid: c8e7a5f951e1b9647956446c91a65727, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
