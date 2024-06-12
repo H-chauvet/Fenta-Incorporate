@@ -62,7 +62,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HeightMap:
-        m_Texture: {fileID: 2800000, guid: b407fa3a00f7e0049a368ad531389717, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6dada3e72e1aa61419c0fa082f98aa8c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _IridescenceMaskMap:
