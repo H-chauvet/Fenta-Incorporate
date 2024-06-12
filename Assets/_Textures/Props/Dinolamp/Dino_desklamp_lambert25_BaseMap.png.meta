@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: ceb675e43c89d1c49988d958b1136d2f
+<<<<<<<< HEAD:Assets/_Textures/Props/Dinolamp/Dino_desklamp_lambert25_BaseMap.png.meta
+guid: c315b91b9678c64469b7a530bbe28f32
+========
+guid: aea71b9b2e69ae348894e491780a1997
+>>>>>>>> engineer-henri:Assets/_Textures/Furniture/all furniture_lambert1_Roughness.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

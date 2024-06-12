@@ -5,6 +5,6 @@ using UnityEngine.Events;
 
 public interface IMonsterAbilities
 {
-    public void MainAbilityInteraction(Animator animator);
-    public void SecondaryAbilityInteraction(Animator animator);
+    public void MainAbilityInteraction();
+    public void SecondaryAbilityInteraction();
 }

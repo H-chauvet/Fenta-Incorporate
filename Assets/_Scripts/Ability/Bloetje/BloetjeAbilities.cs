@@ -51,12 +51,12 @@ public class BloetjeAbilities : MonoBehaviour, IMonsterAbilities
         }
     }
     
-    public void MainAbilityInteraction(Animator animator)
+    public void MainAbilityInteraction()
     {
         BloodAirPower();
     }
 
-    public void SecondaryAbilityInteraction(Animator animator)
+    public void SecondaryAbilityInteraction()
     {
         TailSmash();
     }

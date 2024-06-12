@@ -1,8 +1,12 @@
 fileFormatVersion: 2
-guid: e0015b181825c0f459357dbe44f6f6a9
+<<<<<<<< HEAD:Assets/_Materials/ToSortOut/Level enviroment/shelf wood.mat.meta
+guid: 9f5441dc135eefb4da709e0e396d3a7f
+========
+guid: aa9c51871d48c4841a52939d31c4ac95
+>>>>>>>> engineer-henri:Assets/Animations/Walking.anim.meta
 NativeFormatImporter:
   externalObjects: {}
-  mainObjectFileID: 2100000
+  mainObjectFileID: 7400000
   userData: 
   assetBundleName: 
   assetBundleVariant: 

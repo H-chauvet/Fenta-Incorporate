@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 21c18e88cfb7ce7468e8ebc8f5890a95
+<<<<<<<< HEAD:Assets/Prefabs/Furniture/Chest_Jack.prefab.meta
+guid: 56cf0e282634f6a47a0d34e1bff7dcfb
+========
+guid: 9f3eeafc88a7fef4e884d47e35bc95c5
+>>>>>>>> engineer-henri:Assets/Prefabs/Character 1.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 1a5d33eb0edc6ad4aa53739c15d20ba0
+<<<<<<<< HEAD:Assets/Prefabs/Props/Plants.meta
+guid: d1fa01084deaee547992c6cbf09a178e
+========
+guid: 1d45da9c2774f9cde9421d75a28dd15e
+>>>>>>>> engineer-henri:Assets/_Scripts/Ability/Elisa.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Adobe/Substance3DForUnity/Runtime/Runtime/Scripts.meta
 guid: c55ef6bd36342094da997a93adfbc20b
+=======
+guid: 64fd23c25db375844b4814ad011b3f16
+>>>>>>> engineer-henri:Assets/Scripts.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
