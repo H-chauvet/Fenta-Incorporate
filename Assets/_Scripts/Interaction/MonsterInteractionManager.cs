@@ -21,8 +21,8 @@ public class MonsterInteractionManager : MonoBehaviour
     void Start()
     {
         playerSwitchScript = GetComponent<PlayerSwitchScript>();
-        mainInteractionButton = InputSystem.actions.FindAction("Interact");
-        secondaryInteractionButton = InputSystem.actions.FindAction("Interact");
+        mainInteractionButton = InputSystem.actions.FindAction("InteractMain");
+        secondaryInteractionButton = InputSystem.actions.FindAction("InteractSecond");
     }
 
     // Update is called once per frame

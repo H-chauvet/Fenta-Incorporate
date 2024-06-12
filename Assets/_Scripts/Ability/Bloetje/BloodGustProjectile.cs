@@ -27,6 +27,10 @@ public class BloodGustProjectile : MonoBehaviour
         if (target != null)
         {
             target.OnHit();
+            if (!target.isMovingOnHit)
+            {
+                return;
+            }
             Rigidbody targetRb = other.gameObject.GetComponent<Rigidbody>();
             if (targetRb != null)
             {

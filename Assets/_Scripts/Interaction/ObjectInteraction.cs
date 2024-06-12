@@ -35,8 +35,8 @@ public class ObjectInteraction : MonoBehaviour, IInteractable
     void Start()
     {
         basicInteractionButton = InputSystem.actions.FindAction("Interact");
-        mainInteractionButton = InputSystem.actions.FindAction("Interact");
-        secondaryInteractionButton = InputSystem.actions.FindAction("Interact");
+        mainInteractionButton = InputSystem.actions.FindAction("InteractMain");
+        secondaryInteractionButton = InputSystem.actions.FindAction("InteractSecond");
     }
 
     public void OnTriggerEnter(Collider other) 
