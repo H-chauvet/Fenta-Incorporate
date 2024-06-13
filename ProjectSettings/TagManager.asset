@@ -12,6 +12,7 @@ TagManager:
   - TeleportTrigger
   - EnableTrigger
   - SceneSwitchTrigger
+  - Ring
   layers:
   - Default
   - TransparentFX
