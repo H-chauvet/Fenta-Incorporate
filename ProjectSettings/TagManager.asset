@@ -9,6 +9,9 @@ TagManager:
   - Character2
   - Character3
   - Character4
+  - TeleportTrigger
+  - EnableTrigger
+  - SceneSwitchTrigger
   layers:
   - Default
   - TransparentFX

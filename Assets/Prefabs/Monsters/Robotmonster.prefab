@@ -104,6 +104,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robotmonster
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1f049200d5fb3c4784e913d659cffca, type: 3}
+      propertyPath: m_TagString
+      value: Character3
+      objectReference: {fileID: 0}
     - target: {fileID: 1095498756924319122, guid: b1f049200d5fb3c4784e913d659cffca, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -195,6 +199,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b1f049200d5fb3c4784e913d659cffca, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2869024757576521963}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b1f049200d5fb3c4784e913d659cffca, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4921992977355480548}
   m_SourcePrefab: {fileID: 100100000, guid: b1f049200d5fb3c4784e913d659cffca, type: 3}
 --- !u!1 &6567782657798162400 stripped
 GameObject:
@@ -222,3 +229,26 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4921992977355480548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6567782657798162400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880c64240900b36ceb9879838ab66bec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightningPowerCooldown: 5
+  waterPowerCooldown: 0.01
+  waterProjectile:
+  - {fileID: 3876843331629676570, guid: 1535f573824fdf645809246f47fc485f, type: 3}
+  - {fileID: 5675944273688935339, guid: efd4026841171ef4483fabe739356493, type: 3}
+  waterProjectilePositionOffset: {x: 0, y: 0, z: 0}
+  waterProjectileSpeed: 1
+  waterProjectileUpwardPercentage: 0.2
+  waterProjectileRandomDirectionOffset: 0.1
+  waterProjectileMinAmount: 1
+  waterProjectileMaxAmount: 5
