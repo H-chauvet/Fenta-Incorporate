@@ -12,19 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eed5864476f84ce4b85454db09ca4eaa, type: 3}
   m_Name: graph_0
   m_EditorClassIdentifier: 
-  AssetPath: Assets/_Materials/ToSortOut/Props/Books and Notebooks/plastique-brillant.sbsar
+  AssetPath: Assets/_Materials/ToSortOut/Props/Stationary/Paper, plastic, cardboard,
+    leather/plastique-brillant.sbsar
   RawData: {fileID: -244192453324840774, guid: 12b8371e95d05834b8ef91564de30b9d, type: 3}
   Name: graph_0
   IsRoot: 1
   FlagedForDelete: 0
-  GUID: 0688403f-e8a9-433f-831d-71e3c8324c4e
+  GUID: 520fdc96-92d5-488e-9e93-359086ae6817
   Index: 0
   Input:
-  - rid: 8105939615146311743
-  - rid: 8105939615146311744
-  - rid: 8105939615146311745
-  - rid: 8105939615146311746
-  - rid: 8105939615146311747
+  - rid: 8365755447900897280
+  - rid: 8365755447900897281
+  - rid: 8365755447900897282
+  - rid: 8365755447900897283
+  - rid: 8365755447900897284
   Output:
   - Index: 0
     VirtualOutputIndex: 7
@@ -98,7 +99,7 @@ MonoBehaviour:
       Index: 4
       Type: 8
       Channel: height
-    OutputTexture: {fileID: 2800000, guid: e35c25577f3569d49878ca6ebe54e318, type: 3}
+    OutputTexture: {fileID: 2800000, guid: 6dada3e72e1aa61419c0fa082f98aa8c, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -158,7 +159,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 8105939615146311743
+    - rid: 8365755447900897280
       type: {class: SubstanceInputInt2, ns: Adobe.Substance.Input, asm: Adobe.Substance}
       data:
         Index: 0
@@ -177,7 +178,7 @@ MonoBehaviour:
           SliderClamp: 0
           EnumValueCount: 0
           EnumValues: []
-    - rid: 8105939615146311744
+    - rid: 8365755447900897281
       type: {class: SubstanceInputInt, ns: Adobe.Substance.Input, asm: Adobe.Substance}
       data:
         Index: 1
@@ -199,7 +200,7 @@ MonoBehaviour:
           LabelTrue: 
           EnumValueCount: 0
           EnumValues: []
-    - rid: 8105939615146311745
+    - rid: 8365755447900897282
       type: {class: SubstanceInputTexture, ns: Adobe.Substance.Input, asm: Adobe.Substance}
       data:
         Index: 2
@@ -211,7 +212,7 @@ MonoBehaviour:
           Type: 8
           WidgetType: 7
         Data: {fileID: 0}
-    - rid: 8105939615146311746
+    - rid: 8365755447900897283
       type: {class: SubstanceInputTexture, ns: Adobe.Substance.Input, asm: Adobe.Substance}
       data:
         Index: 3
@@ -223,7 +224,7 @@ MonoBehaviour:
           Type: 8
           WidgetType: 7
         Data: {fileID: 0}
-    - rid: 8105939615146311747
+    - rid: 8365755447900897284
       type: {class: SubstanceInputTexture, ns: Adobe.Substance.Input, asm: Adobe.Substance}
       data:
         Index: 4

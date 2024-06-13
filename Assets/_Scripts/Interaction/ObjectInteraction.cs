@@ -13,6 +13,8 @@ public class ObjectInteraction : MonoBehaviour, IInteractable
 
     public MonsterType interactionMonster = MonsterType.All;
 
+    private PlayerSwitchScript playerSwitchScript;
+
 
     [SerializeField] private UnityEvent _basicInteractEvent;
     [SerializeField] private UnityEvent _mainInteractEvent;
@@ -33,13 +35,17 @@ public class ObjectInteraction : MonoBehaviour, IInteractable
     void Start()
     {
         basicInteractionButton = InputSystem.actions.FindAction("Interact");
-        mainInteractionButton = InputSystem.actions.FindAction("Interact");
-        secondaryInteractionButton = InputSystem.actions.FindAction("Interact");
+        mainInteractionButton = InputSystem.actions.FindAction("InteractMain");
+        secondaryInteractionButton = InputSystem.actions.FindAction("InteractSecond");
+    }
+
+    public void OnTriggerEnter(Collider other) 
+    {
+        playerSwitchScript = other.gameObject.GetComponent<PlayerSwitchScript>();
     }
 
     public void OnTriggerStay(Collider other)
-    {   
-        PlayerSwitchScript playerSwitchScript = other.gameObject.GetComponent<PlayerSwitchScript>();
+    {
         if (playerSwitchScript == null)
         {
             return;
@@ -49,10 +55,15 @@ public class ObjectInteraction : MonoBehaviour, IInteractable
         if (interactionMonster == MonsterType.All) {
             Interact();
         } 
-        else if (children.tag == monsterTags[interactionMonster])
+        else if (children.CompareTag(monsterTags[interactionMonster]))
         {
             Interact();
         }
+    }
+
+    public void OnTriggerLeave(Collider other)
+    {
+        playerSwitchScript = null;
     }
 
     public void Interact()
