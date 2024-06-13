@@ -246,6 +246,7 @@ MonoBehaviour:
   waterProjectile:
   - {fileID: 3876843331629676570, guid: 1535f573824fdf645809246f47fc485f, type: 3}
   - {fileID: 5675944273688935339, guid: efd4026841171ef4483fabe739356493, type: 3}
+  waterProjectileSpawnPoints: []
   waterProjectilePositionOffset: {x: 0, y: 0, z: 0}
   waterProjectileSpeed: 1
   waterProjectileUpwardPercentage: 0.2
