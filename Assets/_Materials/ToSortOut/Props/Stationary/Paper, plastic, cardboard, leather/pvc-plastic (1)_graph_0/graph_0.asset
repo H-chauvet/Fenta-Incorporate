@@ -18,12 +18,12 @@ MonoBehaviour:
   Name: graph_0
   IsRoot: 1
   FlagedForDelete: 0
-  GUID: b1314040-a688-440e-9e2b-7b5c26adbeae
+  GUID: c6375d28-6f20-4455-aa4f-643091d6351e
   Index: 0
   Input:
-  - rid: 5665502181457920098
-  - rid: 5665502181457920099
-  - rid: 5665502181457920100
+  - rid: 8365755447900897404
+  - rid: 8365755447900897405
+  - rid: 8365755447900897406
   Output:
   - Index: 0
     VirtualOutputIndex: 7
@@ -97,7 +97,7 @@ MonoBehaviour:
       Index: 4
       Type: 8
       Channel: height
-    OutputTexture: {fileID: 2800000, guid: 9287d83bce4c3a147857372d894922de, type: 3}
+    OutputTexture: {fileID: 2800000, guid: 8154b83df7ced9848bc1a47d195bfdc8, type: 3}
     sRGB: 1
     IsVirtual: 0
     IsAlphaAssignable: 1
@@ -157,7 +157,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 5665502181457920098
+    - rid: 8365755447900897404
       type: {class: SubstanceInputInt2, ns: Adobe.Substance.Input, asm: Adobe.Substance}
       data:
         Index: 0
@@ -176,7 +176,7 @@ MonoBehaviour:
           SliderClamp: 0
           EnumValueCount: 0
           EnumValues: []
-    - rid: 5665502181457920099
+    - rid: 8365755447900897405
       type: {class: SubstanceInputInt, ns: Adobe.Substance.Input, asm: Adobe.Substance}
       data:
         Index: 1
@@ -198,7 +198,7 @@ MonoBehaviour:
           LabelTrue: 
           EnumValueCount: 0
           EnumValues: []
-    - rid: 5665502181457920100
+    - rid: 8365755447900897406
       type: {class: SubstanceInputFloat4, ns: Adobe.Substance.Input, asm: Adobe.Substance}
       data:
         Index: 2

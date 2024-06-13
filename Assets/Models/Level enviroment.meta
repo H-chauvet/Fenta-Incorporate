@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Models/Level enviroment.meta
 guid: 734f0a1dccd776c44b3b52738240e079
+========
+guid: dbef35dc04f100549aa054b79a370e9a
+>>>>>>>> artist-ray:Assets/Adobe/Substance3DForUnity/Editor/Scripts.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

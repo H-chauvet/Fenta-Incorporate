@@ -243,6 +243,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8812590410881356664, guid: ec5e4297009ce954fb37f009237d60d5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8910280087246159097}
+    - targetCorrespondingSourceObject: {fileID: 8812590410881356664, guid: ec5e4297009ce954fb37f009237d60d5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5507709466906980619}
   m_SourcePrefab: {fileID: 100100000, guid: ec5e4297009ce954fb37f009237d60d5, type: 3}
 --- !u!4 &8109922660166047046 stripped
 Transform:
@@ -275,6 +278,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5507709466906980619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8919356094294708220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15ae3ccfcf78e9bfea2f0c57727946c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  growPlantsCooldown: 5
+  icePowerCooldown: 5
+  plantPrefabs: []
+  plantGrowDuration: 1
+  plantGrowDelay: 0.5
+  plantGrowDistance: 1
 --- !u!1001 &984004706492486416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -327,10 +348,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bloetje
       objectReference: {fileID: 0}
-    - target: {fileID: 8862710047113457324, guid: 66baa8d2f61d98245b6fa5b61295790b, type: 3}
-      propertyPath: m_TagString
-      value: Character1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -354,6 +371,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3981286753792424696}
     m_Modifications:
+    - target: {fileID: 4921992977355480548, guid: e2172e0bfa4bf114291b6e0ea8b58e37, type: 3}
+      propertyPath: waterProjectileSpawnPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921992977355480548, guid: e2172e0bfa4bf114291b6e0ea8b58e37, type: 3}
+      propertyPath: waterProjectileSpawnPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 2793909063718513533}
+    - target: {fileID: 4921992977355480548, guid: e2172e0bfa4bf114291b6e0ea8b58e37, type: 3}
+      propertyPath: waterProjectileSpawnPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 7682171712983502847}
     - target: {fileID: 5795749175596916058, guid: e2172e0bfa4bf114291b6e0ea8b58e37, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -411,6 +440,16 @@ Transform:
 --- !u!1 &2276188897541869260 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6567782657798162400, guid: e2172e0bfa4bf114291b6e0ea8b58e37, type: 3}
+  m_PrefabInstance: {fileID: 4950535958122203436}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2793909063718513533 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7094897038235771473, guid: e2172e0bfa4bf114291b6e0ea8b58e37, type: 3}
+  m_PrefabInstance: {fileID: 4950535958122203436}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7682171712983502847 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3327975686253283027, guid: e2172e0bfa4bf114291b6e0ea8b58e37, type: 3}
   m_PrefabInstance: {fileID: 4950535958122203436}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6145151054315723331
@@ -472,7 +511,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8002107688210563974, guid: 0cf7c1fc8ca74624981a52d00f54a644, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7376600029004230861}
   m_SourcePrefab: {fileID: 100100000, guid: 0cf7c1fc8ca74624981a52d00f54a644, type: 3}
 --- !u!4 &3531126073081054079 stripped
 Transform:
@@ -484,3 +526,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8002107688210563974, guid: 0cf7c1fc8ca74624981a52d00f54a644, type: 3}
   m_PrefabInstance: {fileID: 6145151054315723331}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7376600029004230861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4200386038523075013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e7f1511c71de4942a08d20be37bb719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashTime: 1
+  dashSpeed: 10
+  dashCooldown: 2
+  angleDirectionOffset: 30
+  tornadoObject: {fileID: 3353917705055895115, guid: 458a1de71e0506d408c2408efec10d30, type: 3}
+  isDashedControlled: 0
