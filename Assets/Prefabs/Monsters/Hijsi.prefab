@@ -63,6 +63,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 16ebf5322c08d86409b06687cd04c8c4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3585249337136977725}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 16ebf5322c08d86409b06687cd04c8c4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9207353811284553778}
   m_SourcePrefab: {fileID: 100100000, guid: 16ebf5322c08d86409b06687cd04c8c4, type: 3}
 --- !u!1 &8002107688210563974 stripped
 GameObject:
@@ -90,3 +93,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &9207353811284553778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8002107688210563974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e7f1511c71de4942a08d20be37bb719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashTime: 1
+  dashSpeed: 2
+  dashCooldown: 2
+  angleDirectionOffset: 30
+  tornadoObject: {fileID: 0}
+  isDashedControlled: 0

@@ -463,13 +463,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Character2
       objectReference: {fileID: 0}
+    - target: {fileID: 9207353811284553778, guid: 0cf7c1fc8ca74624981a52d00f54a644, type: 3}
+      propertyPath: tornadoObject
+      value: 
+      objectReference: {fileID: 3353917705055895115, guid: 458a1de71e0506d408c2408efec10d30, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8002107688210563974, guid: 0cf7c1fc8ca74624981a52d00f54a644, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7376600029004230861}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cf7c1fc8ca74624981a52d00f54a644, type: 3}
 --- !u!4 &3531126073081054079 stripped
 Transform:
@@ -481,21 +482,3 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8002107688210563974, guid: 0cf7c1fc8ca74624981a52d00f54a644, type: 3}
   m_PrefabInstance: {fileID: 6145151054315723331}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7376600029004230861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4200386038523075013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e7f1511c71de4942a08d20be37bb719, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dashTime: 1
-  dashSpeed: 10
-  dashCooldown: 2
-  angleDirectionOffset: 30
-  tornadoObject: {fileID: 3353917705055895115, guid: 458a1de71e0506d408c2408efec10d30, type: 3}
-  isDashedControlled: 0
