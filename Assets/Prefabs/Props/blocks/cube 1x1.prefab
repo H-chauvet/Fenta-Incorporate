@@ -62,17 +62,30 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 04e67f284b967b047b5bd27f83fd4f3f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -536213187597846146}
+      addedObject: {fileID: 2833003391237981294}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 04e67f284b967b047b5bd27f83fd4f3f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2833003391237981294}
+      addedObject: {fileID: 6471137333636861677}
   m_SourcePrefab: {fileID: 100100000, guid: 04e67f284b967b047b5bd27f83fd4f3f, type: 3}
 --- !u!1 &3967253681686589656 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 04e67f284b967b047b5bd27f83fd4f3f, type: 3}
   m_PrefabInstance: {fileID: 4309924939890625929}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &-536213187597846146
+--- !u!114 &2833003391237981294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3967253681686589656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be0cb648d0f5d84ca624a5f578d61bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorPaletteSO: {fileID: 11400000, guid: 753b1b636eb1fef45b9fad817a454da4, type: 2}
+--- !u!65 &6471137333636861677
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,18 +104,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &2833003391237981294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3967253681686589656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4be0cb648d0f5d84ca624a5f578d61bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colorPaletteSO: {fileID: 11400000, guid: 753b1b636eb1fef45b9fad817a454da4, type: 2}
+  m_Size: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
+  m_Center: {x: 0, y: 0, z: 0}

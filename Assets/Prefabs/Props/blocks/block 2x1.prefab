@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: block 2x1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0ae9787bf26b425428c080429b9f568b, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -61,7 +65,7 @@ PrefabInstance:
       addedObject: {fileID: -7687266553095171398}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0ae9787bf26b425428c080429b9f568b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7816204969049927220}
+      addedObject: {fileID: 8687272649750325219}
   m_SourcePrefab: {fileID: 100100000, guid: 0ae9787bf26b425428c080429b9f568b, type: 3}
 --- !u!1 &1091094628893815873 stripped
 GameObject:
@@ -81,7 +85,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorPaletteSO: {fileID: 11400000, guid: 753b1b636eb1fef45b9fad817a454da4, type: 2}
---- !u!65 &7816204969049927220
+--- !u!65 &8687272649750325219
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,5 +104,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10, y: 20, z: 10}
-  m_Center: {x: -5, y: 0, z: 0}
+  m_Size: {x: 0.10000001, y: 0.099999994, z: 0.20000003}
+  m_Center: {x: 0, y: 0.049999997, z: 0.000000007450581}
