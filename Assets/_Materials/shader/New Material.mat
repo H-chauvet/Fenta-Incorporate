@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: New Material
-  m_Shader: {fileID: -6465566751694194690, guid: 2685ba9780ba82a41a998987d86daa7e, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 6f887231ec545fc4089843d80d106868, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
@@ -87,6 +87,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_9f23ba558eec40fa95d13e251163a222_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: c8cedc74c026c6c48924859eaeb991f5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecularColorMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -115,8 +119,20 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _angled:
+        m_Texture: {fileID: 2800000, guid: 1580b5fe598bd6c4485bac016f6c77eb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _hori:
+        m_Texture: {fileID: 2800000, guid: 058de35c228d597408253ee22e9c4986, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _sketch:
         m_Texture: {fileID: 2800000, guid: 74603a8dd92126c409d8877afe37f233, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _up:
+        m_Texture: {fileID: 2800000, guid: c6e680c3b7706544d9a49c166db2dddd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -252,6 +268,9 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     - _outline_power: 1
+    - _shadow1: 1
+    - _shadow1_1: 0.75
+    - _shadow1_2: 0.5
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
