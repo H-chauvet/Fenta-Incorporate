@@ -45,7 +45,7 @@ public class WardrobeFaucet : MonoBehaviour
     {
         while (isSpawning)
         {
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 5; i++)
             {
                 GameObject spawnedPrefab = Instantiate(prefabToSpawn, transform.position, transform.rotation);
                 Destroy(spawnedPrefab, 5.0f);

@@ -17561,12 +17561,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3866791582831993547, guid: a69d2094d71477d408dc4420d6ece9b0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1134436808}
-    - targetCorrespondingSourceObject: {fileID: 3866791582831993547, guid: a69d2094d71477d408dc4420d6ece9b0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1334695517}
-    - targetCorrespondingSourceObject: {fileID: 3866791582831993547, guid: a69d2094d71477d408dc4420d6ece9b0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 866282429}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a69d2094d71477d408dc4420d6ece9b0, type: 3}
 --- !u!1 &615616424
@@ -24638,52 +24632,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 625601096}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!1 &866282428
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 866282429}
-  - component: {fileID: 866282430}
-  m_Layer: 0
-  m_Name: WaterSpawnPoint (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &866282429
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866282428}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.315, z: 1.436}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1914986025}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &866282430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866282428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 198d88e07192a8a41aa88b10bb8e2e83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: 1430404592}
-  spawnInterval: 0.1
 --- !u!1 &869592166
 GameObject:
   m_ObjectHideFlags: 0
@@ -31554,7 +31502,7 @@ Transform:
   m_GameObject: {fileID: 1134436807}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.436}
+  m_LocalPosition: {x: -0.218, y: 0, z: 1.436}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -36702,52 +36650,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1331741767}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1334695516
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1334695517}
-  - component: {fileID: 1334695518}
-  m_Layer: 0
-  m_Name: WaterSpawnPoint (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1334695517
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1334695516}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.245, z: 1.436}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1914986025}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1334695518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1334695516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 198d88e07192a8a41aa88b10bb8e2e83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: 1430404592}
-  spawnInterval: 0.1
 --- !u!1 &1336896671
 GameObject:
   m_ObjectHideFlags: 0
@@ -56008,6 +55910,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7a5e3ab7a345aa34b80f27ecfd7aba3a, type: 2}
+    - target: {fileID: 3436365631517750139, guid: 8cf452801e84ac640a296310aa3b8529, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.12454939
+      objectReference: {fileID: 0}
+    - target: {fileID: 3436365631517750139, guid: 8cf452801e84ac640a296310aa3b8529, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.12454939
+      objectReference: {fileID: 0}
+    - target: {fileID: 3436365631517750139, guid: 8cf452801e84ac640a296310aa3b8529, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.12454939
+      objectReference: {fileID: 0}
     - target: {fileID: 3436365631517750139, guid: 8cf452801e84ac640a296310aa3b8529, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.498
