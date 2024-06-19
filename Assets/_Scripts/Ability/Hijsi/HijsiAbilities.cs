@@ -4,32 +4,30 @@ using UnityEngine;
 
 public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
 {
-    public float dashTime = 1.0f;
+    /*public float dashTime = 1.0f;
     public float dashSpeed = 10.0f;
     public float dashCooldown = 2.0f;
-    public float angleDirectionOffset = 30f;
+    public float angleDirectionOffset = 30f;*/
 
-    public GameObject tornadoObject;
 
-    private float currentDashTime;
+    /*private float currentDashTime;
     private bool isDashing = false;
     private Vector3 moveDirection;
-
-    private GameObject parent;
-
     private float currentCooldownTime;
-    private bool canDash = true;
+    private bool canDash = true;*/
 
+    public GameObject tornadoObject;
+    private GameObject parent;
     private Rigidbody parentRb;
 
 
 
     [HideInInspector]
-    public bool isDashedControlled;
+    /*public bool isDashedControlled;
     private bool isSpecialDashing = false;
     private Vector3 initialPlayerPos;
     private Vector3 targetPlayerPos;
-    private Vector3 targetDirection;
+    private Vector3 targetDirection;*/
 
     private float TornadoDuration = 1f;
     private float TornadoCooldown = 3f;
@@ -43,7 +41,7 @@ public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
 
     void Update()
     {
-        if (isDashing)
+        /*if (isDashing)
         {
             HandleDash();
         }
@@ -54,7 +52,7 @@ public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
         if (isSpecialDashing)
         {
             HandleSpecialDash();
-        }
+        }*/
 
         if (TornadoReady == false)
         {
@@ -69,10 +67,10 @@ public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
 
     public void MainAbilityInteraction(Animator animator)
     {
-        if (!isDashedControlled) 
+        /*if (!isDashedControlled) 
         {
             Dash(animator);
-        }
+        }*/
     }
 
     public void SecondaryAbilityInteraction(Animator animator)
@@ -80,7 +78,7 @@ public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
         Tornado(animator);
     }
 
-    private void HandleSpecialDash()
+    /*private void HandleSpecialDash()
     {
         Vector3 currentPlayerPos = parent.transform.position;
         float dotProduct = Vector3.Dot(targetDirection, targetPlayerPos - currentPlayerPos);
@@ -176,7 +174,7 @@ public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
                 canDash = true;
             }
         }
-    }
+    }*/
 
     private void Tornado(Animator anim)
     {
@@ -186,7 +184,7 @@ public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
         }
         TornadoReady = false;
         anim.Play("Secondary");
-        Vector3 forwardOffset = parent.transform.forward;
+        Vector3 forwardOffset = parent.transform.forward * 0.7f;
         GameObject tornadoTemp = Instantiate(tornadoObject, parent.transform.position + forwardOffset, Quaternion.identity);
     }
 }

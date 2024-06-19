@@ -5,38 +5,39 @@ using UnityEngine;
 public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
 {
 
-    public float lightningPowerCooldown = 5f;
-    public float waterPowerCooldown = 0.01f;
+    // public float waterPowerCooldown = 0.01f;
 
     // List of all the water projectiles that can be spawned randomly
-    public List<GameObject> waterProjectile;
+    // public List<GameObject> waterProjectile;
 
     // List of all the spawn points for the water projectiles
-    public List<Transform> waterProjectileSpawnPoints;
+    // public List<Transform> waterProjectileSpawnPoints;
 
     // Offset of the position of the water projectiles relative to the parent object orientation and position
-    public Vector3 waterProjectilePositionOffset = new Vector3(0, 0, 0);
+    // public Vector3 waterProjectilePositionOffset = new Vector3(0, 0, 0);
 
     // Speed of the water projectiles
-    public float waterProjectileSpeed = 1f;
+    // public float waterProjectileSpeed = 1f;
 
     // Percentage to add upwards direction to the water projectiles
-    public float waterProjectileUpwardPercentage = 0.2f;
+    // public float waterProjectileUpwardPercentage = 0.2f;
 
     // Random left/right, up/down offset for the water projectiles
-    public float waterProjectileRandomDirectionOffset = 0.1f;
+    // public float waterProjectileRandomDirectionOffset = 0.1f;
 
     // Range of amount of water projectiles to spawn
-    public int waterProjectileMinAmount = 1;
-    public int waterProjectileMaxAmount = 5;
+    // public int waterProjectileMinAmount = 1;
+    // public int waterProjectileMaxAmount = 5;
 
 
     // Remaining time for the power to be ready
-    private float lightningPowerDuration = 5f;
-    private float waterPowerDuration = 0.01f;
+    // private float waterPowerDuration = 0.01f;
+    // private bool waterPowerReady = true;
 
+    private float lightningPowerDuration = 5f;
     private bool lightningPowerReady = true;
-    private bool waterPowerReady = true;
+
+    public float lightningPowerCooldown = 5f;
 
     private GameObject parent;
     private Rigidbody parentRb;
@@ -59,7 +60,7 @@ public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
                 lightningPowerDuration = lightningPowerCooldown;
             }
         }
-        if (waterPowerReady == false)
+        /*if (waterPowerReady == false)
         {
             waterPowerDuration -= Time.deltaTime;
             if (waterPowerDuration <= 0)
@@ -67,7 +68,7 @@ public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
                 waterPowerReady = true;
                 waterPowerDuration = waterPowerCooldown;
             }
-        }
+        }*/
     }
 
     public void MainAbilityInteraction(Animator animator)
@@ -77,7 +78,7 @@ public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
 
     public void SecondaryAbilityInteraction(Animator animator)
     {
-        WaterPower(animator);
+        /*WaterPower(animator);*/
     }
 
     public void LightningPower(Transform newLocation, Animator anim)
@@ -92,7 +93,7 @@ public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
         parent.transform.position = newLocation.position;
     }
 
-    public void WaterPower(Animator anim)
+   /* public void WaterPower(Animator anim)
     {
         if (waterPowerReady == false)
         {
@@ -111,10 +112,10 @@ public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
                 CreateWaterProjectile(waterProjectileSpawnPoints[i], parentVelocity);
             }
         }
-    }
+    }*/
 
     // Create a water projectile with a random rotation and direction relative to the parent object orientation position and velocity
-    private void CreateWaterProjectile(Transform spawnPosition, Vector3 parentVelocity)
+    /*private void CreateWaterProjectile(Transform spawnPosition, Vector3 parentVelocity)
     {
         int randomProjectile = Random.Range(0, waterProjectile.Count);
         Vector3 randomRotation = new Vector3(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360));
@@ -128,5 +129,5 @@ public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
         Vector3 direction = parent.transform.forward + Vector3.up * waterProjectileUpwardPercentage + parent.transform.right * randomLeftRight + parent.transform.up * randomUpDown;
         direction.Normalize();
         rb.AddForce(direction * waterProjectileSpeed * newProjectile.transform.localScale.y * 100 + parentVelocity, ForceMode.Impulse);
-    }
+    }*/
 }

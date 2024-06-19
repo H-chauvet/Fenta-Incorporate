@@ -5,18 +5,19 @@ using UnityEngine;
 public class BloetjeAbilities : MonoBehaviour, IMonsterAbilities
 {
 
-    public float bloodAirPowerCooldown = 1f;
-    public float tailSmashPowerCooldown = 1f;
+    /*public float bloodAirPowerCooldown = 1f;*/
 
-    public List<GameObject> bloodAirProjectile;
+    /*public List<GameObject> bloodAirProjectile;
     public Vector3 bloodAirProjectilePositionOffset = new Vector3(0, 0, 0);
-    public float bloodAirProjectileSpeed = 1f;
+    public float bloodAirProjectileSpeed = 1f;*/
 
     // Remaining time for the power to be ready
-    private float bloodAirPowerDuration = 1f;
-    private float tailSmashDuration = 1f;
+    /*private float bloodAirPowerDuration = 1f;*/
 
-    private bool bloodAirPowerReady = true;
+    /*private bool bloodAirPowerReady = true;*/
+
+    public float tailSmashPowerCooldown = 1f;
+    private float tailSmashDuration = 1f;
     private bool tailSmashPowerReady = true;
 
     private GameObject parent;
@@ -31,7 +32,7 @@ public class BloetjeAbilities : MonoBehaviour, IMonsterAbilities
     // Update is called once per frame
     void Update()
     {
-        if (bloodAirPowerReady == false)
+        /*if (bloodAirPowerReady == false)
         {
             bloodAirPowerDuration -= Time.deltaTime;
             if (bloodAirPowerDuration <= 0)
@@ -39,7 +40,7 @@ public class BloetjeAbilities : MonoBehaviour, IMonsterAbilities
                 bloodAirPowerReady = true;
                 bloodAirPowerDuration = bloodAirPowerCooldown;
             }
-        }
+        }*/
         if (tailSmashPowerReady == false)
         {
             tailSmashDuration -= Time.deltaTime;
@@ -50,10 +51,10 @@ public class BloetjeAbilities : MonoBehaviour, IMonsterAbilities
             }
         }
     }
-    
+
     public void MainAbilityInteraction(Animator animator)
     {
-        BloodAirPower(animator);
+        /*BloodAirPower(animator);*/
     }
 
     public void SecondaryAbilityInteraction(Animator animator)
@@ -61,7 +62,7 @@ public class BloetjeAbilities : MonoBehaviour, IMonsterAbilities
         TailSmash(animator);
     }
 
-    public void BloodAirPower(Animator anim)
+   /* public void BloodAirPower(Animator anim)
     {
         if (bloodAirPowerReady == false)
         {
@@ -84,7 +85,7 @@ public class BloetjeAbilities : MonoBehaviour, IMonsterAbilities
         }
         Vector3 direction = parent.transform.forward;
         rb.AddForce(direction * bloodAirProjectileSpeed * bloodAirProjectileInstance.transform.localScale.y * 500 + parentVelocity, ForceMode.Impulse);
-    }
+    }*/
 
     public void TailSmash(Animator anim)
     {
