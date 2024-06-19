@@ -254,6 +254,9 @@ MonoBehaviour:
       m_Calls: []
   _mainInteractEvent:
     m_PersistentCalls:
+      m_Calls: []
+  _secondaryInteractEvent:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1722818390057577875}
         m_TargetAssemblyTypeName: Teleporter, Assembly-CSharp
@@ -267,9 +270,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _secondaryInteractEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1722818390057577875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -586,6 +586,9 @@ MonoBehaviour:
       m_Calls: []
   _mainInteractEvent:
     m_PersistentCalls:
+      m_Calls: []
+  _secondaryInteractEvent:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1707642362557309468}
         m_TargetAssemblyTypeName: Teleporter, Assembly-CSharp
@@ -599,9 +602,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _secondaryInteractEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1707642362557309468
 MonoBehaviour:
   m_ObjectHideFlags: 0
