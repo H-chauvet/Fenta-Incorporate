@@ -1,19 +1,9 @@
 fileFormatVersion: 2
-guid: 5dae25e90ccfc9c4e9336da73d719c73
+guid: 37c4f93fb7bb639419ec245d52dff3bc
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: phong6
-    second: {fileID: 2100000, guid: 0f53e56b876aa164ea891a731f9ae551, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: standardSurface1
-    second: {fileID: -8498072568288798726, guid: 1cecc0fd529a1f440bc00d0c2ef6aee1, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -77,7 +67,7 @@ ModelImporter:
     secondaryUVMinLightmapResolution: 40
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
     strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
