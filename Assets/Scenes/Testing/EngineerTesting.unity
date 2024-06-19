@@ -792,6 +792,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3579174226291932721, guid: 1044fb584376a9a48b116ac4e913a5fc, type: 3}
+      propertyPath: bloodAirProjectile.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579174226291932721, guid: 1044fb584376a9a48b116ac4e913a5fc, type: 3}
+      propertyPath: bloodAirProjectile.Array.data[0]
+      value: 
+      objectReference: {fileID: 6390371990291166677, guid: e51e088fed98ac149aaddf5b69bb2141, type: 3}
     - target: {fileID: 3981286753792424696, guid: 1044fb584376a9a48b116ac4e913a5fc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2
@@ -1771,6 +1779,14 @@ PrefabInstance:
       propertyPath: hijsi
       value: 
       objectReference: {fileID: 748635036}
+    - target: {fileID: 6908864668705231392, guid: fec2d2e6c6f07134db2f98d2032ece68, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 6908864668705231392, guid: fec2d2e6c6f07134db2f98d2032ece68, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.289
+      objectReference: {fileID: 0}
     - target: {fileID: 7142471089438468185, guid: fec2d2e6c6f07134db2f98d2032ece68, type: 3}
       propertyPath: m_Name
       value: HijsiPlatform

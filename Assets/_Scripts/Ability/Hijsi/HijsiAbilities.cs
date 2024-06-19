@@ -71,13 +71,13 @@ public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
     {
         if (!isDashedControlled) 
         {
-            Dash();
+            Dash(animator);
         }
     }
 
     public void SecondaryAbilityInteraction(Animator animator)
     {
-        Tornado();
+        Tornado(animator);
     }
 
     private void HandleSpecialDash()
@@ -126,18 +126,19 @@ public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
         }
          else
         {
-            Dash();
+            Dash(null);
         }
     }
 
 
 
 
-    private void Dash()
+    private void Dash(Animator anim)
     {
         if (!canDash || isDashing) return;
 
         isDashing = true;
+        if (anim != null) { anim.Play("Primary"); }
         currentDashTime = 0.0f;
         moveDirection = parent.transform.forward;
     }
@@ -177,13 +178,14 @@ public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
         }
     }
 
-    private void Tornado()
+    private void Tornado(Animator anim)
     {
         if (TornadoReady == false)
         {
             return;
         }
         TornadoReady = false;
+        anim.Play("Secondary");
         Vector3 forwardOffset = parent.transform.forward;
         GameObject tornadoTemp = Instantiate(tornadoObject, parent.transform.position + forwardOffset, Quaternion.identity);
     }

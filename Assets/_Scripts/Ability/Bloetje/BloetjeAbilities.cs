@@ -53,22 +53,23 @@ public class BloetjeAbilities : MonoBehaviour, IMonsterAbilities
     
     public void MainAbilityInteraction(Animator animator)
     {
-        BloodAirPower();
+        BloodAirPower(animator);
     }
 
     public void SecondaryAbilityInteraction(Animator animator)
     {
-        TailSmash();
+        TailSmash(animator);
     }
 
-    public void BloodAirPower()
+    public void BloodAirPower(Animator anim)
     {
         if (bloodAirPowerReady == false)
         {
             return;
         }
         bloodAirPowerReady = false;
-
+        anim.Play("Primary");
+        
         int randomProjectile = Random.Range(0, bloodAirProjectile.Count);
         Vector3 localOffset = parent.transform.TransformDirection(bloodAirProjectilePositionOffset);
 
@@ -85,13 +86,14 @@ public class BloetjeAbilities : MonoBehaviour, IMonsterAbilities
         rb.AddForce(direction * bloodAirProjectileSpeed * bloodAirProjectileInstance.transform.localScale.y * 500 + parentVelocity, ForceMode.Impulse);
     }
 
-    public void TailSmash()
+    public void TailSmash(Animator anim)
     {
         if (tailSmashPowerReady == false)
         {
             return;
         }
         tailSmashPowerReady = false;
+        anim.Play("Secondary");
     }
 
     

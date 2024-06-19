@@ -72,15 +72,15 @@ public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
 
     public void MainAbilityInteraction(Animator animator)
     {
-        LightningPower(parent.transform);
+        LightningPower(parent.transform, animator);
     }
 
     public void SecondaryAbilityInteraction(Animator animator)
     {
-        WaterPower();
+        WaterPower(animator);
     }
 
-    public void LightningPower(Transform newLocation)
+    public void LightningPower(Transform newLocation, Animator anim)
     {
         if (lightningPowerReady == false)
         {
@@ -88,16 +88,18 @@ public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
         }
 
         lightningPowerReady = false;
+        anim.Play("Primary");
         parent.transform.position = newLocation.position;
     }
 
-    public void WaterPower()
+    public void WaterPower(Animator anim)
     {
         if (waterPowerReady == false)
         {
             return;
         }
         waterPowerReady = false;
+        anim.Play("Secondary");
 
         Vector3 parentVelocity = parentRb != null ? parentRb.velocity : Vector3.zero;
 
