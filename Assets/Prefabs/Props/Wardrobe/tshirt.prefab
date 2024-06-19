@@ -43,5 +43,26 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 77d2a3fe82c90d64bafae3486d0d9bc8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -3782800120023332768}
   m_SourcePrefab: {fileID: 100100000, guid: 77d2a3fe82c90d64bafae3486d0d9bc8, type: 3}
+--- !u!1 &5068201539014243546 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 77d2a3fe82c90d64bafae3486d0d9bc8, type: 3}
+  m_PrefabInstance: {fileID: 5374122168668195211}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-3782800120023332768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5068201539014243546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be0cb648d0f5d84ca624a5f578d61bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorPaletteSO: {fileID: 11400000, guid: 753b1b636eb1fef45b9fad817a454da4, type: 2}
