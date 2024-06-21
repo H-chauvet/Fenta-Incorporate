@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Breakable : MonoBehaviour
 {
@@ -15,24 +17,33 @@ public class Breakable : MonoBehaviour
     public float debrisMinSize = 0.8f;
     public float debrisMaxSize = 1.2f;
 
+    public bool isDebrisUsed = true;
+
+    [SerializeField] private UnityEvent onBreak;
+
     public void Break()
     {
-        int debrisAmount = Random.Range(minDebris, maxDebris);
+        onBreak.Invoke();
+
+        if (!isDebrisUsed) { return; }
+
+        int debrisAmount = UnityEngine.Random.Range(minDebris, maxDebris);
+        
         
         for (int i = 0; i < debrisAmount; i++)
         {
-            int randomDebris = Random.Range(0, debris.Count);
-            Vector3 randomRotation = new Vector3(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360));
+            int randomDebris = UnityEngine.Random.Range(0, debris.Count);
+            Vector3 randomRotation = new Vector3(UnityEngine.Random.Range(0, 360), UnityEngine.Random.Range(0, 360), UnityEngine.Random.Range(0, 360));
 
-            Vector3 randomOffset = new Vector3(Random.Range(-transform.localScale.x * positionOffset, transform.localScale.x * positionOffset),
-                                               Random.Range(-transform.localScale.y * positionOffset, transform.localScale.y * positionOffset),
-                                               Random.Range(-transform.localScale.z * positionOffset, transform.localScale.z * positionOffset));
+            Vector3 randomOffset = new Vector3(UnityEngine.Random.Range(-transform.localScale.x * positionOffset, transform.localScale.x * positionOffset),
+                                               UnityEngine.Random.Range(-transform.localScale.y * positionOffset, transform.localScale.y * positionOffset),
+                                               UnityEngine.Random.Range(-transform.localScale.z * positionOffset, transform.localScale.z * positionOffset));
             Vector3 debrisPosition = transform.position + randomOffset;
             GameObject debrisInstance = Instantiate(debris[randomDebris], debrisPosition, Quaternion.Euler(randomRotation));
             Rigidbody rb = debrisInstance.GetComponent<Rigidbody>();
             if (rb != null)
             {
-                float randomSize = Random.Range(debrisMinSize, debrisMaxSize);
+                float randomSize = UnityEngine.Random.Range(debrisMinSize, debrisMaxSize);
 
                 float originalVolume = transform.localScale.x * transform.localScale.y * transform.localScale.z;
                 float totalDebrisVolume = originalVolume * debrisVolumeFromParent;
@@ -41,8 +52,8 @@ public class Breakable : MonoBehaviour
                 rb.transform.localScale = new Vector3(debrisScale, debrisScale, debrisScale); 
 
 
-                float force = Random.Range(explosionMinForce, explosionMaxForce);
-                Vector3 direction = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+                float force = UnityEngine.Random.Range(explosionMinForce, explosionMaxForce);
+                Vector3 direction = new Vector3(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f));
                 Debug.Log(direction);
                 rb.AddForce(direction * force * rb.transform.localScale.y, ForceMode.Impulse);
             }

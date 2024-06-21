@@ -50,6 +50,8 @@ public class ObjectInteraction : MonoBehaviour, IInteractable
         {
             return;
         }
+        if (other.gameObject.GetComponent<PlayerSwitchScript>() == null) { return; }
+
         GameObject children = other.gameObject.transform.GetChild(playerSwitchScript.whichCharacter).gameObject;
         Debug.Log(children.tag);
         if (interactionMonster == MonsterType.All) {
