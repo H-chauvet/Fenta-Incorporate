@@ -253,3 +253,5 @@ MonoBehaviour:
   waterProjectileRandomDirectionOffset: 0.1
   waterProjectileMinAmount: 1
   waterProjectileMaxAmount: 5
+  teleportationVFX: {fileID: 6364437117254608182, guid: 0ac537e6dd845a942a63f36fb33b0b3e, type: 3}
+  teleportationVFXDuration: 3
