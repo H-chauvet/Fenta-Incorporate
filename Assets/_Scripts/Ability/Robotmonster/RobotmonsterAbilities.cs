@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
 {
-
     public float lightningPowerCooldown = 5f;
     public float waterPowerCooldown = 0.01f;
 
@@ -30,6 +29,10 @@ public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
     public int waterProjectileMinAmount = 1;
     public int waterProjectileMaxAmount = 5;
 
+    // VFX for Lightning Power (Teleportation)
+    public GameObject teleportationVFX; // Assign this in the Inspector
+    public float teleportationVFXDuration = 1f; // Duration for the VFX
+    public float teleportationSpeed = 10f; // Speed of the VFX following the path
 
     // Remaining time for the power to be ready
     private float lightningPowerDuration = 5f;
@@ -88,7 +91,31 @@ public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
         }
 
         lightningPowerReady = false;
-        parent.transform.position = newLocation.position;
+
+        // Start the coroutine to move the VFX
+        StartCoroutine(TeleportWithVFX(newLocation.position));
+    }
+
+    private IEnumerator TeleportWithVFX(Vector3 newLocation)
+    {
+        Vector3 startPosition = parent.transform.position;
+        GameObject vfxInstance = Instantiate(teleportationVFX, startPosition, Quaternion.identity);
+
+        float elapsedTime = 0f;
+        while (elapsedTime < teleportationVFXDuration)
+        {
+            float t = elapsedTime / teleportationVFXDuration;
+            vfxInstance.transform.position = Vector3.Lerp(startPosition, newLocation, t);
+            elapsedTime += Time.deltaTime * teleportationSpeed;
+            yield return null;
+        }
+
+        // Ensure the parent is exactly at the new location and destroy the VFX after the specified duration
+        parent.transform.position = newLocation;
+        vfxInstance.transform.position = newLocation;
+
+        // Destroy the VFX object after the duration
+        Destroy(vfxInstance, teleportationVFXDuration - elapsedTime);
     }
 
     public void WaterPower()
