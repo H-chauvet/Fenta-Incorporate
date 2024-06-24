@@ -1,12 +1,13 @@
-using System.Collections;
 using System.Collections.Generic;
+using _Scripts.Interaction;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
 
 public class ObjectInteraction : MonoBehaviour, IInteractable
 {
-
+    public Abilities ability = Abilities.None;
+    
     private InputAction basicInteractionButton;
     private InputAction mainInteractionButton;
     private InputAction secondaryInteractionButton;

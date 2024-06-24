@@ -69,8 +69,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4525fa7a4682cd479243cd9bf406814, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 50
-  liftForce: 1.25
+  lifeTime: 5
+  liftForce: 0.95
 --- !u!114 &856883889617474168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,5 +86,5 @@ MonoBehaviour:
   orbitingPrefabs:
   - {fileID: 6287524717046801783, guid: 2a67308631ff8144289e142df66b518a, type: 3}
   rotationSpeed: 200
-  orbitDistance: 5
+  orbitDistance: 1
   particleNumber: 200

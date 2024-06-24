@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7209993314602602444}
   - component: {fileID: 6372321014541285491}
   - component: {fileID: 9096114900108734058}
+  - component: {fileID: 6204758466653872382}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -35,10 +36,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8940375789036627718}
   - {fileID: 3531126073081054079}
   - {fileID: 1503486573148869750}
   - {fileID: 8242599390875568241}
+  - {fileID: 8940375789036627718}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4723380007164497311
@@ -84,7 +85,7 @@ MonoBehaviour:
   isJumping: 0
   isFalling: 1
   isWalking: 0
-  groundCheckRadius: 0.1
+  groundCheckRadius: 0.05
 --- !u!136 &3740455861306303262
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -160,6 +161,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f03fcf13684f2384599c6bbc1a1ac4b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6204758466653872382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3279499211160632082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dfd623cae2942c89429306651aa165f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionDistance: 0.5
 --- !u!1001 &111313826887900292
 PrefabInstance:
   m_ObjectHideFlags: 0

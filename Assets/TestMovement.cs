@@ -5,17 +5,46 @@ using UnityEngine;
 public class TestMovement : MonoBehaviour
 {
     public float Speed = 5f;
-    private CharacterController ch;
+    public float jumpForce = 5f;
+    private Rigidbody rb;
+    private bool isGrounded;
+
     void Start()
     {
-        ch = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        ch.Move(move * Time.deltaTime * Speed);
-        
+        // Handle movement
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
+
+        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        rb.MovePosition(transform.position + movement * Speed * Time.deltaTime);
+
+        // Handle jumping
+        if (isGrounded && Input.GetButtonDown("Jump"))
+        {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        // Check if the player is grounded
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;
+        }
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        // Check if the player is no longer grounded
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = false;
+        }
     }
 }

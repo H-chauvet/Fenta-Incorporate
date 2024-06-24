@@ -52,11 +52,11 @@ public class MonsterInteractionManager : MonoBehaviour
 
     void UseAbility()
     {
-        if (mainInteractionButton.IsPressed())
+        if (mainInteractionButton.WasPressedThisFrame())
         {
             MainAbilityInteraction();
         }
-        if (secondaryInteractionButton.IsPressed())
+        if (secondaryInteractionButton.WasPressedThisFrame())
         {
             SecondaryAbilityInteraction();
         }

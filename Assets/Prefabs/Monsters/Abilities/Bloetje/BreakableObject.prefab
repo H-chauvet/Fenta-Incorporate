@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1817981fcd17988ea8f112b991086916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ability: 2
   interactionMonster: 1
   _basicInteractEvent:
     m_PersistentCalls:

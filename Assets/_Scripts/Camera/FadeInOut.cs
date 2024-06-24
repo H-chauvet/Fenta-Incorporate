@@ -5,6 +5,8 @@ using UnityEngine;
 public class FadeInOut : MonoBehaviour
 {
     [SerializeField] private float fadeDuration = 2;
+    [SerializeField] private float delay = 2;
+    
     private CanvasGroup _canvasGroup;
     
     private void Awake() => _canvasGroup = GetComponent<CanvasGroup>();
@@ -14,12 +16,21 @@ public class FadeInOut : MonoBehaviour
 
     private IEnumerator FadeCanvasGroup(CanvasGroup canvasGroup, float start, float end, float duration)
     {
-        canvasGroup.alpha = start;
-        
         float elapsedTime = 0;
-        while (elapsedTime < fadeDuration)
+
+        while (elapsedTime < delay)
         {
             elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        
+        canvasGroup.alpha = start;
+        
+        float elapsedTime2 = 0;
+        
+        while (elapsedTime2 < fadeDuration)
+        {
+            elapsedTime2 += Time.deltaTime;
             canvasGroup.alpha = Mathf.Lerp(start, end, elapsedTime / duration);
             yield return null;
         }

@@ -26,6 +26,9 @@ public class HijsiTornado : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        rb.AddForce(Vector3.up * liftForce * 10, ForceMode.Acceleration);
+        if (other.CompareTag("Player"))
+        {
+            rb.AddForce(Vector3.up * liftForce * 10, ForceMode.Acceleration);
+        }
     }
 }

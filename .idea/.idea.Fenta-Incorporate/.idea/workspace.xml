@@ -5,32 +5,108 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a10ef50d-60c1-416c-b6b1-52a0a2f9f553" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/Interaction/Abilities.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/Interaction/Abilities.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/Interaction/AbilitySO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/Interaction/AbilitySO.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/Player/PlayerInteraction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/Player/PlayerInteraction.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/UI/AbilityUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/UI/AbilityUI.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fenta-Incorporate/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fenta-Incorporate/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Hijsi.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Hijsi.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Models/Monsters/Bloetje.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Monsters/Bloetje.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Monsters/Elisa.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Monsters/Elisa.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Monsters/Elisa.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Monsters/Elisa.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Props/blocks/arch.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Props/blocks/arch.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Props/blocks/wedge 1x1.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Props/blocks/wedge 1x1.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Furniture/Bed.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Furniture/Bed.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Elisa.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Elisa.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Elisa.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Elisa.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Hijsi.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Hijsi.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Robotmonster.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Robotmonster.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Furniture/BedsideTable Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Furniture/BedsideTable Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/Bloetje/Blood Air Gust.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/Bloetje/Blood Air Gust.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/Bloetje/BreakableObject.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/Bloetje/BreakableObject.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/Elisa/ElisaPlantBridge Example.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/Elisa/ElisaPlantBridge Example.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/Elisa/Flower Power/FlowerHead1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/Elisa/Flower Power/FlowerHead1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/Elisa/Flower Power/FlowerHead2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/Elisa/Flower Power/FlowerHead2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/Elisa/Flower Power/FlowerHead3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/Elisa/Flower Power/FlowerHead3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/Elisa/Flower Power/FlowerHead4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/Elisa/Flower Power/FlowerHead4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/Hijsi/HijsiPlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/Hijsi/HijsiPlatform.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/Hijsi/TornadoObject.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/Hijsi/TornadoObject.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/RobotMonster/Cube Water Projectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/RobotMonster/Cube Water Projectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/RobotMonster/RobotMonsterSocket.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/RobotMonster/RobotMonsterSocket.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/RobotMonster/Sphere Water Projectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/RobotMonster/Sphere Water Projectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Bloetje.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Bloetje.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerPath.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerPath.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/blocks/arch.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/blocks/arch.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/blocks/block 2 x half.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/blocks/block 2 x half.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/blocks/block 2x1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/blocks/block 2x1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/blocks/cube 1x1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/blocks/cube 1x1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/blocks/cylinder.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/blocks/cylinder.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/blocks/half cylinder.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/blocks/half cylinder.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/blocks/wedge 1x1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/blocks/wedge 1x1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/pins/pin pile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/pins/pin pile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Desk_Chair.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Desk_Chair.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Extension_Cord.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Extension_Cord.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Monster Icons Top.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Monster Icons Top.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/UI.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/_SceneRoot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/_SceneRoot.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/00 - Room.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/00 - Room.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/03 - Chest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/03 - Chest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/InteractionTesting.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Testing/InteractionTesting.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/NewRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Testing/NewRoom.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/HDRPDefaultResources/HDRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/HDRPDefaultResources/HDRenderPipelineGlobalSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/HDRPDefaultResources/Sky and Fog Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/HDRPDefaultResources/Sky and Fog Settings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/LB - pressed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/LB - pressed.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/LB icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/LB icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/LT - pressed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/LT - pressed.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/LT icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/LT icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/arrow - pressed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/arrow - pressed.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/arrow icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/arrow icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/big d-pad shadow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/big d-pad shadow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/big d-pad.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/big d-pad.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/button circle - pressed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/button circle - pressed.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/button circle fill.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/button circle fill.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/d-pad - pressed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/d-pad - pressed.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/d-pad arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/d-pad arrow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/interact - pressed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/interact - pressed.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/interact button icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/interact button icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/layout 1 - big monster icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/layout 1 - big monster icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/layout 1 - small monster icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/layout 1 - small monster icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/layout 2 - button circle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/layout 2 - button circle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/layout 2 - d-pad.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/layout 2 - d-pad.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/layout 3 - middle d-pad.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/layout 3 - middle d-pad.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/layout 3 - monster circle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/layout 3 - monster circle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/monster circle - pressed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/monster circle - pressed.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/top left - pressed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/top left - pressed.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/top left button icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/top left button icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Materials/ToSortOut/Monsters/hijsi.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Materials/ToSortOut/Monsters/hijsi.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Materials/Utility/Collider.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Materials/Utility/Collider.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Materials/Utility/Path.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Materials/Utility/Path.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Ability/Hijsi/HijsiAbilities.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Ability/Hijsi/HijsiAbilities.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Ability/Hijsi/HijsiTornado.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Ability/Hijsi/HijsiTornado.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Camera/FadeInOut.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Camera/FadeInOut.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Interaction/MonsterInteractionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Interaction/MonsterInteractionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Interaction/ObjectInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Interaction/ObjectInteraction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/InteractionIndicator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/InteractionUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/InteractionIndicator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/InteractionUI.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/IconSwapUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/UI/IconSwapUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.learn.iet-framework/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.learn.iet-framework/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +117,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b11ba2a8fbf24f219f7cc98532a1130446ac00/23/86772611/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Projects/Unity/isbjorn/Assets/_Scripts/Player/StateMachine/PlayerStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Projects/Unity/steamplunder/Assets/_Scripts/Interactable/GeneralInteractable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Projects/Unity/steamplunder/Assets/_Scripts/Interactable/IInteractable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/InteractionIndicator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/PathEnd.cs" root0="FORCE_HIGHLIGHTING" />
@@ -49,6 +127,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.10.0/Runtime/Behaviours/CinemachineCameraOffset.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.10.0/Runtime/Behaviours/CinemachineSmoothPath.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.10.0/Runtime/Core/CinemachineCore.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.8.2/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -58,28 +137,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "vitoldas-fix",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "CodeLensConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;designer-vitoldas&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\bubel\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\bubel\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\bubel\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\bubel\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\bubel\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\bubel\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Builds\Fenta-Incorporate.exe" />
@@ -115,10 +194,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="17384">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="17384" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -155,6 +234,9 @@
       <workItem from="1718188928134" duration="78000" />
       <workItem from="1718189031447" duration="1781000" />
       <workItem from="1718274818298" duration="320000" />
+      <workItem from="1718358981050" duration="4143000" />
+      <workItem from="1718573773565" duration="8705000" />
+      <workItem from="1718584036266" duration="2898000" />
     </task>
     <servers />
   </component>
@@ -170,5 +252,24 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Scripts/InteractionUI.cs</url>
+          <line>44</line>
+          <properties documentPath="C:\Users\bubel\University\Fenta-Incorporate\Assets\_Scripts\InteractionUI.cs" containingFunctionPresentation="Method 'SetIndicator'">
+            <startOffsets>
+              <option value="1310" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1321" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

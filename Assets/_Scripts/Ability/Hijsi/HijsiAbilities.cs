@@ -20,8 +20,6 @@ public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
     private GameObject parent;
     private Rigidbody parentRb;
 
-
-
     [HideInInspector]
     /*public bool isDashedControlled;
     private bool isSpecialDashing = false;
@@ -122,7 +120,7 @@ public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
             
             isSpecialDashing = true;
         }
-         else
+        else
         {
             Dash(null);
         }
