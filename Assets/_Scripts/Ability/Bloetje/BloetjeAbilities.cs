@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class BloetjeAbilities : MonoBehaviour, IMonsterAbilities
 {
-
     public float bloodAirPowerCooldown = 1f;
     public float tailSmashPowerCooldown = 1f;
 
     public List<GameObject> bloodAirProjectile;
     public Vector3 bloodAirProjectilePositionOffset = new Vector3(0, 0, 0);
     public float bloodAirProjectileSpeed = 1f;
+
+    // VFX for Tail Smash
+    public GameObject tailSmashVFX; // Assign this in the Inspector
+    public float tailSmashVFXDuration = 1f; // Duration for the VFX
 
     // Remaining time for the power to be ready
     private float bloodAirPowerDuration = 1f;
@@ -20,7 +23,6 @@ public class BloetjeAbilities : MonoBehaviour, IMonsterAbilities
     private bool tailSmashPowerReady = true;
 
     private GameObject parent;
-
 
     // Start is called before the first frame update
     void Start()
@@ -50,7 +52,7 @@ public class BloetjeAbilities : MonoBehaviour, IMonsterAbilities
             }
         }
     }
-    
+
     public void MainAbilityInteraction(Animator animator)
     {
         BloodAirPower();
@@ -92,7 +94,10 @@ public class BloetjeAbilities : MonoBehaviour, IMonsterAbilities
             return;
         }
         tailSmashPowerReady = false;
-    }
 
-    
+        // Instantiate and play the VFX effect
+        GameObject vfxInstance = Instantiate(tailSmashVFX, parent.transform.position, Quaternion.identity);
+        Destroy(vfxInstance, tailSmashVFXDuration); // Destroy the VFX after the specified duration
+    }
 }
+

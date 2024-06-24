@@ -13,6 +13,7 @@ TagManager:
   - EnableTrigger
   - SceneSwitchTrigger
   - Ring
+  - Ground
   layers:
   - Default
   - TransparentFX
