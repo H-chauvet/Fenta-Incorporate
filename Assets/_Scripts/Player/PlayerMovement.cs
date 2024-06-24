@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
     public float jumpBufferTime = 0.1f;
     public float jumpCoyoteTime = 0.1f;
+    
 
     private bool canJump = true;
     // private float currentJumpPressedTime = 0f;
@@ -30,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public bool isJumping;
     [HideInInspector] public bool isFalling;
     [HideInInspector] public bool isWalking;
+    [HideInInspector]public float horizontalInput;
+    [HideInInspector]public float verticalInput;
     
     public float groundCheckRadius = 0.1f;
     private InputAction move;
@@ -39,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Transform _mainCameraTransform;
     private Vector3 _mainCameraForward;
+    
 
     private void Start()
     {
@@ -74,12 +78,14 @@ public class PlayerMovement : MonoBehaviour
         Jump();
     }
 
-    void Move()
+    public void Move()
     {
         // Get input from player
         Vector2 input_vector = move.ReadValue<Vector2>();
-        float horizontalInput = input_vector.x;
-        float verticalInput = input_vector.y;
+        horizontalInput = input_vector.x;
+        verticalInput = input_vector.y;
+        Debug.Log(horizontalInput);
+        
 
         // Getting movement and calculating velocity from input
         Vector3 movement = new Vector3(horizontalInput, 0, verticalInput);

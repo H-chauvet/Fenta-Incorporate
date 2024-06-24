@@ -60,7 +60,7 @@ public class BloetjeAbilities : MonoBehaviour, IMonsterAbilities
 
     public void SecondaryAbilityInteraction(Animator animator)
     {
-        TailSmash();
+        TailSmash(animator);
     }
 
     public void BloodAirPower()
@@ -87,12 +87,13 @@ public class BloetjeAbilities : MonoBehaviour, IMonsterAbilities
         rb.AddForce(direction * bloodAirProjectileSpeed * bloodAirProjectileInstance.transform.localScale.y * 500 + parentVelocity, ForceMode.Impulse);
     }
 
-    public void TailSmash()
+    public void TailSmash(Animator anim)
     {
         if (tailSmashPowerReady == false)
         {
             return;
         }
+        anim.Play("Secondary");
         tailSmashPowerReady = false;
 
         // Instantiate and play the VFX effect

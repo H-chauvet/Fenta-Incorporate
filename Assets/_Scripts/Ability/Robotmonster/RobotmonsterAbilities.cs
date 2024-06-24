@@ -4,40 +4,42 @@ using UnityEngine;
 
 public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
 {
-
-    // public float waterPowerCooldown = 0.01f;
+    public float lightningPowerCooldown = 5f;
+    public float waterPowerCooldown = 0.01f;
 
     // List of all the water projectiles that can be spawned randomly
-    // public List<GameObject> waterProjectile;
+    public List<GameObject> waterProjectile;
 
     // List of all the spawn points for the water projectiles
-    // public List<Transform> waterProjectileSpawnPoints;
+    public List<Transform> waterProjectileSpawnPoints;
 
     // Offset of the position of the water projectiles relative to the parent object orientation and position
-    // public Vector3 waterProjectilePositionOffset = new Vector3(0, 0, 0);
+    public Vector3 waterProjectilePositionOffset = new Vector3(0, 0, 0);
 
     // Speed of the water projectiles
-    // public float waterProjectileSpeed = 1f;
+    public float waterProjectileSpeed = 1f;
 
     // Percentage to add upwards direction to the water projectiles
-    // public float waterProjectileUpwardPercentage = 0.2f;
+    public float waterProjectileUpwardPercentage = 0.2f;
 
     // Random left/right, up/down offset for the water projectiles
-    // public float waterProjectileRandomDirectionOffset = 0.1f;
+    public float waterProjectileRandomDirectionOffset = 0.1f;
 
     // Range of amount of water projectiles to spawn
-    // public int waterProjectileMinAmount = 1;
-    // public int waterProjectileMaxAmount = 5;
+    public int waterProjectileMinAmount = 1;
+    public int waterProjectileMaxAmount = 5;
 
+    // VFX for Lightning Power (Teleportation)
+    public GameObject teleportationVFX; // Assign this in the Inspector
+    public float teleportationVFXDuration = 1f; // Duration for the VFX
+    public float teleportationSpeed = 10f; // Speed of the VFX following the path
 
     // Remaining time for the power to be ready
-    // private float waterPowerDuration = 0.01f;
-    // private bool waterPowerReady = true;
-
     private float lightningPowerDuration = 5f;
-    private bool lightningPowerReady = true;
+    private float waterPowerDuration = 0.01f;
 
-    public float lightningPowerCooldown = 5f;
+    private bool lightningPowerReady = true;
+    private bool waterPowerReady = true;
 
     private GameObject parent;
     private Rigidbody parentRb;
@@ -60,7 +62,7 @@ public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
                 lightningPowerDuration = lightningPowerCooldown;
             }
         }
-        /*if (waterPowerReady == false)
+        if (waterPowerReady == false)
         {
             waterPowerDuration -= Time.deltaTime;
             if (waterPowerDuration <= 0)
@@ -68,20 +70,20 @@ public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
                 waterPowerReady = true;
                 waterPowerDuration = waterPowerCooldown;
             }
-        }*/
+        }
     }
 
     public void MainAbilityInteraction(Animator animator)
     {
-        /*WaterPower(animator);*/
+        LightningPower(parent.transform);
     }
 
     public void SecondaryAbilityInteraction(Animator animator)
     {
-        LightningPower(parent.transform, animator);
+        WaterPower();
     }
 
-    public void LightningPower(Transform newLocation, Animator anim)
+    public void LightningPower(Transform newLocation)
     {
         if (lightningPowerReady == false)
         {
@@ -89,18 +91,40 @@ public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
         }
 
         lightningPowerReady = false;
-        anim.Play("Primary");
-        parent.transform.position = newLocation.position;
+
+        // Start the coroutine to move the VFX
+        StartCoroutine(TeleportWithVFX(newLocation.position));
     }
 
-   /* public void WaterPower(Animator anim)
+    private IEnumerator TeleportWithVFX(Vector3 newLocation)
+    {
+        Vector3 startPosition = parent.transform.position;
+        GameObject vfxInstance = Instantiate(teleportationVFX, startPosition, Quaternion.identity);
+
+        float elapsedTime = 0f;
+        while (elapsedTime < teleportationVFXDuration)
+        {
+            float t = elapsedTime / teleportationVFXDuration;
+            vfxInstance.transform.position = Vector3.Lerp(startPosition, newLocation, t);
+            elapsedTime += Time.deltaTime * teleportationSpeed;
+            yield return null;
+        }
+
+        // Ensure the parent is exactly at the new location and destroy the VFX after the specified duration
+        parent.transform.position = newLocation;
+        vfxInstance.transform.position = newLocation;
+
+        // Destroy the VFX object after the duration
+        Destroy(vfxInstance, teleportationVFXDuration - elapsedTime);
+    }
+
+    public void WaterPower()
     {
         if (waterPowerReady == false)
         {
             return;
         }
         waterPowerReady = false;
-        anim.Play("Secondary");
 
         Vector3 parentVelocity = parentRb != null ? parentRb.velocity : Vector3.zero;
 
@@ -112,10 +136,10 @@ public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
                 CreateWaterProjectile(waterProjectileSpawnPoints[i], parentVelocity);
             }
         }
-    }*/
+    }
 
     // Create a water projectile with a random rotation and direction relative to the parent object orientation position and velocity
-    /*private void CreateWaterProjectile(Transform spawnPosition, Vector3 parentVelocity)
+    private void CreateWaterProjectile(Transform spawnPosition, Vector3 parentVelocity)
     {
         int randomProjectile = Random.Range(0, waterProjectile.Count);
         Vector3 randomRotation = new Vector3(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360));
@@ -129,5 +153,5 @@ public class RobotmonsterAbilities : MonoBehaviour, IMonsterAbilities
         Vector3 direction = parent.transform.forward + Vector3.up * waterProjectileUpwardPercentage + parent.transform.right * randomLeftRight + parent.transform.up * randomUpDown;
         direction.Normalize();
         rb.AddForce(direction * waterProjectileSpeed * newProjectile.transform.localScale.y * 100 + parentVelocity, ForceMode.Impulse);
-    }*/
+    }
 }
