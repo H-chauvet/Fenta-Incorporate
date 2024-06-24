@@ -111,3 +111,5 @@ MonoBehaviour:
   - {fileID: 6390371990291166677, guid: e51e088fed98ac149aaddf5b69bb2141, type: 3}
   bloodAirProjectilePositionOffset: {x: 0, y: 0, z: 0}
   bloodAirProjectileSpeed: 1
+  tailSmashVFX: {fileID: 1751337974739839817, guid: 274b79b39640f5242bc6fd04d47c767f, type: 3}
+  tailSmashVFXDuration: 1

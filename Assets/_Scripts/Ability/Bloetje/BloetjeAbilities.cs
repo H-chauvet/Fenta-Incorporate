@@ -4,24 +4,25 @@ using UnityEngine;
 
 public class BloetjeAbilities : MonoBehaviour, IMonsterAbilities
 {
+    public float bloodAirPowerCooldown = 1f;
+    public float tailSmashPowerCooldown = 1f;
 
-    /*public float bloodAirPowerCooldown = 1f;*/
-
-    /*public List<GameObject> bloodAirProjectile;
+    public List<GameObject> bloodAirProjectile;
     public Vector3 bloodAirProjectilePositionOffset = new Vector3(0, 0, 0);
-    public float bloodAirProjectileSpeed = 1f;*/
+    public float bloodAirProjectileSpeed = 1f;
+
+    // VFX for Tail Smash
+    public GameObject tailSmashVFX; // Assign this in the Inspector
+    public float tailSmashVFXDuration = 1f; // Duration for the VFX
 
     // Remaining time for the power to be ready
-    /*private float bloodAirPowerDuration = 1f;*/
-
-    /*private bool bloodAirPowerReady = true;*/
-
-    public float tailSmashPowerCooldown = 1f;
+    private float bloodAirPowerDuration = 1f;
     private float tailSmashDuration = 1f;
+
+    private bool bloodAirPowerReady = true;
     private bool tailSmashPowerReady = true;
 
     private GameObject parent;
-
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +33,7 @@ public class BloetjeAbilities : MonoBehaviour, IMonsterAbilities
     // Update is called once per frame
     void Update()
     {
-        /*if (bloodAirPowerReady == false)
+        if (bloodAirPowerReady == false)
         {
             bloodAirPowerDuration -= Time.deltaTime;
             if (bloodAirPowerDuration <= 0)
@@ -40,7 +41,7 @@ public class BloetjeAbilities : MonoBehaviour, IMonsterAbilities
                 bloodAirPowerReady = true;
                 bloodAirPowerDuration = bloodAirPowerCooldown;
             }
-        }*/
+        }
         if (tailSmashPowerReady == false)
         {
             tailSmashDuration -= Time.deltaTime;
@@ -54,23 +55,22 @@ public class BloetjeAbilities : MonoBehaviour, IMonsterAbilities
 
     public void MainAbilityInteraction(Animator animator)
     {
-        /*BloodAirPower(animator);*/
+        BloodAirPower();
     }
 
     public void SecondaryAbilityInteraction(Animator animator)
     {
-        TailSmash(animator);
+        TailSmash();
     }
 
-   /* public void BloodAirPower(Animator anim)
+    public void BloodAirPower()
     {
         if (bloodAirPowerReady == false)
         {
             return;
         }
         bloodAirPowerReady = false;
-        anim.Play("Primary");
-        
+
         int randomProjectile = Random.Range(0, bloodAirProjectile.Count);
         Vector3 localOffset = parent.transform.TransformDirection(bloodAirProjectilePositionOffset);
 
@@ -85,17 +85,19 @@ public class BloetjeAbilities : MonoBehaviour, IMonsterAbilities
         }
         Vector3 direction = parent.transform.forward;
         rb.AddForce(direction * bloodAirProjectileSpeed * bloodAirProjectileInstance.transform.localScale.y * 500 + parentVelocity, ForceMode.Impulse);
-    }*/
+    }
 
-    public void TailSmash(Animator anim)
+    public void TailSmash()
     {
         if (tailSmashPowerReady == false)
         {
             return;
         }
         tailSmashPowerReady = false;
-        anim.Play("Secondary");
-    }
 
-    
+        // Instantiate and play the VFX effect
+        GameObject vfxInstance = Instantiate(tailSmashVFX, parent.transform.position, Quaternion.identity);
+        Destroy(vfxInstance, tailSmashVFXDuration); // Destroy the VFX after the specified duration
+    }
 }
+
