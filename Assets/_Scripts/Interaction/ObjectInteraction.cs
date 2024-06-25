@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using _Scripts.Interaction;
 using UnityEngine;
@@ -15,6 +16,7 @@ public class ObjectInteraction : MonoBehaviour, IInteractable
     public MonsterType interactionMonster = MonsterType.All;
 
     private PlayerSwitchScript playerSwitchScript;
+    private bool canInteract = false;
 
 
     [SerializeField] private UnityEvent _basicInteractEvent;
@@ -54,35 +56,46 @@ public class ObjectInteraction : MonoBehaviour, IInteractable
         if (other.gameObject.GetComponent<PlayerSwitchScript>() == null) { return; }
 
         GameObject children = other.gameObject.transform.GetChild(playerSwitchScript.whichCharacter).gameObject;
-        Debug.Log(children.tag);
+        //Debug.Log(children.tag);
         if (interactionMonster == MonsterType.All) {
             Interact();
         } 
-        else if (children.CompareTag(monsterTags[interactionMonster]))
+        else if (canInteract == false && children.CompareTag(monsterTags[interactionMonster]))
         {
-            Interact();
+            canInteract = true;
         }
     }
 
-    public void OnTriggerLeave(Collider other)
+    public void OnTriggerExit(Collider other)
     {
-        playerSwitchScript = null;
+        GameObject children = other.gameObject.transform.GetChild(playerSwitchScript.whichCharacter).gameObject;
+        if (children.CompareTag(monsterTags[interactionMonster]))
+        {
+            canInteract = false;
+        }
+    }
+
+    private void Update()
+    {
+        if (!canInteract) return;
+        if (basicInteractionButton.WasPressedThisFrame())
+        {
+            onBasicInteractEvent();
+        }
+        if (mainInteractionButton.WasPressedThisFrame())
+        {
+            canInteract = false;
+            onMainInteractEvent();
+        }
+        if (secondaryInteractionButton.WasPressedThisFrame())
+        {
+            onSecondaryInteractEvent();
+        }
     }
 
     public void Interact()
     {
-        if (basicInteractionButton.IsPressed())
-        {
-            onBasicInteractEvent();
-        }
-        if (mainInteractionButton.IsPressed())
-        {
-            onMainInteractEvent();
-        }
-        if (secondaryInteractionButton.IsPressed())
-        {
-            onSecondaryInteractEvent();
-        }
+        
     }
 
     public void onBasicInteractEvent()

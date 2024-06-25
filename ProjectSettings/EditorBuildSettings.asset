@@ -5,14 +5,20 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/SampleSceneAssets/Scenes/SampleScene.unity
-    guid: 3db1837cc97a95e4c98610966fac2b0b
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: ce5de4d53720b2f41a132761d5d748bb
+  - enabled: 1
     path: Assets/Scenes/00 - Room.unity
     guid: cc4d3ceae9fb08e45b8effef5932a723
-  - enabled: 0
-    path: Assets/Scenes/Testing/NewRoom.unity
-    guid: 46e0bcb83eceb4c47ae6b6124707cb74
+  - enabled: 1
+    path: Assets/Scenes/01 - Wardrobe.unity
+    guid: ba7f6ad257f3a3749b8112ceaca77e6c
+  - enabled: 1
+    path: Assets/Scenes/02 - Pipes.unity
+    guid: cce9c6abf4a4e2d4f8e126ec3e832905
+  - enabled: 1
+    path: Assets/Scenes/03 - Chest.unity
+    guid: e68c21da64780644caf6a77d90bec32c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: e48cd292afa3b214c8efa85072b0cc63, type: 3}

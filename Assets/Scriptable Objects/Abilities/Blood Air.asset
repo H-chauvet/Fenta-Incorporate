@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a02e1b39dad4f8592074ec1b728f6dc, type: 3}
   m_Name: Blood Air
   m_EditorClassIdentifier: 
+  monsterType: 1
   ability: 1
-  type: 0
-  icon: {fileID: 21300000, guid: 30c78a9af3487914cb0dcfb4ffc19efc, type: 3}
+  abilityType: 0
+  abilityIcon: {fileID: 21300000, guid: 30c78a9af3487914cb0dcfb4ffc19efc, type: 3}
+  monsterIcon: {fileID: 21300000, guid: 3e0233aae565e1c408ff8ac26101b377, type: 3}

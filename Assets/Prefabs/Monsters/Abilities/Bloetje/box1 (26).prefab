@@ -150,6 +150,10 @@ MonoBehaviour:
   debrisVolumeFromParent: 0.75
   debrisMinSize: 0.4
   debrisMaxSize: 0.6
+  isDebrisUsed: 1
+  onBreak:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5588626138562839340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,14 +166,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1817981fcd17988ea8f112b991086916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ability: 0
   interactionMonster: 1
   _basicInteractEvent:
     m_PersistentCalls:
       m_Calls: []
   _mainInteractEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  _secondaryInteractEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8018886259178458410}
@@ -184,3 +186,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _secondaryInteractEvent:
+    m_PersistentCalls:
+      m_Calls: []

@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a02e1b39dad4f8592074ec1b728f6dc, type: 3}
   m_Name: Lightning
   m_EditorClassIdentifier: 
+  monsterType: 3
   ability: 3
-  type: 0
-  icon: {fileID: 21300000, guid: 8034cf01751223e4bb4dfbbd22f7c729, type: 3}
+  abilityType: 0
+  abilityIcon: {fileID: 21300000, guid: 8034cf01751223e4bb4dfbbd22f7c729, type: 3}
+  monsterIcon: {fileID: 21300000, guid: 83b36ebec6b52474c80ec0682a6c6c92, type: 3}

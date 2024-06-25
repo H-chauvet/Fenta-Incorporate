@@ -46,7 +46,7 @@ public class MonsterInteractionManager : MonoBehaviour
         }
         if (monsterInteraction != null)
         {
-            monsterInteraction.Interact();
+            // monsterInteraction.Interact();
         }
     }
 
@@ -69,6 +69,6 @@ public class MonsterInteractionManager : MonoBehaviour
 
     void SecondaryAbilityInteraction()
     {
-        monsterAbilities.SecondaryAbilityInteraction(_playerAnimation._animator);
+        //monsterAbilities.SecondaryAbilityInteraction(_playerAnimation._animator);
     }
 }

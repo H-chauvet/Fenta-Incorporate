@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -5,36 +6,28 @@ using UnityEngine;
 public class FadeInOut : MonoBehaviour
 {
     [SerializeField] private float fadeDuration = 2;
-    [SerializeField] private float delay = 2;
     
     private CanvasGroup _canvasGroup;
     
     private void Awake() => _canvasGroup = GetComponent<CanvasGroup>();
 
-    public void FadeIn() => StartCoroutine(FadeCanvasGroup(_canvasGroup, 1, 0, fadeDuration));
-    public void FadeOut() => StartCoroutine(FadeCanvasGroup(_canvasGroup, 0, 1, fadeDuration));
+    public void FadeIn(Action afterCoroutine = null) => StartCoroutine(FadeCanvasGroup(_canvasGroup, 1, 0, fadeDuration, afterCoroutine));
+    public void FadeOut(Action afterCoroutine = null) => StartCoroutine(FadeCanvasGroup(_canvasGroup, 0, 1, fadeDuration, afterCoroutine));
 
-    private IEnumerator FadeCanvasGroup(CanvasGroup canvasGroup, float start, float end, float duration)
+    private IEnumerator FadeCanvasGroup(CanvasGroup canvasGroup, float start, float end, float duration, Action afterCoroutine)
     {
-        float elapsedTime = 0;
-
-        while (elapsedTime < delay)
-        {
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-        
         canvasGroup.alpha = start;
         
-        float elapsedTime2 = 0;
+        float elapsedTime = 0;
         
-        while (elapsedTime2 < fadeDuration)
+        while (elapsedTime < duration)
         {
-            elapsedTime2 += Time.deltaTime;
+            elapsedTime += Time.deltaTime;
             canvasGroup.alpha = Mathf.Lerp(start, end, elapsedTime / duration);
             yield return null;
         }
 
         canvasGroup.alpha = end;
+        afterCoroutine?.Invoke();
     }
 }

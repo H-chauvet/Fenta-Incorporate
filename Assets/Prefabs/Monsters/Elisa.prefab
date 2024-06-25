@@ -80,7 +80,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8692861528542744143}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: acb83dc0917d4044c97747cbd7fcb0fb, type: 2}
   m_CullingMode: 0
@@ -108,10 +108,10 @@ MonoBehaviour:
   growPlantsCooldown: 5
   icePowerCooldown: 5
   plantPrefabs:
-  - {fileID: 1291360564566216007, guid: 39f0e1a7da5f9a846a0ede810f25f1b5, type: 3}
-  - {fileID: 1629757510102763263, guid: d7ba8008af2fdf74c9d3ef2734a18fb2, type: 3}
-  - {fileID: 9071423450466268885, guid: b0add705de3e495458bfe93337ccf8ca, type: 3}
-  - {fileID: 853283520848464177, guid: b99d6cef7073f7f448c580970e6eb214, type: 3}
+  - {fileID: 3478119818353321847, guid: 39f0e1a7da5f9a846a0ede810f25f1b5, type: 3}
+  - {fileID: 8163163099578950192, guid: d7ba8008af2fdf74c9d3ef2734a18fb2, type: 3}
+  - {fileID: 8880867579951356944, guid: b0add705de3e495458bfe93337ccf8ca, type: 3}
+  - {fileID: 2872895378879819938, guid: b99d6cef7073f7f448c580970e6eb214, type: 3}
   plantGrowDuration: 1
   plantGrowDelay: 0.5
   plantGrowDistance: 1

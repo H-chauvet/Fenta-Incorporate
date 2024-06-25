@@ -102,41 +102,41 @@ public class PlayerSwitchScript : MonoBehaviour
                 IsSwitchingPressed3 = true;
                 SwitchCharacter(0);
                 //Debug.Log(pm.horizontalInput);
-                if(pm.horizontalInput!=0 || pm.verticalInput!=0)
-                {
-                        source.clip = monster0;
-                        source.Play();
-                }
+                // if(pm.horizontalInput!=0 || pm.verticalInput!=0)
+                // {
+                //         //source.clip = monster0;
+                //         //source.Play();
+                // }
             }
             else if (RightMonster.IsPressed()) // D-Pad Right
             {
                 IsSwitchingPressed3 = true;
                 SwitchCharacter(1);
-                 if(pm.horizontalInput!=0 || pm.verticalInput!=0)
-                {
-                        source.clip = monster1;
-                        source.Play();
-                }
+                //  if(pm.horizontalInput!=0 || pm.verticalInput!=0)
+                // {
+                //         //source.clip = monster1;
+                //         //source.Play();
+                // }
             }
             else if (DownMonster.IsPressed()) // D-Pad Down
             {
                 IsSwitchingPressed3 = true;
                 SwitchCharacter(2);
-                 if(pm.horizontalInput!=0 || pm.verticalInput!=0)
-                {
-                        source.clip = monster2;
-                        source.Play();
-                }
+                //  if(pm.horizontalInput!=0 || pm.verticalInput!=0)
+                // {
+                //         //source.clip = monster2;
+                //         //source.Play();
+                // }
             }
             else if (LeftMonster.IsPressed()) // D-Pad Left
             {
                 IsSwitchingPressed3 = true;
                 SwitchCharacter(3);
-                 if(pm.horizontalInput!=0 || pm.verticalInput!=0)
-                {
-                        source.clip = monster3;
-                        source.Play();
-                }
+                //  if(pm.horizontalInput!=0 || pm.verticalInput!=0)
+                // {
+                //         //source.clip = monster3;
+                //         //source.Play();
+                // }
             }
         }
         else

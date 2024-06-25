@@ -25,6 +25,7 @@ public class IconSwapUI : MonoBehaviour
         if (monster.CompareTag(_monsterTags[monsterType]))
         {
             Activate();
+            CurrentMonsterUI.onCharacterSwitch.Invoke(monsterType);
         }
         else
         {

@@ -37,8 +37,8 @@ public class InteractionUI : MonoBehaviour
     {
         interactionIndicator.transform.position = _camera.WorldToScreenPoint(position);
         var info = _abilityLookup[interactable.ability];
-        abilityImage.sprite = info.icon;
-        button.text = info.type switch
+        abilityImage.sprite = info.abilityIcon;
+        button.text = info.abilityType switch
         {
             AbilityType.Primary => "B",
             AbilityType.Secondary => "Y",

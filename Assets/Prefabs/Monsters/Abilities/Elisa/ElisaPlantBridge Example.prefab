@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2114084181335988008
 Transform:
   m_ObjectHideFlags: 0
@@ -59,7 +59,7 @@ Transform:
   m_GameObject: {fileID: 4151988644042004972}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalPosition: {x: 0.186, y: 0, z: -0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 1956346431128634701}
   - component: {fileID: 7089690386480985951}
   - component: {fileID: 1328017894763698590}
+  - component: {fileID: 1905469106729589631}
   m_Layer: 0
   m_Name: ElisaPlantBridge Example
   m_TagString: Untagged
@@ -189,14 +190,16 @@ MonoBehaviour:
   startPoint: {fileID: 8674044466381746309}
   knots:
   - {fileID: 5783684406536930730}
-  - {fileID: 2114084181335988008}
   endPoint: {fileID: 5863361731809130584}
   plantPrefabs:
-  - {fileID: 5976958355743575866, guid: aa3670c116dd3834f9fb7e3ec37ba35b, type: 3}
+  - {fileID: 3478119818353321847, guid: 39f0e1a7da5f9a846a0ede810f25f1b5, type: 3}
+  - {fileID: 8163163099578950192, guid: d7ba8008af2fdf74c9d3ef2734a18fb2, type: 3}
+  - {fileID: 8880867579951356944, guid: b0add705de3e495458bfe93337ccf8ca, type: 3}
+  - {fileID: 2872895378879819938, guid: b99d6cef7073f7f448c580970e6eb214, type: 3}
   plantGrowDuration: 1
-  plantGrowSize: 2.5
+  plantGrowSize: 1.5
   plantGrowDelay: 0.5
-  plantAmount: 20
+  plantAmount: 10
 --- !u!114 &7089690386480985951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,8 +254,29 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 0.45, z: 1}
-  m_Center: {x: -2, y: 0.2, z: 0}
+  m_Size: {x: 0.25251335, y: 0.45, z: 0.26194227}
+  m_Center: {x: -2.0054412, y: 0.20000002, z: 0.0022500157}
+--- !u!65 &1905469106729589631
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5771281608512735366}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.26069206, y: 0.6242204, z: 1}
+  m_Center: {x: -2.0015411, y: -0.18788981, z: -2.190766e-17}
 --- !u!1 &6271833091564616610
 GameObject:
   m_ObjectHideFlags: 0

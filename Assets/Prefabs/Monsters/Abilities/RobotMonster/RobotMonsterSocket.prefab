@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 373606580126747657}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0.1, y: 0, z: 4.09}
+  m_LocalPosition: {x: -2.13, y: 5.94, z: 5.185}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -50,7 +50,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 373606580126747657}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -100,7 +100,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -158,7 +158,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122749736061387347}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -210,7 +210,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -248,14 +248,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1817981fcd17988ea8f112b991086916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ability: 0
   interactionMonster: 3
   _basicInteractEvent:
     m_PersistentCalls:
       m_Calls: []
   _mainInteractEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  _secondaryInteractEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1722818390057577875}
@@ -270,6 +268,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _secondaryInteractEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1722818390057577875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,6 +283,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62dce33269ab7674eb7833bf3fbcca11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teleportationVFX: {fileID: 6364437117254608182, guid: 0ac537e6dd845a942a63f36fb33b0b3e, type: 3}
+  teleportationVFXDuration: 1
+  teleportationSpeed: 10
   teleportTarget: {fileID: 4469896258389103282}
   timer: {fileID: 7684780474972685610}
 --- !u!1 &1688169987493778629
@@ -312,7 +316,7 @@ Transform:
   m_GameObject: {fileID: 1688169987493778629}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -1.15, y: 0, z: -1.79}
+  m_LocalPosition: {x: -1.15, y: 0, z: -0.999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -334,7 +338,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1688169987493778629}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -384,7 +388,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -417,7 +421,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.1, z: 1}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.32769847, y: 0.32769847, z: 0.32769847}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4670698653889052924}
@@ -436,7 +440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d16e18680bfa954f93ac1e9a2f37b7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 1
+  timer: 2
   canTeleport: 0
 --- !u!1 &3167060820024366062
 GameObject:
@@ -490,7 +494,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3167060820024366062}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -542,7 +546,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -580,14 +584,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1817981fcd17988ea8f112b991086916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ability: 3
   interactionMonster: 3
   _basicInteractEvent:
     m_PersistentCalls:
       m_Calls: []
   _mainInteractEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  _secondaryInteractEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1707642362557309468}
@@ -602,6 +604,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _secondaryInteractEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1707642362557309468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -614,5 +619,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62dce33269ab7674eb7833bf3fbcca11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teleportationVFX: {fileID: 6364437117254608182, guid: 0ac537e6dd845a942a63f36fb33b0b3e, type: 3}
+  teleportationVFXDuration: 1
+  teleportationSpeed: 10
   teleportTarget: {fileID: 3206999261193414113}
   timer: {fileID: 7684780474972685610}

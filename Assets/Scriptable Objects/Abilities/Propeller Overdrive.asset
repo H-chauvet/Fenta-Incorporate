@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a02e1b39dad4f8592074ec1b728f6dc, type: 3}
   m_Name: Propeller Overdrive
   m_EditorClassIdentifier: 
+  monsterType: 2
   ability: 7
-  type: 0
-  icon: {fileID: 21300000, guid: 8f486712d01144342a0184fea429f711, type: 3}
+  abilityType: 0
+  abilityIcon: {fileID: 21300000, guid: 8f486712d01144342a0184fea429f711, type: 3}
+  monsterIcon: {fileID: 21300000, guid: b53c02b6747172e4ba6082f796f4fe5f, type: 3}

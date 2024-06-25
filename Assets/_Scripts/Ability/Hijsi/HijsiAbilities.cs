@@ -65,6 +65,7 @@ public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
 
     public void MainAbilityInteraction(Animator animator)
     {
+        Tornado(animator);
         /*if (!isDashedControlled) 
         {
             Dash(animator);
@@ -73,7 +74,7 @@ public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
 
     public void SecondaryAbilityInteraction(Animator animator)
     {
-        Tornado(animator);
+        //Tornado(animator);
     }
 
     /*private void HandleSpecialDash()
