@@ -84,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
         Vector2 input_vector = move.ReadValue<Vector2>();
         horizontalInput = input_vector.x;
         verticalInput = input_vector.y;
-        // Debug.Log(horizontalInput);
+       // Debug.Log(horizontalInput);
         
 
         // Getting movement and calculating velocity from input

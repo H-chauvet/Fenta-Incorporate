@@ -24,15 +24,23 @@ public class PlayerSwitchScript : MonoBehaviour
     private bool IsSwitchingPressed3 = false;
 
     //Audio
-    public AudioSource source;
+    public AudioSource abilitySource;
+    public AudioSource walkingSource;
     public AudioClip monster0;
     public AudioClip monster1;
     public AudioClip monster2;
     public AudioClip monster3;
+    public AudioClip monsterAbility0;
+    public AudioClip monsterAbility1;
+    public AudioClip monsterAbility2;
+    public AudioClip monsterAbility3;
+    bool abilitySoundIsPlaying = false;
+    bool walkingSoundIsPlaying = false;
+    public float abilitySoundDuration = 1f;
+    public float walkingSoundDuration = 0.5f;
 
 
-
-    PlayerMovement pm;
+    public PlayerMovement pm;
 
     public static Action<int, GameObject> CharacterSwitch;
     
@@ -47,16 +55,92 @@ public class PlayerSwitchScript : MonoBehaviour
         previousPosition = possibleCharacters[whichCharacter].transform.position;
         SwitchCharacter(0);
 
-        source = GetComponent<AudioSource>();
+        
+        
+    }
+
+    void EnableAbilitySound()
+    {
+        abilitySoundIsPlaying = false;
+    }
+
+    void EnableWalkingSound()
+    {
+        walkingSoundIsPlaying = false;
     }
 
     void Update()
     {
+        //Ability Sounds
+        if(!abilitySoundIsPlaying && Input.GetKeyDown("t"))
+        {
+
+            if(whichCharacter == 0)
+            {
+                abilitySoundIsPlaying = true;
+                abilitySource.PlayOneShot(monsterAbility0);
+                Invoke("EnableAbilitySound",abilitySoundDuration);
+            }
+
+            if(whichCharacter == 1)
+            {
+                abilitySoundIsPlaying = true;
+                abilitySource.PlayOneShot(monsterAbility1);
+                Invoke("EnableAbilitySound",abilitySoundDuration);
+            }
+
+            if(whichCharacter == 2)
+            {
+                abilitySoundIsPlaying = true;
+                abilitySource.PlayOneShot(monsterAbility2);
+                Invoke("EnableAbilitySound",abilitySoundDuration);
+            }
+
+            if(whichCharacter == 3)
+            {
+                abilitySoundIsPlaying = true;
+                abilitySource.PlayOneShot(monsterAbility3);
+                Invoke("EnableAbilitySound",abilitySoundDuration);
+            }
+
+        }
+        //Walking Sounds
+        if(!walkingSoundIsPlaying && (pm.horizontalInput!=0 || pm.verticalInput!=0))
+        {
+            if(whichCharacter == 0)
+            {
+                walkingSoundIsPlaying = true;
+                walkingSource.PlayOneShot(monster0);
+                Invoke("EnableWalkingSound",walkingSoundDuration);
+            } 
+            if(whichCharacter == 1)
+            {
+                walkingSoundIsPlaying = true;
+                walkingSource.PlayOneShot(monster1);
+                Invoke("EnableWalkingSound",walkingSoundDuration);
+            }
+
+            if(whichCharacter == 2)
+            {
+                walkingSoundIsPlaying = true;
+                walkingSource.PlayOneShot(monster2);
+                Invoke("EnableWalkingSound",walkingSoundDuration);
+            }
+
+            if(whichCharacter == 3)
+            {
+                walkingSoundIsPlaying = true;
+                walkingSource.PlayOneShot(monster3);
+                Invoke("EnableWalkingSound",walkingSoundDuration);
+            }   
+        }
+
         float dPadHorizontal = Input.GetAxis("DPadHorizontal");
         float dPadVertical = Input.GetAxis("DPadVertical");
 
         if (!IsSwitchingPressed)
         {
+            
             if (NextMonster.IsPressed())
             {
                 IsSwitchingPressed = true;
@@ -94,49 +178,30 @@ public class PlayerSwitchScript : MonoBehaviour
             IsSwitchingPressed2 = false;
         }
 
-
         if (!IsSwitchingPressed3)
         {
             if (UpMonster.IsPressed()) // D-Pad Up
             {
                 IsSwitchingPressed3 = true;
                 SwitchCharacter(0);
-                //Debug.Log(pm.horizontalInput);
-                // if(pm.horizontalInput!=0 || pm.verticalInput!=0)
-                // {
-                //         //source.clip = monster0;
-                //         //source.Play();
-                // }
+
             }
             else if (RightMonster.IsPressed()) // D-Pad Right
             {
                 IsSwitchingPressed3 = true;
                 SwitchCharacter(1);
-                //  if(pm.horizontalInput!=0 || pm.verticalInput!=0)
-                // {
-                //         //source.clip = monster1;
-                //         //source.Play();
-                // }
+
             }
             else if (DownMonster.IsPressed()) // D-Pad Down
             {
                 IsSwitchingPressed3 = true;
                 SwitchCharacter(2);
-                //  if(pm.horizontalInput!=0 || pm.verticalInput!=0)
-                // {
-                //         //source.clip = monster2;
-                //         //source.Play();
-                // }
+
             }
             else if (LeftMonster.IsPressed()) // D-Pad Left
             {
                 IsSwitchingPressed3 = true;
                 SwitchCharacter(3);
-                //  if(pm.horizontalInput!=0 || pm.verticalInput!=0)
-                // {
-                //         //source.clip = monster3;
-                //         //source.Play();
-                // }
             }
         }
         else
@@ -155,6 +220,7 @@ public class PlayerSwitchScript : MonoBehaviour
         whichCharacter = characterIndex + changeIndex;
         CharacterSwitch.Invoke(whichCharacter, possibleCharacters[whichCharacter]);
         Swap();
+    
     }
 
     public void Swap()
