@@ -6,66 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a10ef50d-60c1-416c-b6b1-52a0a2f9f553" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fenta-Incorporate/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fenta-Incorporate/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Elisa.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Elisa.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Monsters/Elisa.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Monsters/Elisa.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Monsters/Elisa.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Monsters/Elisa.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Monsters/Robotmonster.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Monsters/Robotmonster.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Effects/FadeCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Effects/FadeCanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Effects/FadeCanvas.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Effects/FadeCanvas.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Furniture/Bed.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Furniture/Bed.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Furniture/Desk Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Furniture/Desk Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/Bloetje/box1 (26).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/Bloetje/box1 (26).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/RobotMonster/RobotMonsterSocket.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/RobotMonster/RobotMonsterSocket.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Elisa.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Elisa.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Monster Icons Top.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Monster Icons Top.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/UI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/_SceneRoot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/_SceneRoot.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/03 - Chest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/03 - Chest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/DesignerV1.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/DesignerV1.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/InteractionTesting.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/InteractionTesting.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/Lighting.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/Lighting.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/MonsterTesting.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/MonsterTesting.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/Elisa/ElisaPlantBridge Example.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/Elisa/ElisaPlantBridge Example.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/00 - Room.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/00 - Room.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/00 - Room.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/00 - Room.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/RoomTesting Copy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Testing/RoomTesting Copy.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/RoomTesting.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Testing/RoomTesting.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/Under the bed testing.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/Under the bed testing.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/WardrobeBlockout.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Testing/WardrobeBlockout.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Abilities/Blood Air.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Abilities/Blood Air.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Abilities/Flower Power.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Abilities/Flower Power.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Abilities/Freeze.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Abilities/Freeze.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Abilities/Lightning.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Abilities/Lightning.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Abilities/Propeller Overdrive.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Abilities/Propeller Overdrive.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Abilities/Tail Smash.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Abilities/Tail Smash.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Abilities/Tornado.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Abilities/Tornado.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable Objects/Abilities/Water.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable Objects/Abilities/Water.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/HDRPDefaultResources/Sky and Fog Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/HDRPDefaultResources/Sky and Fog Settings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/InputSystem_Actions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/InputSystem_Actions.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Materials/Main/Props/Stationary/Pens, metals/Plastic Grip_graph_0/Plastic Grip_graph_0_material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Materials/Main/Props/Stationary/Pens, metals/Plastic Grip_graph_0/Plastic Grip_graph_0_material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Materials/Main/wood floor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Materials/Main/wood floor.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Materials/Utility/Colors/New Material.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Materials/Utility/Colors/New Material.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Materials/Utility/Colors/green.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Materials/Utility/Colors/green.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Materials/Utility/Colors/what.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Materials/Utility/Colors/what.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Ability/Bloetje/BloetjeAbilities.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Ability/Bloetje/BloetjeAbilities.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Ability/Hijsi/HijsiAbilities.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Ability/Hijsi/HijsiAbilities.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Ability/Robotmonster/RobotmonsterAbilities.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Ability/Robotmonster/RobotmonsterAbilities.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Ability/Robotmonster/Teleporter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Ability/Robotmonster/Teleporter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Camera/FadeInOut.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Camera/FadeInOut.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Interaction/AbilitySO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Interaction/AbilitySO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Interaction/MonsterInteractionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Interaction/MonsterInteractionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Interaction/ObjectInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Interaction/ObjectInteraction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/InteractionUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/InteractionUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Player/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Player/PlayerSwitchScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Player/PlayerSwitchScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/IconSwapUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/UI/IconSwapUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +25,7 @@
     <setting file="file://$USER_HOME$/Projects/Unity/isbjorn/Assets/_Scripts/Player/StateMachine/PlayerStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Projects/Unity/steamplunder/Assets/_Scripts/Interactable/GeneralInteractable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Projects/Unity/steamplunder/Assets/_Scripts/Interactable/IInteractable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/PathEnd.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/UI/CharacterSwitchUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/UI/CurrentMonsterUI.cs" root0="FORCE_HIGHLIGHTING" />
@@ -200,7 +145,7 @@
       <workItem from="1719239006173" duration="1606000" />
       <workItem from="1719258114796" duration="3202000" />
       <workItem from="1719267663754" duration="1308000" />
-      <workItem from="1719295171183" duration="8088000" />
+      <workItem from="1719295171183" duration="10817000" />
     </task>
     <servers />
   </component>
@@ -227,50 +172,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_Scripts/Interaction/ObjectInteraction.cs</url>
-          <line>106</line>
-          <properties documentPath="C:\Users\bubel\University\Fenta-Incorporate\Assets\_Scripts\Interaction\ObjectInteraction.cs" containingFunctionPresentation="Method 'onMainInteractEvent'">
-            <startOffsets>
-              <option value="3062" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3090" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_Scripts/Camera/CameraController.cs</url>
-          <line>27</line>
-          <properties documentPath="C:\Users\bubel\University\Fenta-Incorporate\Assets\_Scripts\Camera\CameraController.cs" containingFunctionPresentation="Method 'NextCamera'">
-            <startOffsets>
-              <option value="708" />
-            </startOffsets>
-            <endOffsets>
-              <option value="736" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/_Scripts/Camera/CameraController.cs</url>
-          <line>36</line>
-          <properties documentPath="C:\Users\bubel\University\Fenta-Incorporate\Assets\_Scripts\Camera\CameraController.cs" containingFunctionPresentation="Method 'PreviousCamera'">
-            <startOffsets>
-              <option value="1002" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1034" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

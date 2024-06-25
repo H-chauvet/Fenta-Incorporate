@@ -80,7 +80,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4151988644042004972}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -148,7 +148,6 @@ GameObject:
   - component: {fileID: 1956346431128634701}
   - component: {fileID: 7089690386480985951}
   - component: {fileID: 1328017894763698590}
-  - component: {fileID: 1905469106729589631}
   m_Layer: 0
   m_Name: ElisaPlantBridge Example
   m_TagString: Untagged
@@ -232,6 +231,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _secondaryInteractEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -256,27 +267,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25251335, y: 0.45, z: 0.26194227}
   m_Center: {x: -2.0054412, y: 0.20000002, z: 0.0022500157}
---- !u!65 &1905469106729589631
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5771281608512735366}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.26069206, y: 0.6242204, z: 1}
-  m_Center: {x: -2.0015411, y: -0.18788981, z: -2.190766e-17}
 --- !u!1 &6271833091564616610
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,7 +316,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6271833091564616610}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
