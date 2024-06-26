@@ -19,7 +19,7 @@ public class CurrentMonsterUI : MonoBehaviour
         onCharacterSwitch += UpdateUI;
     }
 
-    private void Start()
+    private void Awake()
     {
         foreach (var monster in monsterData)
         {
@@ -29,6 +29,7 @@ public class CurrentMonsterUI : MonoBehaviour
 
     private void UpdateUI(MonsterType monsterType)
     {
+        if (monsterImage == null || abilityImage == null) return;
         monsterImage.sprite = MonsterLookup[monsterType].monsterIcon;
         abilityImage.sprite = MonsterLookup[monsterType].abilityIcon;
     }

@@ -9,7 +9,7 @@ public class UIController : MonoBehaviour
     private InputAction _pauseAction;
     private bool _isGamePaused;
 
-    private void OnEnable()
+    private void Awake()
     {
         _pauseAction = InputSystem.actions.FindAction("Pause");
     }
@@ -24,7 +24,7 @@ public class UIController : MonoBehaviour
 
     public void Pause(bool isGamePaused)
     {
-        if (!isGamePaused)
+        if (isGamePaused)
         {
             Time.timeScale = 1;
             pauseMenuCanvas.SetActive(false);

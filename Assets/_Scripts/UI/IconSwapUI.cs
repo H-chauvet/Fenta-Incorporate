@@ -22,6 +22,7 @@ public class IconSwapUI : MonoBehaviour
 
     private void OnCharacterSwitch(int whichMonster, GameObject monster)
     {
+        if (activeIcon == null || inactiveIcon == null) return;
         if (monster.CompareTag(_monsterTags[monsterType]))
         {
             Activate();

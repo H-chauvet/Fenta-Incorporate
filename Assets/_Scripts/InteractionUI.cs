@@ -35,6 +35,7 @@ public class InteractionUI : MonoBehaviour
 
     private void SetIndicator(ObjectInteraction interactable, Vector3 position)
     {
+        if (interactionIndicator == null) return;
         interactionIndicator.transform.position = _camera.WorldToScreenPoint(position);
         var info = _abilityLookup[interactable.ability];
         abilityImage.sprite = info.abilityIcon;
@@ -48,6 +49,7 @@ public class InteractionUI : MonoBehaviour
 
     private void IndicatorSetActive(bool state)
     {
+        if (interactionIndicator == null) return;
         interactionIndicator.SetActive(state);
     }
 }

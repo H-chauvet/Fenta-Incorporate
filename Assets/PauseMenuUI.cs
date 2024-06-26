@@ -10,7 +10,7 @@ public class PauseMenuUI : MonoBehaviour
     private InputAction _continueAction;
     private InputAction _restartAction;
 
-    private void OnEnable()
+    private void Awake()
     {
         _homeAction = InputSystem.actions.FindAction("Home");
         _continueAction = InputSystem.actions.FindAction("Continue");
@@ -19,8 +19,16 @@ public class PauseMenuUI : MonoBehaviour
 
     private void Update()
     {
-        if (_homeAction.WasPressedThisFrame()) SceneManager.LoadScene("Main Menu");
-        if (_continueAction.WasPressedThisFrame()) uiController.Pause(false);
-        if (_restartAction.WasPressedThisFrame()) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if (_homeAction.WasPressedThisFrame())
+        {
+            Time.timeScale = 1;
+            SceneManager.LoadScene("Main Menu");
+        }
+        if (_continueAction.WasPressedThisFrame()) uiController.Pause(true);
+        if (_restartAction.WasPressedThisFrame())
+        {
+            Time.timeScale = 1;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }
