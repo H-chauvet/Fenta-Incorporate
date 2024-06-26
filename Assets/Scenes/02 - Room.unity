@@ -9900,8 +9900,8 @@ MonoBehaviour:
   onGrab:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1770230851}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
@@ -9914,19 +9914,7 @@ MonoBehaviour:
         m_CallState: 2
   onAnimationStart:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: StopMoving
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1478179788
 GameObject:
   m_ObjectHideFlags: 0
@@ -12632,6 +12620,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 257455604162759760, guid: 8772dd0e22f07bc4e8ae9467035d97f3, type: 3}
   m_PrefabInstance: {fileID: 1764106740}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1770230851 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6835596048383091572, guid: df99365fa8a8ada408f280eaf2cf18a6, type: 3}
+  m_PrefabInstance: {fileID: 1330304924}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6311c1706467bd140b56137a35a5f13e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1774688401
 GameObject:
   m_ObjectHideFlags: 0
@@ -13658,19 +13657,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3792626497723420731, guid: d429cd2dcdc75484cbbe8902f181541a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70701486
+      value: 0.70701015
       objectReference: {fileID: 0}
     - target: {fileID: 3792626497723420731, guid: d429cd2dcdc75484cbbe8902f181541a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.011366166
+      value: 0.011366205
       objectReference: {fileID: 0}
     - target: {fileID: 3792626497723420731, guid: d429cd2dcdc75484cbbe8902f181541a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.707016
+      value: -0.70702076
       objectReference: {fileID: 0}
     - target: {fileID: 3792626497723420731, guid: d429cd2dcdc75484cbbe8902f181541a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.011366185
+      value: 0.011366375
       objectReference: {fileID: 0}
     - target: {fileID: 4306795263963579048, guid: d429cd2dcdc75484cbbe8902f181541a, type: 3}
       propertyPath: m_AnchorMax.y
