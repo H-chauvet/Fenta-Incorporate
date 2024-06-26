@@ -9,6 +9,7 @@ public class ChestHandsSequence : MonoBehaviour
 
     private int currentIndex = 0;
     private Coroutine moveCoroutine;
+    public JackLevelCompletion LevelCompletion;
 
     void Start()
     {
@@ -42,6 +43,7 @@ public class ChestHandsSequence : MonoBehaviour
             if (moveCoroutine != null)
             {
                 StopCoroutine(moveCoroutine);
+                LevelCompletion.RemoveHand(this);
             }
         }
     }

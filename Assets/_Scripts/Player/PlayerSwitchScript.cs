@@ -17,6 +17,7 @@ public class PlayerSwitchScript : MonoBehaviour
     private InputAction LeftMonster;
     private InputAction PreviousMonster;
     private InputAction NextMonster;
+    private InputAction interactMain;
 
 
     private bool IsSwitchingPressed = false;
@@ -52,6 +53,7 @@ public class PlayerSwitchScript : MonoBehaviour
         RightMonster = InputSystem.actions.FindAction("RightMonster");
         PreviousMonster = InputSystem.actions.FindAction("PreviousMonster");
         NextMonster = InputSystem.actions.FindAction("NextMonster");
+        interactMain = InputSystem.actions.FindAction("InteractMain");
         previousPosition = possibleCharacters[whichCharacter].transform.position;
         SwitchCharacter(0);
 
@@ -72,35 +74,35 @@ public class PlayerSwitchScript : MonoBehaviour
     void Update()
     {
         //Ability Sounds
-        if(!abilitySoundIsPlaying && Input.GetKeyDown("t"))
+        if(!abilitySoundIsPlaying && interactMain.WasPressedThisFrame())
         {
 
             if(whichCharacter == 0)
             {
                 abilitySoundIsPlaying = true;
                 abilitySource.PlayOneShot(monsterAbility0);
-                Invoke("EnableAbilitySound",abilitySoundDuration);
+                Invoke("EnableAbilitySound",monsterAbility0.length);
             }
 
             if(whichCharacter == 1)
             {
                 abilitySoundIsPlaying = true;
                 abilitySource.PlayOneShot(monsterAbility1);
-                Invoke("EnableAbilitySound",abilitySoundDuration);
+                Invoke("EnableAbilitySound",monsterAbility1.length);
             }
 
             if(whichCharacter == 2)
             {
                 abilitySoundIsPlaying = true;
                 abilitySource.PlayOneShot(monsterAbility2);
-                Invoke("EnableAbilitySound",abilitySoundDuration);
+                Invoke("EnableAbilitySound",monsterAbility2.length);
             }
 
             if(whichCharacter == 3)
             {
                 abilitySoundIsPlaying = true;
                 abilitySource.PlayOneShot(monsterAbility3);
-                Invoke("EnableAbilitySound",abilitySoundDuration);
+                Invoke("EnableAbilitySound",monsterAbility3.length);
             }
 
         }
@@ -111,27 +113,27 @@ public class PlayerSwitchScript : MonoBehaviour
             {
                 walkingSoundIsPlaying = true;
                 walkingSource.PlayOneShot(monster0);
-                Invoke("EnableWalkingSound",walkingSoundDuration);
+                Invoke("EnableWalkingSound",monster0.length);
             } 
             if(whichCharacter == 1)
             {
                 walkingSoundIsPlaying = true;
                 walkingSource.PlayOneShot(monster1);
-                Invoke("EnableWalkingSound",walkingSoundDuration);
+                Invoke("EnableWalkingSound",monster1.length);
             }
 
             if(whichCharacter == 2)
             {
                 walkingSoundIsPlaying = true;
                 walkingSource.PlayOneShot(monster2);
-                Invoke("EnableWalkingSound",walkingSoundDuration);
+                Invoke("EnableWalkingSound",monster2.length);
             }
 
             if(whichCharacter == 3)
             {
                 walkingSoundIsPlaying = true;
                 walkingSource.PlayOneShot(monster3);
-                Invoke("EnableWalkingSound",walkingSoundDuration);
+                Invoke("EnableWalkingSound",monster3.length);
             }   
         }
 

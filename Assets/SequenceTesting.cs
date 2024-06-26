@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SequenceTesting : MonoBehaviour
 {
@@ -11,6 +13,9 @@ public class SequenceTesting : MonoBehaviour
     public static List<SequenceTesting> circles = new List<SequenceTesting>();
     private static int currentOrderIndex = 0;
     private Renderer circleRenderer;
+
+    public UnityEvent onComplete;
+    public bool hit = false;
 
     void Start()
     {
@@ -27,8 +32,18 @@ public class SequenceTesting : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (orderIndex == 5 && currentOrderIndex > 5)
+        {
+            currentOrderIndex = 0;
+            onComplete.Invoke();
+        }
+    }
+
     void OnCollisionEnter(Collision collision)
     {
+        if (hit) return;
         Debug.Log("AYY");
         // Check if the collider is the player
         if (collision.gameObject.CompareTag("Player"))
@@ -40,6 +55,7 @@ public class SequenceTesting : MonoBehaviour
                 if (circleRenderer != null && hitMaterial != null)
                 {
                     circleRenderer.material = hitMaterial;
+                    hit = true;
                 }
                 currentOrderIndex++;
             }
@@ -51,6 +67,7 @@ public class SequenceTesting : MonoBehaviour
                     if (circle.circleRenderer != null && circle.originalMaterial != null)
                     {
                         circle.circleRenderer.material = circle.originalMaterial;
+                        circle.hit = false;
                     }
                 }
                 currentOrderIndex = 0;

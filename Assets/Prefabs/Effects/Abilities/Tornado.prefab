@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2888132783209789776}
   - component: {fileID: 9163299031288577510}
   - component: {fileID: 9191927933444113626}
+  - component: {fileID: 3591877431687408033}
+  - component: {fileID: 5800379018097546340}
   m_Layer: 0
   m_Name: Tornado
   m_TagString: Untagged
@@ -114,3 +116,38 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &3591877431687408033
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8753645332705149964}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.146899, y: 2.7077687, z: 0.7872013}
+  m_Center: {x: -0.008661509, y: 1.3059853, z: -0.018482447}
+--- !u!114 &5800379018097546340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8753645332705149964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4525fa7a4682cd479243cd9bf406814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 5
+  liftForce: 1

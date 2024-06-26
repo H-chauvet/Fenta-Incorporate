@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,21 +12,6 @@ public class PipeScript : MonoBehaviour
 
     private bool isSpawning = false;
     private Coroutine spawnCoroutine;
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (isSpawning)
-            {
-                StopSpawning();
-            }
-            else
-            {
-                StartSpawning();
-            }
-        }
-    }
 
     private void StartSpawning()
     {
@@ -65,7 +51,7 @@ public class PipeScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            isSpawning = false; // Ensure it doesn't start spawning immediately
+            StartSpawning();
         }
     }
 

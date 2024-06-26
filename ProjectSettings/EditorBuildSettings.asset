@@ -10,18 +10,18 @@ EditorBuildSettings:
     guid: ce5de4d53720b2f41a132761d5d748bb
   - enabled: 1
     path: Assets/Scenes/00 - Room.unity
-    guid: cc4d3ceae9fb08e45b8effef5932a723
+    guid: 5ed4947c3438daa488b93debfc8bf9ca
   - enabled: 1
     path: Assets/Scenes/01 - Wardrobe.unity
-    guid: ba7f6ad257f3a3749b8112ceaca77e6c
+    guid: ad2499e8cbe3592489157105664ece28
   - enabled: 1
-    path: Assets/Scenes/02 - Pipes.unity
-    guid: cce9c6abf4a4e2d4f8e126ec3e832905
+    path: Assets/Scenes/02 - Room.unity
+    guid: b2e4063503b7777408d7f91c0c2d0bdf
   - enabled: 1
     path: Assets/Scenes/03 - Chest.unity
-    guid: e68c21da64780644caf6a77d90bec32c
+    guid: c41c2491b87876e4197b3df8668c1fd9
   - enabled: 1
-    path: Assets/Scenes/Testing/WardrobeBlockout.unity
-    guid: ad2499e8cbe3592489157105664ece28
+    path: Assets/Scenes/04 - Room.unity
+    guid: 89d590e08b1c7134c84b524b10a64be4
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: e48cd292afa3b214c8efa85072b0cc63, type: 3}

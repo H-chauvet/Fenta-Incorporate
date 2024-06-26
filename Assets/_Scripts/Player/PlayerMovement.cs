@@ -85,7 +85,6 @@ public class PlayerMovement : MonoBehaviour
         horizontalInput = input_vector.x;
         verticalInput = input_vector.y;
        // Debug.Log(horizontalInput);
-        
 
         // Getting movement and calculating velocity from input
         Vector3 movement = new Vector3(horizontalInput, 0, verticalInput);
@@ -95,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
         // Apply velocity to the player
         Vector3 localVelocity = transform.InverseTransformDirection(velocity);
         localVelocity.y = rb.velocity.y;
-        isWalking = localVelocity != Vector3.zero ? true : false;
+        isWalking = input_vector != Vector2.zero;
         rb.velocity = transform.TransformDirection(localVelocity);
 
         // Rotate player
@@ -177,6 +176,13 @@ public class PlayerMovement : MonoBehaviour
         _mainCameraForward.Normalize();
         right.Normalize();
         return vector.x * right + vector.z * _mainCameraForward;
+    }
+
+    public void StopMoving()
+    {
+        rb.velocity = Vector3.zero;
+        isWalking = false;
+        enabled = false;
     }
     
 }

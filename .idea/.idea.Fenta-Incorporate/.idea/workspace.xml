@@ -6,10 +6,44 @@
   <component name="ChangeListManager">
     <list default="true" id="a10ef50d-60c1-416c-b6b1-52a0a2f9f553" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fenta-Incorporate/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fenta-Incorporate/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/Elisa/ElisaPlantBridge Example.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/Elisa/ElisaPlantBridge Example.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ChestHandsSequence.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ChestHandsSequence.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ChestTestTargetSequence.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ChestTestTargetSequence.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Furniture/Chest_Jack.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Furniture/Chest_Jack.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PipeScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PipeScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Effects/Abilities/Tornado.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Effects/Abilities/Tornado.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/Bloetje/box1 (26).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monsters/Abilities/Bloetje/box1 (26).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Books/Book_Closed1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Books/Book_Closed1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Books/Book_Closed2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Books/Book_Closed2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Books/Book_Closed3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Books/Book_Closed3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Books/Book_Closed4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Books/Book_Closed4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Books/Book_Closed5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Books/Book_Closed5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Props/Extension_Cord.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Props/Extension_Cord.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/UI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/_SceneRoot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/_SceneRoot.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/00 - Room.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/00 - Room.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/00 - Room.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/00 - Room.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/RoomTesting Copy.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Testing/RoomTesting Copy.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/01 - Wardrobe.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/01 - Wardrobe.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/02 - Pipes.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/02 - Pipes.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/03 - Chest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/03 - Chest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/ChestBlockout.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/ChestBlockout.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/WardrobeBlockout.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/WardrobeBlockout.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SequenceTesting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SequenceTesting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/HDRPDefaultResources/Sky and Fog Settings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/HDRPDefaultResources/Sky and Fog Settings.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/InputSystem_Actions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/InputSystem_Actions.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/Quirky Stitch SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/Quirky Stitch SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/WaterParticle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/WaterParticle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Ability/Hijsi/HijsiAbilities.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Ability/Hijsi/HijsiAbilities.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Interaction/ObjectInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Interaction/ObjectInteraction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Player/PlayerSwitchScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Player/PlayerSwitchScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/SceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/SceneLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +59,9 @@
     <setting file="file://$USER_HOME$/Projects/Unity/isbjorn/Assets/_Scripts/Player/StateMachine/PlayerStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Projects/Unity/steamplunder/Assets/_Scripts/Interactable/GeneralInteractable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Projects/Unity/steamplunder/Assets/_Scripts/Interactable/IInteractable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ChestTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/JackLevelCompletion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/PathEnd.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/UI/CharacterSwitchUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/UI/CurrentMonsterUI.cs" root0="FORCE_HIGHLIGHTING" />
@@ -99,10 +135,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="17980">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7300">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="17980" />
+      <option name="pid" value="7300" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -145,7 +181,8 @@
       <workItem from="1719239006173" duration="1606000" />
       <workItem from="1719258114796" duration="3202000" />
       <workItem from="1719267663754" duration="1308000" />
-      <workItem from="1719295171183" duration="10817000" />
+      <workItem from="1719295171183" duration="16029000" />
+      <workItem from="1719336567459" duration="13019000" />
     </task>
     <servers />
   </component>

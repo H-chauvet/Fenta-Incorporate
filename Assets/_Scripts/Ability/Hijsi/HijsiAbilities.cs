@@ -183,7 +183,7 @@ public class HijsiAbilities : MonoBehaviour, IMonsterAbilities
         }
         TornadoReady = false;
         anim.Play("Secondary");
-        Vector3 forwardOffset = parent.transform.forward * 0.7f;
+        Vector3 forwardOffset = parent.transform.forward * 0.3f;
         GameObject tornadoTemp = Instantiate(tornadoObject, parent.transform.position + forwardOffset, Quaternion.identity);
     }
 }

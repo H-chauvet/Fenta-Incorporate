@@ -41,10 +41,13 @@ public class ObjectInteraction : MonoBehaviour, IInteractable
         mainInteractionButton = InputSystem.actions.FindAction("InteractMain");
         secondaryInteractionButton = InputSystem.actions.FindAction("InteractSecond");
     }
-
+    
     public void OnTriggerEnter(Collider other) 
     {
-        playerSwitchScript = other.gameObject.GetComponent<PlayerSwitchScript>();
+        if (other.CompareTag("Player"))
+        {
+            playerSwitchScript = other.gameObject.GetComponent<PlayerSwitchScript>();
+        }
     }
 
     public void OnTriggerStay(Collider other)
@@ -68,6 +71,7 @@ public class ObjectInteraction : MonoBehaviour, IInteractable
 
     public void OnTriggerExit(Collider other)
     {
+        if (!other.CompareTag("Player")) return;
         GameObject children = other.gameObject.transform.GetChild(playerSwitchScript.whichCharacter).gameObject;
         if (children.CompareTag(monsterTags[interactionMonster]))
         {
