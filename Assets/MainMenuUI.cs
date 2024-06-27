@@ -9,7 +9,7 @@ public class MainMenuUI : MonoBehaviour
 
     private void OnEnable()
     {
-        mainUIAction = InputSystem.actions.FindAction("Jump");
+        mainUIAction = InputSystem.actions.FindAction("Continue");
     }
 
     private void Update()

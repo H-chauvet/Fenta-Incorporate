@@ -702,6 +702,17 @@
                 },
                 {
                     "name": "",
+                    "id": "dcb56ff2-b7e4-43fc-992c-0c1a3d932c58",
+                    "path": "<Keyboard>/o",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InteractMain",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "bfe5bc33-67e0-4e04-a6bf-6a6f6ae31e00",
                     "path": "<Keyboard>/t",
                     "interactions": "",
@@ -758,7 +769,7 @@
                 {
                     "name": "",
                     "id": "74da011d-2c89-4a5e-9be4-b5092f774c91",
-                    "path": "<Keyboard>/p",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -780,7 +791,7 @@
                 {
                     "name": "",
                     "id": "a5228d0a-1259-44d7-9f55-4df619791c58",
-                    "path": "<Keyboard>/b",
+                    "path": "<Keyboard>/h",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -802,7 +813,18 @@
                 {
                     "name": "",
                     "id": "d98817a4-58fb-4637-9fa3-e4a69cc84668",
-                    "path": "<Keyboard>/n",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Continue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a0902fed-2b94-4487-8803-4f0aec788c62",
+                    "path": "<Keyboard>/x",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -824,7 +846,18 @@
                 {
                     "name": "",
                     "id": "67581c6f-a1fa-41e0-bee9-434085497cf0",
-                    "path": "<Keyboard>/m",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Restart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "60f4f0d9-2ce1-44a9-bdbf-50553bae6125",
+                    "path": "<Keyboard>/o",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

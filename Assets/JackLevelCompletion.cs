@@ -11,6 +11,7 @@ public class JackLevelCompletion : MonoBehaviour
     public void RemoveHand(ChestHandsSequence hand)
     {
         hands.Remove(hand);
+        Destroy(hand.gameObject);
 
         if (hands.Count <= 0)
         {
