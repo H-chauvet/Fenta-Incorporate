@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.9378885, g: 0.6988802, b: 0.3469955, a: 1}
+  m_IndirectSpecularColor: {r: 0.93788874, g: 0.69888026, b: 0.34699652, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7623,7 +7623,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8371496309838661517, guid: 042a6f3ee19649549b716bf51b74aeea, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 0.53892
+      objectReference: {fileID: 0}
+    - target: {fileID: 8371496309838661517, guid: 042a6f3ee19649549b716bf51b74aeea, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.059892442
       objectReference: {fileID: 0}
     - target: {fileID: 8371496309838661517, guid: 042a6f3ee19649549b716bf51b74aeea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7636,8 +7640,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8472871832134905504, guid: 042a6f3ee19649549b716bf51b74aeea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1039719552}
   m_SourcePrefab: {fileID: 100100000, guid: 042a6f3ee19649549b716bf51b74aeea, type: 3}
+--- !u!1 &1039719551 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8472871832134905504, guid: 042a6f3ee19649549b716bf51b74aeea, type: 3}
+  m_PrefabInstance: {fileID: 1039719550}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1039719552
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039719551}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1.0000002}
+  m_Center: {x: 0, y: -0.0000038146973, z: 0}
 --- !u!1 &1040263308
 GameObject:
   m_ObjectHideFlags: 0

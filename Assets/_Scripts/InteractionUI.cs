@@ -41,7 +41,7 @@ public class InteractionUI : MonoBehaviour
         abilityImage.sprite = info.abilityIcon;
         button.text = info.abilityType switch
         {
-            AbilityType.Primary => "B",
+            AbilityType.Primary => "O",
             AbilityType.Secondary => "Y",
             _ => button.text
         };
